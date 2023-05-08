@@ -1,0 +1,87 @@
+.header {
+    width: 100%;
+    padding: 2.5rem 0;
+    background: #141F2B;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 5;
+    
+
+    &__logo {
+        width: 17.9rem;
+        height: 4.6rem;
+    }
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__left {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 29rem;
+    }
+    &__language {
+        position: relative;
+        font-family: 'Proxima Nova Semibold';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 2rem;
+        line-height: 2rem;
+
+        &-box {
+            display: flex;
+            gap: 0.4rem;
+            align-items: center;
+
+            &::after {
+                width: 1.8rem;
+                height: 1.2rem;
+                position: absolute;
+                content: '';
+                display: block;
+                -webkit-transition: .2s ease-in;
+                transition: .2s ease-in;
+                background: url(/img/icon/arrowdownwhite.svg) no-repeat center/100%;
+                right: -2.2rem;
+                -webkit-transform: translateY(50%);
+                transform: translateY(50%);
+                top: 0;
+            }
+        }
+        &-img {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+    }
+
+    &__right {
+        display: flex;
+        width: 98rem;
+    }
+    &__lists {
+        display: flex;
+        gap: 3rem;
+        width: 100%;
+    }
+    
+    &__item {
+        font-family: 'Proxima Nova Semibold';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 2rem;
+        line-height: 2rem;
+
+        text-transform: uppercase;
+    }
+    &__phone-number {
+        font-family: 'Proxima Nova';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 2.8rem;
+        line-height: 2.8rem;
+        margin-top: -1rem;
+    }
+}

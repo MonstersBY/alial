@@ -1,0 +1,142 @@
+.production {
+    color: #151313;
+    margin-top: 9.5rem;
+    margin-bottom: 17rem;
+
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 5rem;
+
+        &-link {
+            position: relative;
+            font-family: 'Proxima Nova';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 1.8rem;
+            line-height: 150%;
+            padding-right: 7rem;
+            margin-top: 0.3rem;
+
+            &::after {
+                position: absolute;
+                content: '';
+                top: 50%;
+                -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
+                right: 0;
+                width: 3.6rem;
+                height: 1.2rem;
+                background-image: url(/img/icon/arrowrightred.svg);
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+            }
+        }
+    }
+    &__title {
+        font-family: 'Proxima Nova Bold';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 3.5rem;
+        line-height: 3.5rem;
+    }
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 13.7rem;
+
+        &-img{
+            width: 125.3rem;
+            height: 46.8rem;
+            border-radius: 1rem;
+        }
+        &-content {
+            width: 39.7rem;
+
+            &-text {
+                font-family: 'Proxima Nova';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 1.8rem;
+                line-height: 150%;
+                margin-bottom: 3.9rem;
+            }
+
+            & > ul > li {
+                font-family: 'Proxima Nova';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 2rem;
+                line-height: 2rem;
+                text-transform: uppercase;
+                padding-left: 10.3rem;
+                position: relative;
+
+                &:not(:last-child) {
+                    margin-bottom: 2rem;
+                }
+                &::after {
+                    position: absolute;
+                    content: '';
+                    left: 0;
+                    top: 50%;
+                    width: 9rem;
+                    height: 1px;
+                    background-color: #92999D;
+                }
+            }
+        }
+    }
+
+    &__center {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15.6rem;
+
+        &-img {
+            width: 82.5rem;
+            height: 44.4rem;
+            margin-right: 4.6rem;
+        }
+        &-content {
+            font-family: 'Proxima Nova';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 1.8rem;
+            line-height: 150%;
+            width: 39.6rem;
+        }
+    }
+    &__bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &-title {
+            font-family: 'Proxima Nova';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 4rem;
+            line-height: 130%;
+            text-transform: uppercase;
+            width: 82.5rem;
+            padding-right: 10rem;
+        }
+        &-img {
+            width: 39.8rem;
+            height: 35.9rem;
+        }
+        &-content {
+            font-family: 'Proxima Nova';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 1.8rem;
+            line-height: 150%;
+            width: 39.8rem;
+            margin-bottom: 4rem;
+        }
+    }
+    
+}
