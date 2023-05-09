@@ -1,0 +1,151 @@
+.gallery {
+    position: relative;
+    z-index: 10;
+    background: #FFFFFF;
+
+    .container {
+        width: 100%;
+        position: relative;
+        height: 84rem;
+    }
+
+    &__slide {
+        display: flex;
+        align-items: center;
+        height: 66.7rem;
+    }
+    &__swiper {
+
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: -29rem;
+            left: 0;
+            background-color: #141F2B;
+            height: 100%;
+            width: 100%;
+        }
+
+        &-wrapper {
+            position: relative;
+            z-index: 3;
+            display: flex;
+            align-items: center;
+            background-image: url(/img/gallery-background1.svg);
+            background-repeat: no-repeat;
+            background-position: left top 8.2rem;
+            background-size: auto 61.7rem;
+            height: 70rem;
+        }
+        &-pagination {
+            display: block;
+            position: absolute;
+            width: auto;
+            font-family: 'Proxima Nova Semibold';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 2rem;
+            line-height: 2rem;
+
+            text-transform: uppercase;
+
+            bottom: 10.4rem;
+            left: 26rem;
+
+            .swiper-pagination-current {
+                color: #E01327;
+            }
+        }
+    }
+    &__head {
+        display: flex;
+        flex-direction: column;
+        width: 125rem;
+        padding-left: 61.3rem;
+        padding-right: 15rem;
+
+        strong {
+            display: block;
+            font-family: 'Proxima Nova Bold';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 3.5rem;
+            line-height: 3.5rem;
+            color: #151313;
+            margin-top: 9rem;
+        }
+        span {
+            display: block;
+            font-family: 'Proxima Nova';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 1.8rem;
+            line-height: 150%;
+            color: #151313;
+            margin-top: 2.4rem;
+            width: 47rem;
+        }
+    }
+    &__box {
+        display: flex;
+        height: 46.1rem;
+        margin-top: 5.9rem;
+        background: linear-gradient(0deg, #F8F8F8, #F8F8F8), #F8F8F8;
+        box-shadow: 10px 7px 10px rgba(0, 0, 0, 0.08);
+        
+        .gallery__img {
+            margin-top: 0;
+            height: 46.1rem;
+            width: 66.9rem;
+        }
+        .gallery__head {
+            margin-top: 4rem;
+        }
+    }
+    &__img {
+        margin-top: 6.6rem;
+        position: relative;
+        height: auto;
+        width: 67.9rem;
+
+        &-detail {
+            position: absolute;
+            width: 25.568rem;
+            height: 22.891rem;
+            left: 0;
+            right: 0;
+            top: 13rem;
+            margin: auto;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    &__lavka {
+        position: absolute;
+        bottom: 16.5rem;;
+        right: 37.5rem;
+        z-index: 1;
+        width: 23.6rem;
+        height: 7.505rem;
+
+    }
+    &__man {
+        position: absolute;
+        bottom: 10.5rem;
+        right: 49.5rem;
+        z-index: 1;
+        width: 38.099rem;
+        height: 25.389rem;
+    }
+    &__scroll {
+        position: absolute;
+        width: 9.328rem;
+        height: 4.5rem;
+        bottom: 9rem;
+        right: 26.2rem;
+    }
+}

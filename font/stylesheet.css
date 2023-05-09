@@ -1,0 +1,44 @@
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('proximanova_regular.ttf');
+    src: local('Proxima Nova Regular'), local('Proxima-Nova-Regular'),
+    url('proximanova_regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Proxima Nova Semibold';
+    src: url('proxima-nova-semibold.ttf');
+    src: local('Proxima Nova Semibold'), local('Proxima-Nova-Semibold'),
+    url('proxima-nova-semibold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Proxima Nova Bold';
+    src: url('proximanova_bold.otf');
+    src: local('Proxima Nova Bold'), local('Proxima-Nova-Bold'),
+    url('proximanova_bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Proxima Nova Light';
+    src: url('proximanova_light.otf');
+    src: local('Proxima Nova Light'), local('Proxima-Nova-Light'),
+    url('proximanova_light.otf') format('opentype');
+    font-weight: lighter;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Euclid Circular A';
+    src: url('Euclid-Circular-A-Regular.ttf');
+    src: local('Euclid Circular A Regular'), local('Euclid-Circular-A-Regular'),
+    url('Euclid-Circular-A-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

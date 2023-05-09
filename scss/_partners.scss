@@ -1,0 +1,39 @@
+.partners {
+    margin-bottom: 17rem;
+
+    .container {
+        width: 100%;
+    }
+    &__head {
+        display: flex;
+        width: 168rem;
+        justify-content: space-between;
+        margin: 0 auto 5rem auto;
+        
+    }
+    &__title {
+        font-family: 'Proxima Nova Bold';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 3.5rem;
+        line-height: 3.5rem;
+    }
+    &__img {
+        height: 8.1rem;
+
+        img {
+            width: auto;
+            height: 100%;
+        }
+    }
+    &__swiper {
+        height: 14rem;
+    }
+    &__slide {
+        display: flex;
+        border: 1.52174px solid #DADFE2;
+        border-radius: 0.7rem;
+        align-items: center;
+        justify-content: center;
+    }
+}

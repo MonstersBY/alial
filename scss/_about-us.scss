@@ -1,0 +1,94 @@
+.about-us {
+    color: #FFFFFF;
+    position: relative;
+    background-color: #141F2B;
+    padding-top: 8.3rem;
+    padding-bottom: 5rem;
+    margin-bottom: -0.1rem;
+
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 119.5rem;
+    }
+    &__title {
+        font-family: 'Proxima Nova Semibold';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 5.5rem;
+        line-height: 110%;
+        width: 37.1rem;
+    }
+    &__text {
+        font-family: 'Proxima Nova';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.8rem;
+        line-height: 150%;
+        width: 72.9rem;
+        height: 9rem;
+    }
+    &__line {
+        position: absolute;
+        top: 5.4rem;
+        left: 0;
+        width: 100%;
+        height: 1rem;
+        background: #D22E54;
+        background: linear-gradient(90deg, rgba(221, 20, 68, 0) 0%, #D22E54 30%, #D22E54 60%, rgba(221, 20, 68, 0) 100%);
+    }
+    &__list {
+        display: flex;
+        margin-top: 7rem;
+        position: relative;
+    }
+    &__item {
+        width: 25%;
+        position: relative;
+        z-index: 1;
+    }
+    &__cir-wr {
+        width: 11.8rem;
+        height: 11.8rem;
+        display: flex;
+        align-items: center;
+        margin-bottom: 2.4rem;
+
+        &.win {
+            justify-content: center;
+            background-color: #D22E54;
+            border-radius: 100%;
+
+            img {
+                width: 3.5rem;
+            }
+        }
+    }
+    &__cir {
+        width: 3.2rem;
+        height: 3.2rem;
+        border-radius: 100%;
+        border: 1.1rem solid #D22E54;
+        background-color: #fff;
+    }
+    &__info {
+
+        &-num {
+            font-family: 'Proxima Nova Semibold';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 5.5rem;
+            line-height: 110%;
+            margin-bottom: 0.8rem;
+        }
+        &-text {
+            font-family: 'Proxima Nova';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 1.8rem;
+            line-height: 150%;
+            width: 22rem;
+        }
+    }
+}

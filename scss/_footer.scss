@@ -1,0 +1,77 @@
+.footer {
+    background-color: #080E1A;
+    color: #FFFFFF;
+    height: 42.7rem;
+    margin-top: -11.2rem;
+    position: relative;
+    z-index: 1;
+    padding-top: 5.9rem;
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0.4rem;
+
+        &-items {
+            font-family: 'Proxima Nova';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 1.8rem;
+            line-height: 2.7rem;
+            width: 39.5rem;
+        }
+        &-item {
+            margin-bottom: 3.6rem;
+
+            &.prod {
+                color: #92999D;
+            }
+        }
+        &-logo {
+            width: 17.9rem;
+            height: 4.6rem;
+            margin-bottom: 6rem;
+        }
+        &-phone {
+            font-family: 'Proxima Nova Semibold';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 2rem;
+            line-height: 2rem;
+            text-transform: uppercase;
+        }
+    }
+    &__line {
+        height: 1px;
+        width: auto;
+        background: #92999D;
+        margin-bottom: 2.8rem;
+    }
+    &__bottom {
+        display: flex;
+        gap: 17.7rem;
+
+        &-item {
+            display: flex;
+            font-family: 'Proxima Nova';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 1.8rem;
+            line-height: 2.7rem;
+            color: #92999D;
+
+            &:nth-child(2) {
+                margin-right: 11.5rem;
+            }
+            span {
+                display: block;
+                margin-right: 3.1rem;
+            }
+        }
+        &-logo {
+            display: block;
+            width: 19.95rem;
+            height: 2.8rem;
+        }
+    }
+}
