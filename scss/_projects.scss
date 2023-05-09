@@ -1,8 +1,9 @@
 .projects {
-    margin-bottom: 34.8rem;
+    margin-bottom: 22.9rem;
 
     &__inner {
         position: relative;
+        z-index: 5;
 
         &::after {
             position: absolute;
@@ -149,10 +150,9 @@
     &__btn-next {
         top: unset;
         bottom: -5.5rem;
-        right: -0.7rem;
+        right: 0rem;
         height: auto;
         &::after {
-            font-family: swiper-icons;
             font-size: 1rem;
             color: #151313;
         }
@@ -164,7 +164,6 @@
         bottom: -5.5rem;
         height: auto;
         &::after {
-            font-family: swiper-icons;
             font-size: 1rem;
             color: #151313;
         }
@@ -172,7 +171,7 @@
     &__swiper-pagination {
         display: block;
         width: auto;
-        left: 42.4%;
+        left: 71rem;
         bottom: -5.8rem;
 
         font-family: 'Proxima Nova Semibold';
@@ -182,7 +181,8 @@
         line-height: 2rem;
 
         .swiper-pagination-total {
-            margin-left: 3.5rem;
+            position: absolute;
+            left: 4.5rem;
         }
         &::after {
             position: absolute;

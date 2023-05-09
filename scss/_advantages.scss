@@ -1,9 +1,10 @@
 .advantages {
     background-color: #141F2B;
-    background-image: url(/img/advantages-back.svg);
-    background-repeat: no-repeat;
-    background-position: bottom left;
-    background-size: 95.1rem 73.6rem;
+    position: relative;
+    // background-image: url(/img/advantages-back.svg);
+    // background-repeat: no-repeat;
+    // background-position: bottom left;
+    // background-size: 95.1rem 73.6rem;
     padding-top: 9rem;
     padding-bottom: 7rem;
     color: #FFFFFF;
@@ -76,5 +77,14 @@
             height: 1px;
             background-color: rgba(255, 255, 255, 0.5);
         }
+    }
+
+    &__img {
+        position: absolute;
+        z-index: 5;
+        width: 90.103rem;
+        height: 73.65rem;
+        bottom: -17rem;
+        left: -11rem;
     }
 }

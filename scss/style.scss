@@ -1,8 +1,9 @@
 @import "set";
 
 @import "header";
-// @import "footer";
+@import "footer";
 
+@import 'line';
 @import "baner";
 @import "about-us";
 @import "gallery";
@@ -11,6 +12,9 @@
 @import "production";
 @import "partners";
 @import "projects";
+@import "world";
+@import "licenses";
+@import "last-img";
 
 @media (min-width: 48.01em) {
   .mobile {

@@ -1,11 +1,13 @@
 .header {
     width: 100%;
-    padding: 2.5rem 0;
+    padding-top: 2.6rem;
+    padding-bottom: 3.8rem;
     background: #141F2B;
     color: #FFFFFF;
     text-transform: uppercase;
     position: relative;
     z-index: 5;
+    border-bottom: 1px solid rgba(157, 153, 175, 0.15);
     
 
     &__logo {
@@ -30,7 +32,16 @@
         font-weight: 600;
         font-size: 2rem;
         line-height: 2rem;
+        cursor: pointer;
 
+        &.open {
+            .header__language-box::after {
+                transform: translateY(50%) rotate(180deg);
+            }
+            .header__language-list {
+                display: flex;
+            }
+        }
         &-box {
             display: flex;
             gap: 0.4rem;
@@ -49,6 +60,20 @@
                 -webkit-transform: translateY(50%);
                 transform: translateY(50%);
                 top: 0;
+                cursor: pointer;
+            }
+        }
+        &-list {
+            position: absolute;
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            bottom: -2.5rem;
+
+            &-box {
+                display: flex;
+                gap: 0.4rem;
+                align-items: center;
             }
         }
         &-img {

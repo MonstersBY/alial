@@ -1,5 +1,7 @@
 .gallery {
-    // padding-bottom: 14rem;
+    position: relative;
+    z-index: 10;
+    background: #FFFFFF;
 
     .container {
         width: 100%;
