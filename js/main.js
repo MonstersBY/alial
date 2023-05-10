@@ -118,6 +118,23 @@ function customPag(swiper, current, total) {
   return `<span class="swiper-pagination-current">${current}</span><span class="swiper-pagination-total">${total}</span>`
 }
 
+const header = document.querySelector('header')
+const burgerBtn = header.querySelector('.header__burger')
+
+burgerBtn.addEventListener('click', () => {
+  header.classList.toggle('active')
+})
+
+langListBox.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    for (let i = 0; i < 2; i++) {
+      langBox.append(btn.children[0])
+      btn.append(langBox.children[0])
+    }
+    lang.classList.remove('open')
+  });
+});
+
 const worldProject = [
   {
     id: 1,
@@ -163,21 +180,21 @@ const worldProject = [
   },
 ]
 
-const worldList = document.querySelector('.world__list')
-for (let i = 0; i < worldProject.length; i++) {
-  const card = document.createElement('div')
-  if (worldProject[i].mob) card.classList.add('mob')
-  card.classList.add('world__item')
-  card.innerHTML = `
-    <a href="#" class="world__name">Нефтяной завод переработки нефти</a>
-    <div class="world__circle">
-        <div class="world__circle-center"></div>
-    </div>
-  `
-  card.style.top = worldProject[i].top + 'rem'
-  card.style.left = worldProject[i].left + 'rem'
-  worldList.append(card);
-}
+// const worldList = document.querySelector('.world__list')
+// for (let i = 0; i < worldProject.length; i++) {
+//   const card = document.createElement('div')
+//   if (worldProject[i].mob) card.classList.add('mob')
+//   card.classList.add('world__item')
+//   card.innerHTML = `
+//     <a href="#" class="world__name">Нефтяной завод переработки нефти</a>
+//     <div class="world__circle">
+//         <div class="world__circle-center"></div>
+//     </div>
+//   `
+//   card.style.top = worldProject[i].top + 'rem'
+//   card.style.left = worldProject[i].left + 'rem'
+//   worldList.append(card);
+// }
 
 const lang = document.querySelector('.header__language')
 const langBox = lang.querySelector('.header__language-box')

@@ -220,7 +220,7 @@ svg {
   background: url(/img/icon/arrowdownwhite.svg) no-repeat center/100%;
   right: -2.2rem;
   -webkit-transform: translateY(50%);
-  transform: translateY(50%);
+          transform: translateY(50%);
   top: 0;
   cursor: pointer;
 }
@@ -279,6 +279,182 @@ svg {
   margin-top: -1rem;
 }
 
+@media (max-width: 48em) {
+  .header {
+    width: 100%;
+    padding-top: 4.6rem;
+    padding-bottom: 5.2rem;
+    background: #141F2B;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    position: fixed;
+    z-index: 5;
+    border-bottom: 1px solid rgba(157, 153, 175, 0.15);
+  }
+  .header__logo {
+    width: 23.9rem;
+    height: 4.6rem;
+  }
+  .header__container {
+    position: relative;
+  }
+  .header__left {
+    width: 53rem;
+  }
+  .header__language {
+    font-size: 3.2rem;
+    line-height: 4.4rem;
+  }
+  .header__language-box::after {
+    width: 4rem;
+    height: 2.2rem;
+    right: -4.2rem;
+  }
+  .header__language-list {
+    bottom: -4.5rem;
+  }
+  .header__language-img {
+    width: 3rem;
+    height: 3rem;
+    margin-top: -0.4rem;
+  }
+  .header__burger {
+    position: relative;
+    width: 8.2rem;
+    height: 4.4rem;
+  }
+  .header__burger-icon {
+    position: absolute;
+    height: 2px;
+    width: 6.4rem;
+    top: 2.2rem;
+    background-color: #FFFFFF;
+  }
+  .header__burger-icon::before {
+    -webkit-transition-duration: 0.5s;
+            transition-duration: 0.5s;
+    position: absolute;
+    height: 2px;
+    width: 5.2rem;
+    background-color: #FFFFFF;
+    content: "";
+    top: -1.6rem;
+    right: 0;
+  }
+  .header__burger-icon:after {
+    -webkit-transition-duration: 0.5s;
+            transition-duration: 0.5s;
+    position: absolute;
+    height: 2px;
+    width: 4.2rem;
+    background-color: #FFFFFF;
+    content: "";
+    top: 1.6rem;
+    right: 0;
+  }
+  .header.active {
+    position: absolute;
+  }
+  .header.active .header__right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .header__right {
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 98rem;
+    position: absolute;
+    top: 9.8rem;
+    left: 0;
+    padding-top: 12rem;
+    background-color: #FFFFFF;
+  }
+  .header__lists {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 6rem;
+    width: 100%;
+    color: #151313;
+    padding-bottom: 10.6rem;
+    padding-left: 3.6rem;
+    border-bottom: 1px solid #9D99AF;
+  }
+  .header__item {
+    font-size: 2.9rem;
+    line-height: 3.4rem;
+  }
+  .header__phone-number {
+    display: none;
+    font-family: "Proxima Nova";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.8rem;
+    line-height: 2.8rem;
+    margin-top: -1rem;
+  }
+  .header__mob-contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 6rem;
+    padding-left: 3.6rem;
+    border-bottom: 1px solid #9D99AF;
+    padding-bottom: 5.5rem;
+  }
+  .header__mob-contact strong {
+    font-family: "Proxima Nova Bold";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 130%;
+    color: #151313;
+    margin-bottom: 2.5rem;
+  }
+  .header__mob-contact span {
+    font-family: "Proxima Nova Semibold";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.9rem;
+    line-height: 140%;
+    text-transform: uppercase;
+    color: #92999D;
+  }
+  .header__mob-another {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 3.6rem;
+    margin-top: 9rem;
+  }
+  .header__mob-another span {
+    font-family: "Proxima Nova";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.7rem;
+    line-height: 140%;
+    color: #92999D;
+    text-transform: initial;
+    margin-right: 4.5rem;
+  }
+  .header__mob-img {
+    display: block;
+    width: 31.7rem;
+    height: 4.4rem;
+  }
+}
 .footer {
   background-color: #080E1A;
   color: #FFFFFF;
@@ -545,7 +721,6 @@ svg {
   top: 111rem;
 }
 .baner__btn-next {
-  top: 111rem;
   right: 27.7rem;
 }
 .baner__btn-prev {
@@ -568,6 +743,155 @@ svg {
   opacity: 1;
 }
 
+@media (max-width: 48em) {
+  .baner {
+    color: #FFFFFF;
+    height: 133.1rem;
+  }
+  .baner__container {
+    position: relative;
+    width: 100%;
+    height: 100rem;
+    margin: 0;
+    padding: 0;
+  }
+  .baner__img {
+    margin-top: 0;
+  }
+  .baner__swiper {
+    margin: 0;
+    width: 100%;
+    position: absolute;
+    top: 23.5rem;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .baner__swiper-pagination {
+    display: none;
+    top: 109rem;
+    right: 45.5rem;
+  }
+  .baner__swiper-slide-number {
+    position: absolute;
+    bottom: -20.6rem;
+    right: 3.2rem;
+    height: 10rem;
+    width: 12.9rem;
+  }
+  .baner__swiper-slide-number img {
+    width: auto;
+    height: 100%;
+  }
+  .baner__slide {
+    height: 80rem;
+    margin-left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .baner__slide-container {
+    margin-left: 3.5rem;
+  }
+  .baner__slide-title {
+    font-size: 4.9rem;
+    line-height: 130%;
+    width: 65rem;
+    margin-bottom: 0;
+  }
+  .baner__slide-info {
+    width: 71rem;
+    position: relative;
+  }
+  .baner__slide-text {
+    margin-left: 0;
+    margin-bottom: 5.5rem;
+    width: 63rem;
+    margin-top: 38rem;
+  }
+  .baner__slide-text strong {
+    font-weight: 600;
+    font-size: 2.9rem;
+    line-height: 130%;
+    margin-bottom: 2.4rem;
+  }
+  .baner__slide-text span {
+    font-size: 2.75rem;
+    line-height: 140%;
+  }
+  .baner__slide-img {
+    width: 34rem;
+    height: 16rem;
+    position: absolute;
+    left: 0;
+    top: -33.2rem;
+  }
+  .baner__slide-img img {
+    width: 100%;
+    height: 100%;
+  }
+  .baner__slide-link {
+    position: absolute;
+    width: 34rem;
+    height: 13.6rem;
+    background-color: #E01327;
+    top: -17.6rem;
+    right: 3.2rem;
+  }
+  .baner__slide-link a {
+    display: inline-block;
+    padding: 3.4rem 0 0 2.5rem;
+  }
+  .baner__slide-link a::before {
+    width: 4.2rem;
+    height: 2.2rem;
+    right: 1.5rem;
+    bottom: 3.2rem;
+  }
+  .baner__slide-link strong {
+    font-size: 2.95rem;
+    line-height: 140%;
+    margin-bottom: 0.3rem;
+  }
+  .baner__slide-link span {
+    font-size: 2.2rem;
+  }
+  .baner__btn-next, .baner__btn-prev {
+    width: 6.3rem;
+    height: 4.1rem;
+    background-image: url("/img/icon/arrowrightwhite.svg") !important;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    top: 67rem;
+  }
+  .baner__btn-next {
+    right: 0;
+    left: 23.2rem;
+  }
+  .baner__btn-prev {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    left: 11.5rem;
+  }
+  .baner .swiper-button-next:after, .baner .swiper-button-prev:after {
+    content: none;
+  }
+  .baner .swiper-pagination-bullet {
+    width: 1rem;
+    height: 1rem;
+    background: #DADFE2;
+    opacity: 0.3;
+    margin-right: 1.6rem;
+  }
+  .baner .swiper-pagination-bullet-active {
+    background: #FFFFFF;
+    opacity: 1;
+  }
+}
 .about-us {
   color: #FFFFFF;
   position: relative;
