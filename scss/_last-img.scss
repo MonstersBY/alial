@@ -1,4 +1,12 @@
 .last-img {
     height: 88.1rem;
     width: 100%;
+    position: relative;
+    z-index: -1;
+}
+@media (max-width: 48em) {
+    .last-img {
+        height: auto;
+        width: 100%;
+    }
 }

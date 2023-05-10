@@ -65,16 +65,17 @@
     </div>
 </header>
 
+<div class="lines">
+    <div class="container">
+        <div class="lines__item"></div>
+        <div class="lines__item"></div>
+        <div class="lines__item"></div>
+        <div class="lines__item"></div>
+    </div>
+</div>
+
 <main>
 
-    <!-- <div class="lines">
-        <div class="container">
-            <div class="lines__item"></div>
-            <div class="lines__item"></div>
-            <div class="lines__item"></div>
-            <div class="lines__item"></div>
-        </div>
-    </div> -->
     <section class="baner">
         <div class="container baner__container">
             <div class="baner__img desktop">
@@ -197,14 +198,14 @@
                     </div>
                     <div class="about-us__info">
                         <div class="about-us__info-num">300+</div>
-                        <div class="about-us__info-text">проектов в промышленном секторе</div>
+                        <div class="about-us__info-text">проектов<br class="mobile"> в промышленном секторе</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- <section class="gallery">
+    <section class="gallery">
         <div class="container">
             <div class="swiper-container gallery__swiper">
                 <div class="swiper-wrapper gallery__swiper-wrapper">
@@ -284,8 +285,10 @@
             <div class="gallery__man">
                 <img src="./img/gallery-men.png" alt="">
             </div>
+            <div class="swiper-button-next btn-next gallery__btn-next mobile"></div>
+            <div class="swiper-button-prev btn-prev gallery__btn-prev mobile"></div>
             <div class="swiper-pagination gallery__swiper-pagination slider-pagination"></div>
-            <div class="gallery__scroll">
+            <div class="gallery__scroll desktop">
                 <img src="./img/gallery-scroll.svg" alt="">
             </div>
         </div>
@@ -550,26 +553,20 @@
                 <div class="swiper-pagination projects__swiper-pagination slider-pagination"></div>
             </div>
         </div>
-    </section> -->
+    </section>
 
-    <!-- <section class="world">
+    <section class="world">
         <div class="container">
             <div class="world__head">
                 <div class="world__title">Наши проекты в мире</div>
                 <a href="#" class="world__head-link">Смотреть карту</a>
             </div>
-            <div class="world__list"> -->
-                <!-- <div class="world__item">
-                    <a href="#" class="world__name">Нефтяной завод переработки нефти</a>
-                    <div class="world__circle">
-                        <div class="world__circle-center"></div>
-                    </div>
-                </div> -->
-            <!-- </div>
+            <div class="world__list">
+            </div>
         </div>
-    </section> -->
+    </section>
 
-    <!-- <section class="licenses">
+    <section class="licenses">
         <div class="container">
             <div class="licenses__head">
                 <div class="licenses__title">Лицензии на продукцию</div>
@@ -666,11 +663,12 @@
         </div>
     </section>
     <section class="last-img">
-        <img src="./img/neft-back.jpg" alt="">
-    </section> -->
+        <img class="desktop" src="./img/neft-back.png" alt="">
+        <img class="mobile" src="./img/neft-back-mob.png" alt="">
+    </section>
 </main>
 
-<!-- <footer class="footer">
+<footer class="footer">
     <div class="container">
         <div class="footer__top">
             <div class="footer__top-items">
@@ -708,7 +706,7 @@
             </div>
         </div>
     </div>
-</footer> -->
+</footer>
 
 
 <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>

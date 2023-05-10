@@ -98,3 +98,84 @@
         }
     }
 }
+@media (max-width: 48em) {
+    .world {
+        background-color: #141F2B;
+        background-image: url(../img/world-back.svg);
+        background-repeat: no-repeat;
+        padding-top: 11.1rem;
+        height: 145rem;
+        background-position-y: 27rem;
+        background-position-x: -218rem;
+        background-size: inherit;
+        position: relative;
+        z-index: 5;
+    
+        &__head {
+            flex-direction: column;
+            margin-bottom: 7rem;
+
+            &-link {
+                width: fit-content;
+                font-size: 2.7rem;
+                line-height: 140%;
+                padding-right: 7.5rem;
+                margin-top: 3.5rem;
+
+                &::after {
+                    position: absolute;
+                    content: '';
+                    top: 50%;
+                    -webkit-transform: translateY(-50%);
+                    transform: translateY(-50%);
+                    right: 0;
+                    width: 4.6rem;
+                    height: 1.8rem;
+                    background-image: url(../img/icon/arrowrightred.svg);
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-position: center;
+                }
+            }
+        }
+        &__title {
+            font-size: 4rem;
+            line-height: 130%;
+        }
+        &__list {
+            position: relative;
+        }
+        &__item {
+            position: absolute;
+        }
+        &__name {
+            font-size: 2.65rem;
+            line-height: 140%;
+            width: 29rem;
+            padding: 2rem 2rem;
+    
+            &::before {
+                position: absolute;
+                content: '';
+                width: 0;
+                height: 0;
+                border-bottom: 11.415rem solid #FFFFFF;
+                border-left: 2.5em solid transparent;
+                left: -6.32rem;
+                top: 0;
+            }
+        }
+        &__circle {
+            width: 5.1rem;
+            height: 5.1rem;
+            border: 1px solid rgba(224, 19, 39, 0.8);
+            left: -10.5rem;
+            bottom: -4.5rem;
+    
+            &-center {
+                width: 2.9rem;
+                height: 2.9rem;
+            }
+        }
+    }
+}

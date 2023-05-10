@@ -23,6 +23,10 @@ sliderBaner.on('slideChange', function (x) {
 })
 
 const sliderGallery = new Swiper(".gallery__swiper", {
+  navigation: {
+    nextEl: ".gallery__btn-next",
+    prevEl: ".gallery__btn-prev",
+  },
   pagination: {
     el: ".gallery__swiper-pagination",
     type: "fraction",
@@ -49,13 +53,12 @@ function addZero(num) {
 }
 
 const sliderPartners = new Swiper(".partners__swiper", {
-  allowTouchMove: false,
   autoplay: {
     delay: 5000,
   },
   allowTouchMove: false,
-  slidesPerView: 6,
-  spaceBetween: rem(0),
+  slidesPerView: 2.5,
+  spaceBetween: rem(1.9),
   speed: 1500,
   breakpoints: {
     769: {
@@ -120,20 +123,14 @@ function customPag(swiper, current, total) {
 
 const header = document.querySelector('header')
 const burgerBtn = header.querySelector('.header__burger')
+const lines = document.querySelector('.lines')
 
 burgerBtn.addEventListener('click', () => {
   header.classList.toggle('active')
 })
-
-langListBox.forEach((btn) => {
-  btn.addEventListener('click', () => {
-    for (let i = 0; i < 2; i++) {
-      langBox.append(btn.children[0])
-      btn.append(langBox.children[0])
-    }
-    lang.classList.remove('open')
-  });
-});
+lines.addEventListener('click', () => {
+  if (header.classList.length == 2) header.classList.toggle('active')
+})
 
 const worldProject = [
   {
@@ -155,18 +152,28 @@ const worldProject = [
     id: 4,
     top: 17.3,
     left: 135.6,
-    mob: true,
+    mob: {
+      top: 27.3,
+      left: 29.6,
+    },
   },
   {
     id: 5,
     top: 31.5,
     left: 108,
+    mob: {
+      top: 50.5,
+      left: 20,
+    },
   },
   {
     id: 6,
     top: 40.5,
     left: 135.6,
-    mob: true,
+    mob: {
+      top: 76.5,
+      left: 17.6,
+    },
   },
   {
     id: 7,
@@ -180,21 +187,31 @@ const worldProject = [
   },
 ]
 
-// const worldList = document.querySelector('.world__list')
-// for (let i = 0; i < worldProject.length; i++) {
-//   const card = document.createElement('div')
-//   if (worldProject[i].mob) card.classList.add('mob')
-//   card.classList.add('world__item')
-//   card.innerHTML = `
-//     <a href="#" class="world__name">Нефтяной завод переработки нефти</a>
-//     <div class="world__circle">
-//         <div class="world__circle-center"></div>
-//     </div>
-//   `
-//   card.style.top = worldProject[i].top + 'rem'
-//   card.style.left = worldProject[i].left + 'rem'
-//   worldList.append(card);
-// }
+const worldList = document.querySelector('.world__list')
+const ScreenSize = window.innerWidth;
+for (let i = 0; i < worldProject.length; i++) {
+  if (ScreenSize <= 1635) {
+    if(worldProject[i].mob) {
+      createWorldItem(worldProject[i].mob)
+    }
+  } else {
+    createWorldItem(worldProject[i])
+  }
+}
+
+function createWorldItem (item) {
+  const card = document.createElement('div')
+  card.classList.add('world__item')
+  card.innerHTML = `
+    <a href="#" class="world__name">Нефтяной завод переработки нефти</a>
+    <div class="world__circle">
+        <div class="world__circle-center"></div>
+    </div>
+  `
+  card.style.top = item.top + 'rem'
+  card.style.left = item.left + 'rem'
+  worldList.append(card);
+}
 
 const lang = document.querySelector('.header__language')
 const langBox = lang.querySelector('.header__language-box')

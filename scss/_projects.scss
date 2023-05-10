@@ -1,5 +1,7 @@
 .projects {
     margin-bottom: 22.9rem;
+    position: relative;
+    z-index: 5;
 
     &__inner {
         position: relative;
@@ -201,91 +203,296 @@
         margin-bottom: 41vw;
         &__inner {
             &::after {
-                right: 16vw;
-                bottom: -9.5vw;
-                width: 53vw;
-                height: 0.2rem;
+                right: 15rem;
+                bottom: -2rem;
+                width: 36rem;
+                height: 0.3rem;
             }
         }
-        &__header {
-            display: block;
-            padding-bottom: 5.4vw;
-            margin-bottom: 7.2vw;
-            &-title {
-                margin-bottom: 6.3vw;
+        &__head {
+            flex-direction: column;
+            margin-bottom: 7rem;
+
+            &-link {
+                width: fit-content;
+                font-size: 2.7rem;
+                line-height: 140%;
+                padding-right: 7.5rem;
+                margin-top: 3.5rem;
+
+                &::after {
+                    position: absolute;
+                    content: '';
+                    top: 50%;
+                    -webkit-transform: translateY(-50%);
+                    transform: translateY(-50%);
+                    right: 0;
+                    width: 4.6rem;
+                    height: 1.8rem;
+                    background-image: url(../img/icon/arrowrightred.svg);
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-position: center;
+                }
             }
-            &-text {
-                font-size: 4vw;
-                line-height: 150%;
-                position: static;
-                margin-bottom: 7vw;
-            }
+        }
+        &__title {
+            font-size: 4rem;
+            line-height: 130%;
         }
         &__slide {
             display: block;
             &-name {
+                font-family: "Proxima Nova Semibold";
                 width: 100%;
-                font-size: 5.3vw;
-                margin-bottom: 3.2vw;
-                line-height: 123%;
+                font-size: 2.9rem;
+                margin-bottom: 6.5rem;
+                line-height: 140%;
             }
             &-info {
                 width: 100%;
                 display: block;
+
                 &-img {
+
                     width: 100%;
-                    height: 55vw;
-                    margin-bottom: 5.2vw;
+                    height: 37.5rem;
+                    margin-bottom: 3rem;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+
                     &-data {
-                    left: 5.3vw;
-                    top: 4.4vw;
-                    font-size: 4vw;
+                        left: 3.5rem;
+                        top: 3rem;
+                        font-size: 2.9rem;
+                        line-height: 140%;
                     }
                     &-name {
-                    left: 5.3vw;
-                    bottom: 5.8vw;
-                    font-weight: 400;
-                    font-size: 3.47vw;
-                    padding: 1.2vw 3.73vw;
-                    border-radius: 100rem;
+                        left: 5.3vw;
+                        bottom: 5.8vw;
+                        font-weight: 400;
+                        font-size: 2.6rem;
+                        line-height: 140%;
+                        padding: 1.2vw 3.73vw;
+                        border-radius: 100rem;
                     }
                 }
                 &-content {
                     width: 86%;
                     margin-top: 0;
+
                     &-item {
-                    line-height: 150%;
-                    padding-left: 18.6vw;
-                    font-size: 4.27vw;
-                    &:not(:last-child) {
-                        margin-bottom: 0.7vw;
-                    }
-                    &:nth-child(2) {
-                        margin-bottom: 0.3vw;
-                    }
-                    &::after {
-                        top: 2.5vw;
-                        width: 13.3vw;
-        
-                    }
-                    &>span {
-                        font-size: 6.4vw;
-                        line-height: 80%;
-                    }
+                        line-height: 140%;
+                        padding-left: 12.5rem;
+                        font-size: 2.75rem;
+
+                        &:not(:last-child) {
+                            margin-bottom: 2.3rem;
+                        }
+                        &:nth-child(2) {
+                            margin-bottom: 2rem;
+                        }
+                        &::after {
+                            top: 2.5vw;
+                            width: 13.3vw;
+            
+                        }
+                        &>span {
+                            font-size: 4.5rem;
+                        }
                     }
                 }
             }
         }
         &__btn-next {
-            bottom: -10.7vw;
+            bottom: -2.8rem;
+            right: -1.5rem;
+            height: auto;
+            &::after {
+                font-size: 2rem;
+            }
         }
         &__btn-prev {
-            right: 10vw;
-            bottom: -10.7vw;
+            right: 5rem;
+            top: unset;
+            bottom: -2.8rem;
+            height: auto;
+            &::after {
+                font-size: 2rem;
+            }
         }
         &__swiper-pagination {
-            left: 0.3vw;
-            bottom: -10.9vw;
+            left: 0;
+            bottom: -4rem;
+            font-size: 3rem;
+            line-height: 140%;
+
+            .swiper-pagination-total {
+                position: absolute;
+                left: 8.5rem;
+            }
+            &::after {
+                position: absolute;
+                content: "";
+                left: 3.5rem;
+                top: 1.7rem;
+                width: 2.6rem;
+                height: 1px;
+                background-color: #151313;
+            }
+        }
+    }
+}
+@media (max-width: 48em) {
+    .projects {
+        margin-bottom: 20rem;
+        &__inner {
+            &::after {
+                right: 15rem;
+                bottom: -2rem;
+                width: 36rem;
+                height: 0.3rem;
+            }
+        }
+        &__head {
+            flex-direction: column;
+            margin-bottom: 7rem;
+
+            &-link {
+                width: fit-content;
+                font-size: 2.7rem;
+                line-height: 140%;
+                padding-right: 7.5rem;
+                margin-top: 3.5rem;
+
+                &::after {
+                    position: absolute;
+                    content: '';
+                    top: 50%;
+                    -webkit-transform: translateY(-50%);
+                    transform: translateY(-50%);
+                    right: 0;
+                    width: 4.6rem;
+                    height: 1.8rem;
+                    background-image: url(../img/icon/arrowrightred.svg);
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-position: center;
+                }
+            }
+        }
+        &__title {
+            font-size: 4rem;
+            line-height: 130%;
+        }
+        &__slide {
+            display: block;
+            &-name {
+                font-family: "Proxima Nova Semibold";
+                width: 100%;
+                font-size: 2.9rem;
+                margin-bottom: 6.5rem;
+                line-height: 140%;
+            }
+            &-info {
+                width: 100%;
+                display: block;
+
+                &-img {
+
+                    width: 100%;
+                    height: 37.5rem;
+                    margin-bottom: 3rem;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+
+                    &-data {
+                        left: 3.5rem;
+                        top: 3rem;
+                        font-size: 2.9rem;
+                        line-height: 140%;
+                    }
+                    &-name {
+                        left: 5.3vw;
+                        bottom: 5.8vw;
+                        font-weight: 400;
+                        font-size: 2.6rem;
+                        line-height: 140%;
+                        padding: 1.2vw 3.73vw;
+                        border-radius: 100rem;
+                    }
+                }
+                &-content {
+                    width: 86%;
+                    margin-top: 0;
+
+                    &-item {
+                        line-height: 140%;
+                        padding-left: 12.5rem;
+                        font-size: 2.75rem;
+
+                        &:not(:last-child) {
+                            margin-bottom: 2.3rem;
+                        }
+                        &:nth-child(2) {
+                            margin-bottom: 2rem;
+                        }
+                        &::after {
+                            top: 2.5vw;
+                            width: 13.3vw;
+            
+                        }
+                        &>span {
+                            font-size: 4.5rem;
+                        }
+                    }
+                }
+            }
+        }
+        &__btn-next {
+            bottom: -2.8rem;
+            right: -1.5rem;
+            height: auto;
+            &::after {
+                font-size: 2rem;
+            }
+        }
+        &__btn-prev {
+            right: 5rem;
+            top: unset;
+            bottom: -2.8rem;
+            height: auto;
+            &::after {
+                font-size: 2rem;
+            }
+        }
+        &__swiper-pagination {
+            left: 0;
+            bottom: -4rem;
+            font-size: 3rem;
+            line-height: 140%;
+
+            .swiper-pagination-total {
+                position: absolute;
+                left: 8.5rem;
+            }
+            &::after {
+                position: absolute;
+                content: "";
+                left: 3.5rem;
+                top: 1.7rem;
+                width: 2.6rem;
+                height: 1.5px;
+                background-color: #151313;
+            }
         }
     }
 }

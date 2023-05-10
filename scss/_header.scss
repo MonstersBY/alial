@@ -6,7 +6,7 @@
     color: #FFFFFF;
     text-transform: uppercase;
     position: relative;
-    z-index: 5;
+    z-index: 10;
     border-bottom: 1px solid rgba(157, 153, 175, 0.15);
     
 
@@ -117,8 +117,6 @@
         background: #141F2B;
         color: #FFFFFF;
         text-transform: uppercase;
-        position: fixed;
-        z-index: 5;
         border-bottom: 1px solid rgba(157, 153, 175, 0.15);
         
     
@@ -164,6 +162,7 @@
                 width: 6.4rem;
                 top: 2.2rem;
                 background-color: #FFFFFF;
+                transform-origin: 0% 0%;
 
                 &::before {
                     transition-duration: 0.5s;
@@ -174,6 +173,7 @@
                     content: "";
                     top: -1.6rem;
                     right: 0;
+                    transform-origin: 0% 0%;
                 }
                 &:after {
                     transition-duration: 0.5s;
@@ -184,21 +184,40 @@
                     content: "";
                     top: 1.6rem;
                     right: 0;
+                    transform-origin: 0% 0%;
                 }
             }
         }
     
         &.active {
-            position: absolute;
+            position: relative;
 
             .header__right {
                 display: flex;
+                width: 100%;
+                padding-bottom: 11rem;
+            }
+
+            .header__burger {
+    
+                &-icon {
+                    background-color: inherit;
+    
+                    &::before {
+                        width: 6rem;
+                        transform: rotate(45deg) translate(6px, -7px);
+                    }
+                    &:after {
+                        transform: rotate(-45deg) translate(3px, 8px);
+                        width: 6rem;
+                    }
+                }
             }
         }
         &__right {
             display: none;
             flex-direction: column;
-            width: 98rem;
+            width: 100%;
             position: absolute;
             top: 9.8rem;
             left: 0;

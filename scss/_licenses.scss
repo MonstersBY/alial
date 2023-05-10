@@ -1,6 +1,8 @@
 .licenses {
     margin-top: 17rem;
     height: 74.5rem;
+    position: relative;
+    z-index: 5;
 
     .container {
         position: relative;
@@ -102,5 +104,93 @@
         width: auto;
         background-color: #151313;
         margin: 5rem 6.8rem 0;
+    }
+}
+
+@media (max-width: 48em) {
+    .licenses {
+        margin-top: 17rem;
+        height: 74.5rem;
+        margin-bottom: 7rem;
+    
+        .container {
+            position: relative;
+        }
+        &__head {
+            flex-direction: column;
+            margin-bottom: 7rem;
+
+            &-link {
+                width: fit-content;
+                font-size: 2.7rem;
+                line-height: 140%;
+                padding-right: 7.5rem;
+                margin-top: 3.5rem;
+
+                &::after {
+                    position: absolute;
+                    content: '';
+                    top: 50%;
+                    -webkit-transform: translateY(-50%);
+                    transform: translateY(-50%);
+                    right: 0;
+                    width: 4.6rem;
+                    height: 1.8rem;
+                    background-image: url(../img/icon/arrowrightred.svg);
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-position: center;
+                }
+            }
+        }
+        &__title {
+            font-size: 4rem;
+            line-height: 130%;
+        }
+        &__img {
+            width: 32rem;
+            height: 38.6rem;
+        }
+        &__btn-next {
+            bottom: -0.8rem;
+            right: 2rem;
+            height: auto;
+            &::after {
+                font-size: 2rem;
+            }
+        }
+        &__btn-prev {
+            right: 8.5rem;
+            bottom: -0.8rem;
+            height: auto;
+            &::after {
+                font-size: 2rem;
+            }
+        }
+        &__swiper-pagination {
+            left: 3rem;
+            bottom: -2rem;
+            font-size: 3rem;
+            line-height: 140%;
+
+            .swiper-pagination-total {
+                position: absolute;
+                left: 8.5rem;
+            }
+            &::after {
+                position: absolute;
+                content: "";
+                left: 3.5rem;
+                top: 1.7rem;
+                width: 2.6rem;
+                height: 1.5px;
+                background-color: #151313;
+            }
+        }
+        &__line {
+            width: 36rem;
+            background-color: #151313;
+            margin: 5.5rem 16.8rem 0;
+        }
     }
 }

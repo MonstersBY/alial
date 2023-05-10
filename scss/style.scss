@@ -16,6 +16,10 @@
 @import "licenses";
 @import "last-img";
 
+body {
+  position: relative;
+  background-color: #F1F4F5;
+}
 @media (min-width: 48.01em) {
   .mobile {
     display: none;
@@ -25,5 +29,8 @@
 @media (max-width: 48em) {
   .desktop {
     display: none;
+  }
+  .container {
+    padding: 0 3.6rem;
   }
 }

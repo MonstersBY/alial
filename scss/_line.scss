@@ -1,9 +1,10 @@
 .lines {
-    position: fixed;
-    height: -webkit-fill-available;;
+    position: absolute;
+    height: 98.95%;
     z-index: 4;
     left: 0;
     right: 0;
+
 
     .container {
         display: flex;
@@ -29,6 +30,46 @@
         }
         &:last-child {
             border-right: 1px solid rgba(157, 153, 175, 0.25);
+        }
+    }
+}
+
+@media (max-width: 48em) {
+    .lines {
+        position: absolute;
+        height: 99.18%;
+        z-index: 4;
+        left: 0;
+        right: 0;
+    
+    
+        .container {
+            display: flex;
+            height: 100%;
+        }
+        &__item {
+            width: 25%;
+            height: 100%;
+            flex-grow: 1;
+            border-left: 1px solid rgba(157, 153, 175, 0.25);
+    
+            &:nth-child(1) {
+                width: 41.2rem;
+            }
+            &:nth-child(2) {
+                display: none;
+                width: 42.6rem;
+            }
+            &:nth-child(3) {
+                display: none;
+                width: 42.7rem;
+            }
+            &:nth-child(4) {
+                width: 41.6rem;
+            }
+            &:last-child {
+                border-right: 1px solid rgba(157, 153, 175, 0.25);
+            }
         }
     }
 }
