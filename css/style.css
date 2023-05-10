@@ -362,7 +362,7 @@ svg {
 
 .lines {
   position: fixed;
-  height: -webkit-fill-available;
+  height: 200%;
   z-index: 4;
   left: 0;
   right: 0;
@@ -444,7 +444,6 @@ svg {
 }
 .baner__slide {
   height: 80rem;
-  margin-left: 12rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -452,6 +451,9 @@ svg {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+.baner__slide-container {
+  margin-left: 12rem;
 }
 .baner__slide-title {
   font-family: "Proxima Nova Semibold";
@@ -490,7 +492,7 @@ svg {
   display: block;
 }
 .baner__slide-img {
-  width: 41.3rem;
+  width: 41.2rem;
   height: 16rem;
   position: absolute;
   left: 0;

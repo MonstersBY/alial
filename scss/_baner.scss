@@ -41,9 +41,12 @@
     }
     &__slide {
         height: 80rem;
-        margin-left: 12rem;
         display: flex;
         flex-direction: column;
+
+        &-container {
+            margin-left: 12rem;
+        }
 
         &-title {
             font-family: 'Proxima Nova Semibold';
@@ -86,7 +89,7 @@
         }
 
         &-img {
-            width: 41.3rem;
+            width: 41.2rem;
             height: 16rem;
             position: absolute;
             left: 0;
