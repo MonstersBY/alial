@@ -851,7 +851,7 @@ svg {
   display: block;
 }
 .baner__slide-img {
-  width: 41.3rem;
+  width: 41.2rem;
   height: 16rem;
   position: absolute;
   left: 0;
@@ -2910,10 +2910,10 @@ svg {
   content: "";
   width: 0;
   height: 0;
-  border-bottom: 6.4rem solid #FFFFFF;
+  border-bottom: 6.481rem solid #FFFFFF;
   border-left: 3.5rem solid transparent;
-  left: -3.5rem;
-  top: 0;
+  left: -3.4rem;
+  bottom: 0;
 }
 .world__circle {
   position: absolute;
