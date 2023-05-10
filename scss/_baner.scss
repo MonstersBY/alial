@@ -112,7 +112,7 @@
                     content: '';
                     width: 3.6rem;
                     height: 1.2rem;
-                    background-image: url(/img/icon/arrowrightwhite.svg);
+                    background-image: url(../img/icon/arrowrightwhite.svg);
                     background-repeat: no-repeat;
                     background-size: 100% 100%;
                     right: 3rem;
@@ -146,7 +146,7 @@
     &__btn-next, &__btn-prev {
         width: 3.3rem;
         height: 1.1rem;
-        background-image: url("/img/icon/arrowrightwhite.svg") !important;
+        background-image: url(../img/icon/arrowrightwhite.svg) !important;
         background-repeat: no-repeat;
         background-size: 100% 100%;
         top: 111rem;
