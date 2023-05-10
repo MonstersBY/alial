@@ -37,6 +37,9 @@
                 </div>
             </div>
         </div>
+        <div class="header__burger">
+            <div class="header__burger-icon"></div>
+        </div>
         <div class="header__right">
             <ul class="header__lists">
                 <li class="header__item"><a href="#">о компании</a></li>
@@ -47,25 +50,39 @@
                 <li class="header__item"><a href="#">карьера</a></li>
                 <li class="header__item"><a href="#">контакты</a></li>
             </ul>
+            <div class="header__mob mobile">
+                <div class="header__mob-contact">
+                    <strong>+ 7 (495) 532-03-79</strong>
+                    <span>info@alialmash.ru</span>
+                </div>
+                <div class="header__mob-another">
+                    <span>Смотрите также:</span>
+                    <a class="header__mob-img" href=""><img src="./img/logo-tech.png" alt=""></a>
+                </div>
+            </div>
         </div>
         <div class="header__phone-number">+ 7 (495) 532-03-79</div>
     </div>
 </header>
 
+<div class="lines">
+    <div class="container">
+        <div class="lines__item"></div>
+        <div class="lines__item"></div>
+        <div class="lines__item"></div>
+        <div class="lines__item"></div>
+    </div>
+</div>
+
 <main>
 
-    <div class="lines">
-        <div class="container">
-            <div class="lines__item"></div>
-            <div class="lines__item"></div>
-            <div class="lines__item"></div>
-            <div class="lines__item"></div>
-        </div>
-    </div>
     <section class="baner">
         <div class="container baner__container">
-            <div class="baner__img">
+            <div class="baner__img desktop">
                 <img src="img/baner1-desc.png" alt="">
+            </div>
+            <div class="baner__img mobile">
+                <img src="img/baner-mob.png" alt="">
             </div>
             <div class="swiper-container baner__swiper">
                 <div class="swiper-wrapper">
@@ -181,7 +198,7 @@
                     </div>
                     <div class="about-us__info">
                         <div class="about-us__info-num">300+</div>
-                        <div class="about-us__info-text">проектов в промышленном секторе</div>
+                        <div class="about-us__info-text">проектов<br class="mobile"> в промышленном секторе</div>
                     </div>
                 </div>
             </div>
@@ -268,8 +285,10 @@
             <div class="gallery__man">
                 <img src="./img/gallery-men.png" alt="">
             </div>
+            <div class="swiper-button-next btn-next gallery__btn-next mobile"></div>
+            <div class="swiper-button-prev btn-prev gallery__btn-prev mobile"></div>
             <div class="swiper-pagination gallery__swiper-pagination slider-pagination"></div>
-            <div class="gallery__scroll">
+            <div class="gallery__scroll desktop">
                 <img src="./img/gallery-scroll.svg" alt="">
             </div>
         </div>
@@ -543,12 +562,6 @@
                 <a href="#" class="world__head-link">Смотреть карту</a>
             </div>
             <div class="world__list">
-                <!-- <div class="world__item">
-                    <a href="#" class="world__name">Нефтяной завод переработки нефти</a>
-                    <div class="world__circle">
-                        <div class="world__circle-center"></div>
-                    </div>
-                </div> -->
             </div>
         </div>
     </section>
@@ -650,7 +663,8 @@
         </div>
     </section>
     <section class="last-img">
-        <img src="./img/neft-back.jpg" alt="">
+        <img class="desktop" src="./img/neft-back.png" alt="">
+        <img class="mobile" src="./img/neft-back-mob.png" alt="">
     </section>
 </main>
 

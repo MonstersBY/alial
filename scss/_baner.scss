@@ -17,6 +17,7 @@
         position: absolute;
         top: 50.5rem;
         height: fit-content;
+        z-index: 5;
 
         &-pagination {
             top: 109rem;
@@ -45,7 +46,7 @@
         flex-direction: column;
 
         &-container {
-            margin-left: 12rem;
+            margin-left: 11.1rem;
         }
 
         &-title {
@@ -98,14 +99,18 @@
 
         &-link {
             width: 34.8rem;
-            height: 11.1rem;
+            height: auto;
             background-color: #E01327;
             margin-left: auto;
             position: relative;
+            z-index: 10;
+            cursor: pointer;
 
             a {
                 display: inline-block;
-                padding: 3rem 0 2rem 4rem;
+                padding: 3rem 10.5rem 2rem 4rem;
+                position: relative;
+                z-index: 5;
 
                 &::before {
                     position: absolute;
@@ -152,7 +157,6 @@
         top: 111rem;
     }
     &__btn-next {
-        top: 111rem;
         right: 27.7rem;
     }
     &__btn-prev {
@@ -174,5 +178,167 @@
     .swiper-pagination-bullet-active {
         background: #FFFFFF;
         opacity: 1;
+    }
+}
+
+@media (max-width: 48em) {
+    .baner {
+        color: #FFFFFF;
+        height: 133.1rem;
+        margin-bottom: 9rem;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 88.35%, #000000 100%), linear-gradient(0deg, rgba(211, 102, 113, 0.05), rgba(211, 102, 113, 0.05)), linear-gradient(0deg, rgba(9, 9, 11, 0.3), rgba(9, 9, 11, 0.3));
+
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100rem;
+            margin: 0;
+            padding: 0;
+        }
+        &__img {
+            margin-top: -14rem;
+        }
+        &__swiper {
+            margin: 0;
+            width: 100%;
+            position: absolute;
+            top: 23.5rem;
+            height: fit-content;
+    
+            &-pagination {
+                display: none;
+                top: 109rem;
+                right: 45.5rem;
+            }
+            &-slide-number {
+                position: absolute;
+                bottom: -20.6rem;
+                right: 3.2rem;
+                height: 10rem;
+                width: 12.9rem;
+    
+                img {
+                    width: auto;
+                    height: 100%;
+                }
+            }
+        }
+        &__slide {
+            height: 80rem;
+            margin-left: 0;
+            display: flex;
+            flex-direction: column;
+    
+            &-container {
+                margin-left: 3.5rem;
+            }
+            &-title {
+                font-size: 4.9rem;
+                line-height: 130%;
+                width: 65rem;
+                margin-bottom: 0;
+            }
+    
+            &-info {
+                width: 71rem;
+                position: relative;
+            }
+    
+            &-text {
+                margin-left: 0;
+                margin-bottom: 5.5rem;
+                width: 63rem;
+                margin-top: 38rem;
+    
+                strong {
+                    font-weight: 600;
+                    font-size: 2.9rem;
+                    line-height: 130%;
+                    margin-bottom: 2.4rem;
+                }
+                span {
+                    font-size: 2.75rem;
+                    line-height: 140%;
+                }
+            }
+    
+            &-img {
+                width: 34rem;
+                height: 16rem;
+                position: absolute;
+                left: 0;
+                top: -33.2rem;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+    
+            &-link {
+                position: absolute;
+                width: 34rem;
+                height: 13.6rem;
+                background-color: #E01327;
+                top: -17.6rem;
+                right: 3.2rem;
+    
+                a {
+                    display: inline-block;
+                    padding: 3.4rem 0 0 2.5rem;
+    
+                    &::before {
+                        width: 4.2rem;
+                        height: 2.2rem;
+                        right: -2.5rem;
+                        bottom: 0.5rem;
+                    }
+                }
+                
+                strong {
+                    font-size: 2.95rem;
+                    line-height: 140%;
+                    margin-bottom: 0.3rem;
+                }
+    
+                span {
+                    font-size: 2.2rem;
+                }
+    
+            }
+        }
+    
+        &__btn-next, &__btn-prev {
+            width: 6.3rem;
+            height: 4.1rem;
+            background-image: url(../img/icon/arrowrightwhite.svg) !important;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            top: 67rem;
+        }
+        &__btn-next {
+            right: 0;
+            left: 23.2rem;
+        }
+        &__btn-prev {
+            transform: rotate(180deg);
+            left: 11.5rem;
+        }
+        .swiper-button-next:after, .swiper-button-prev:after {
+            content: none;
+        }
+    
+        
+        .swiper-pagination-bullet {
+            width: 1rem;
+            height: 1rem;
+            background: #DADFE2;
+            opacity: 0.3;
+            margin-right: 1.6rem;
+        }
+        .swiper-pagination-bullet-active {
+            background: #FFFFFF;
+            opacity: 1;
+        }
     }
 }
