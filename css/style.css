@@ -217,7 +217,7 @@ svg {
   display: block;
   -webkit-transition: 0.2s ease-in;
   transition: 0.2s ease-in;
-  background: url(/img/icon/arrowdownwhite.svg) no-repeat center/100%;
+  background: url(../img/icon/arrowdownwhite.svg) no-repeat center/100%;
   right: -2.2rem;
   -webkit-transform: translateY(50%);
           transform: translateY(50%);
@@ -688,7 +688,7 @@ svg {
   content: "";
   width: 3.6rem;
   height: 1.2rem;
-  background-image: url(/img/icon/arrowrightwhite.svg);
+  background-image: url(../img/icon/arrowrightwhite.svg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   right: 3rem;
@@ -1034,7 +1034,7 @@ svg {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-image: url(/img/gallery-background1.svg);
+  background-image: url(../img/gallery-background1.svg);
   background-repeat: no-repeat;
   background-position: left top 8.2rem;
   background-size: auto 61.7rem;
@@ -1184,7 +1184,7 @@ svg {
   right: 0;
   width: 3.6rem;
   height: 1.2rem;
-  background-image: url(/img/icon/arrowrightred.svg);
+  background-image: url(../img/icon/arrowrightred.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -1233,7 +1233,7 @@ svg {
   right: 0;
   width: 3.6rem;
   height: 1.2rem;
-  background-image: url(/img/icon/arrowrightred.svg);
+  background-image: url(../img/icon/arrowrightred.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -1360,7 +1360,7 @@ svg {
   right: 0;
   width: 3.6rem;
   height: 1.2rem;
-  background-image: url(/img/icon/arrowrightred.svg);
+  background-image: url(../img/icon/arrowrightred.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -1576,7 +1576,7 @@ svg {
   right: 0;
   width: 3.6rem;
   height: 1.2rem;
-  background-image: url(/img/icon/arrowrightred.svg);
+  background-image: url(../img/icon/arrowrightred.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -1831,7 +1831,7 @@ svg {
 }
 .world {
   background-color: #141F2B;
-  background-image: url(/img/world-back.svg);
+  background-image: url(../img/world-back.svg);
   background-repeat: no-repeat;
   padding-top: 9.1rem;
   height: 90rem;
@@ -1870,7 +1870,7 @@ svg {
   right: 0;
   width: 3.6rem;
   height: 1.2rem;
-  background-image: url(/img/icon/arrowrightred.svg);
+  background-image: url(../img/icon/arrowrightred.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -1968,7 +1968,7 @@ svg {
   right: 0;
   width: 3.6rem;
   height: 1.2rem;
-  background-image: url(/img/icon/arrowrightred.svg);
+  background-image: url(../img/icon/arrowrightred.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
