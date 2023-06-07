@@ -7,6 +7,7 @@
         position: relative;
         height: 84rem;
         background-color: #F1F4F5;
+        margin: 0 auto;
     }
 
     &__slide {
@@ -16,10 +17,12 @@
     }
     .lines {
         z-index: 1;
+        width: 192rem;
 
         .container {
             height: 30rem;
             background: #141F2B;
+            margin: 0;
         }
         &__item:nth-child(1) {
             margin-left: 12rem;

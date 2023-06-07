@@ -100,7 +100,8 @@ ul li {
 
 .container {
     width: 168rem;;
-    margin: 0 auto;
+    // margin: 0 auto;
+    margin: 0 12rem;
 }
 
 input[type="number"]::-webkit-inner-spin-button,
@@ -132,5 +133,6 @@ svg {
     .container {
         padding: 0 3rem; // в моб версии отступ от края задаем для всех контейнеров, а там где не нужно можем точечно убрать
         width: 100%;
+        margin: 0 auto;
     }
 }

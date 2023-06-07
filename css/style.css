@@ -112,7 +112,7 @@ ul li {
 
 .container {
   width: 168rem;
-  margin: 0 auto;
+  margin: 0 12rem;
 }
 
 input[type=number]::-webkit-inner-spin-button,
@@ -142,6 +142,7 @@ svg {
   .container {
     padding: 0 3rem;
     width: 100%;
+    margin: 0 auto;
   }
 }
 .header {
@@ -690,6 +691,7 @@ svg {
   display: -ms-flexbox;
   display: flex;
   height: 100%;
+  margin: 0 12rem;
 }
 .lines__item {
   width: 25%;
@@ -728,6 +730,7 @@ svg {
     display: -ms-flexbox;
     display: flex;
     height: 100%;
+    margin: 0 auto;
   }
   .lines__item {
     width: 25%;
@@ -1320,6 +1323,7 @@ svg {
   position: relative;
   height: 84rem;
   background-color: #F1F4F5;
+  margin: 0 auto;
 }
 .gallery__slide {
   display: -webkit-box;
@@ -1332,10 +1336,12 @@ svg {
 }
 .gallery .lines {
   z-index: 1;
+  width: 192rem;
 }
 .gallery .lines .container {
   height: 30rem;
   background: #141F2B;
+  margin: 0;
 }
 .gallery .lines__item:nth-child(1) {
   margin-left: 12rem;
@@ -1693,9 +1699,12 @@ svg {
   gap: 3rem;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .categories__item {
-  width: 39.75rem;
+  width: 39.65rem;
   margin-bottom: 1rem;
 }
 .categories__item-img {
@@ -2267,6 +2276,7 @@ svg {
 }
 .partners .container {
   width: 100%;
+  margin: 0 auto;
 }
 .partners__head {
   display: -webkit-box;

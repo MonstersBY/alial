@@ -47,9 +47,10 @@
         display: flex;
         gap: 3rem;
         flex-wrap: wrap;
+        justify-content: space-between;
     }
     &__item {
-        width: 39.75rem;
+        width: 39.65rem;
         margin-bottom: 1rem;
 
         &-img {

@@ -9,6 +9,7 @@
     .container {
         display: flex;
         height: 100%;
+        margin: 0 12rem;
     }
     &__item {
         width: 25%;
@@ -46,6 +47,7 @@
         .container {
             display: flex;
             height: 100%;
+            margin: 0 auto;
         }
         &__item {
             width: 25%;
