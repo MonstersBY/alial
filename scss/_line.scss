@@ -14,7 +14,7 @@
         width: 25%;
         height: 100%;
         flex-grow: 1;
-        border-left: 1px solid rgba(157, 153, 175, 0.25);
+        border-left: 1px solid rgba(157, 153, 175, 0.15);
 
         &:nth-child(1) {
             width: 41.2rem;
@@ -29,7 +29,7 @@
             width: 41rem;
         }
         &:last-child {
-            border-right: 1px solid rgba(157, 153, 175, 0.25);
+            border-right: 1px solid rgba(157, 153, 175, 0.15);
         }
     }
 }

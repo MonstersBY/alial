@@ -697,7 +697,7 @@ svg {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  border-left: 1px solid rgba(157, 153, 175, 0.25);
+  border-left: 1px solid rgba(157, 153, 175, 0.15);
 }
 .lines__item:nth-child(1) {
   width: 41.2rem;
@@ -712,7 +712,7 @@ svg {
   width: 41rem;
 }
 .lines__item:last-child {
-  border-right: 1px solid rgba(157, 153, 175, 0.25);
+  border-right: 1px solid rgba(157, 153, 175, 0.15);
 }
 
 @media (max-width: 48em) {
@@ -812,7 +812,7 @@ svg {
           flex-direction: column;
 }
 .baner__slide-container {
-  margin-left: 11.1rem;
+  margin-left: 12rem;
 }
 .baner__slide-title {
   font-family: "Proxima Nova Semibold";
@@ -1330,15 +1330,18 @@ svg {
           align-items: center;
   height: 66.7rem;
 }
-.gallery__swiper::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: -29rem;
-  left: 0;
-  background-color: #141F2B;
-  height: 100%;
-  width: 100%;
+.gallery .lines {
+  z-index: 1;
+}
+.gallery .lines .container {
+  height: 30rem;
+  background: #141F2B;
+}
+.gallery .lines__item:nth-child(1) {
+  margin-left: 12rem;
+}
+.gallery .lines__item:last-child {
+  margin-right: 12rem;
 }
 .gallery__swiper-wrapper {
   position: relative;
@@ -1489,6 +1492,19 @@ svg {
         -ms-flex-align: baseline;
             align-items: baseline;
     height: 100%;
+  }
+  .gallery .lines {
+    display: none;
+  }
+  .gallery .lines .container {
+    height: 30rem;
+    background: #141F2B;
+  }
+  .gallery .lines__item:nth-child(1) {
+    margin-left: 12rem;
+  }
+  .gallery .lines__item:last-child {
+    margin-right: 12rem;
   }
   .gallery__swiper {
     -webkit-box-shadow: 10px 7px 10px rgba(0, 0, 0, 0.08);

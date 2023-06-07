@@ -34,9 +34,9 @@ const sliderGallery = new Swiper(".gallery__swiper", {
     formatFractionTotal: addZero,
   },
   allowTouchMove: false,
-  autoplay: {
-    delay: 5000,
-  },
+  // autoplay: {
+  //   delay: 5000,
+  // },
   slidesPerView: 1,
   spaceBetween: rem(0),
   speed: 1500,
