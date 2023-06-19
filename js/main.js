@@ -53,8 +53,17 @@ const sliderGallery = new Swiper(".gallery__swiper", {
       slidesPerView: 1,
       spaceBetween: rem(0),
       speed: 1500,
+      autoplay: {
+        delay: 5000,
+      },
     }
   },
+  slidesPerView: "auto",
+  freeMode: true,
+  scrollbar: {
+    el: ".swiper-scrollbar",
+  },
+  mousewheel: true,
 })
 function addZero(num) {
   return (num > 9) ? num : '0' + num
