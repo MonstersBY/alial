@@ -1,26 +1,34 @@
-const sliderBaner = new Swiper(".baner__swiper", {
-    navigation: {
+var sliderBaner = new Swiper(".baner__swiper", {
+  loop: false,
+  effect: 'fade',
+  slidesPerView: 1,
+  freeMode: true,
+  slideActiveClass: 'active',
+  loopedSlides: 8,
+  autoplay: {
+      delay: 8000,
+      disableOnInteraction: false
+  },
+  speed: 0,
+  // loopedSlides: 6,
+  pagination: {
+      el: ".baner__swiper-pagination",
+  },
+  navigation: {
       nextEl: ".baner__btn-next",
       prevEl: ".baner__btn-prev",
-    },
-    pagination: {
-      el: ".baner__swiper-pagination",
-    },
-    allowTouchMove: false,
-    slidesPerView: 1,
-    spaceBetween: rem(0),
-    speed: 1500,
-    breakpoints: {
-      769: {
-        slidesPerView: 1,
-        spaceBetween: rem(0),
-        speed: 1500,
-      }
-    },
-})
+  },
+});
+$('.baner__swiper-slide-number').children('img').addClass('active')
 sliderBaner.on('slideChange', function (x) {
   document.querySelector('.baner__swiper-slide-number').innerHTML = `<img src="./img/icon/slide-num/${(x.activeIndex+1)}.svg" alt="">`
+  setTimeout(()=>{
+    $('.baner__swiper-slide-number').children('img').addClass('active')
+  }, 1)
 })
+if (document.querySelector('.main-slider')) {
+  setTimeout(() => { mainSlider.update() }, 100)
+}
 
 const sliderGallery = new Swiper(".gallery__swiper", {
   navigation: {
@@ -34,9 +42,9 @@ const sliderGallery = new Swiper(".gallery__swiper", {
     formatFractionTotal: addZero,
   },
   allowTouchMove: false,
-  // autoplay: {
-  //   delay: 5000,
-  // },
+  autoplay: {
+    delay: 5000,
+  },
   slidesPerView: 1,
   spaceBetween: rem(0),
   speed: 1500,
@@ -190,7 +198,8 @@ const worldProject = [
 const worldList = document.querySelector('.world__list')
 const ScreenSize = window.innerWidth;
 for (let i = 0; i < worldProject.length; i++) {
-  if (ScreenSize <= 1635) {
+  console.log(window.innerWidth)
+  if (ScreenSize <= 768) {
     if(worldProject[i].mob) {
       createWorldItem(worldProject[i].mob)
     }
@@ -229,3 +238,12 @@ langListBox.forEach((btn) => {
     lang.classList.remove('open')
   });
 });
+
+wow = new WOW({
+  boxClass:     'wow',
+  animateClass: 'animate__animated',
+  offset:       100,
+  mobile:       true,
+  live:         true
+})
+wow.init();
