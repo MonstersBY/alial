@@ -23,6 +23,9 @@ body {
   position: relative;
   background-color: #F1F4F5;
 }
+:root {
+  --animate-duration: 2s;
+}
 @media (min-width: 48.01em) {
   .mobile {
     display: none;
