@@ -1,38 +1,54 @@
 .baner {
     color: #FFFFFF;
-    height: 133.1rem;
+    height: auto;
+    margin-bottom: -1rem;
 
     &__container {
         position: relative;
         width: 100%;
-        height: 100rem;
+        height: auto;
         margin: 0;
+        margin-top: -0.5rem;
     }
     &__img {
-        margin-top: -35.5rem;
+        margin-top: 0;
+        position: absolute;
+        z-index: -1;
     }
     &__swiper {
         margin: 0;
         width: 100%;
-        position: absolute;
-        top: 50.5rem;
+        position: relative;
+        top: 0;
         height: fit-content;
         z-index: 5;
+        padding-bottom: 14rem;
 
         &-pagination {
-            top: 109rem;
-            right: 45.5rem;
+            &.swiper-pagination-horizontal {
+                bottom: 19.2rem;
+                right: 46.8rem;
+                width: fit-content;
+                left: auto;
+                display: flex;
+                gap: 1.6rem;
+
+                .swiper-pagination-bullet {
+                    margin: 0;
+                }
+            }
         }
         &-slide-number {
             position: absolute;
-            bottom: -10.3rem;
-            right: 6.2rem;
+            bottom: 19.7rem;
+            right: 20rem;
             display: flex;
             justify-content: flex-start;
             font-size: 15rem;
             font-weight: bold;
             height: 11rem;
             width: 17.9rem;
+            z-index: 5;
             
             img {
                 width: auto;
@@ -59,17 +75,17 @@
         transition-timing-function: unset !important;
 
         &-container {
-            margin-left: 12rem;
+            margin-left: 25rem;
+            padding-top: 15.2rem;
         }
 
         &-title {
-            font-family: 'Proxima Nova Semibold';
-            font-style: normal;
-            font-weight: 700;
             font-size: 5.5rem;
-            line-height: 110%;
-            width: 70rem;
-            margin-bottom: 7.5rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            width: 71.3rem;
+            margin-bottom: 5.5rem;
             opacity: 0;
         }
 
@@ -81,24 +97,21 @@
         &-text {
             margin-left: auto;
             margin-bottom: 5.5rem;
-            width: 28.8rem;
+            width: 27.8rem;
             opacity: 0;
 
             strong {
-                font-family: 'Proxima Nova Semibold';
+                font-size: 1.8rem;
                 font-style: normal;
                 font-weight: 600;
-                font-size: 2rem;
-                line-height: 2rem;
-                text-transform: uppercase;
+                line-height: 150%;
                 display: block;
                 margin-bottom: 2.4rem;
             }
             span {
-                font-family: 'Proxima Nova';
-                font-style: normal;
-                font-weight: 400;
                 font-size: 1.8rem;
+                font-style: normal;
+                font-weight: 300;
                 line-height: 150%;
                 display: block;
             }
@@ -107,7 +120,7 @@
             z-index: 2 !important;
 
             .baner__slide-img {
-                width: 41.2rem;
+                width: 41.3rem;
                 opacity: 1;
             }
             .baner__slide-link {
@@ -125,7 +138,7 @@
             height: 16rem;
             position: absolute;
             left: 0;
-            top: 12.8rem;
+            top: 16rem;
             opacity: 0;
             transition: width 2s;
 
@@ -139,19 +152,17 @@
             width: 0;
             height: auto;
             background-color: #E01327;
-            // margin-left: auto;
-            margin-left: 41.5rem;
+            margin-left: 41.3rem;
             position: relative;
             z-index: 10;
             cursor: pointer;
-            overflow: hidden;
             opacity: 0;
             transition: width 2s;
             white-space: nowrap;
 
             a {
                 display: inline-block;
-                padding: 3rem 10.5rem 2rem 4rem;
+                padding: 2.5rem 9.9rem 2.5rem 3.2rem;
                 position: relative;
                 z-index: 5;
 
@@ -162,25 +173,22 @@
                     height: 1.2rem;
                     background-image: url(../img/icon/arrowrightwhite.svg);
                     background-repeat: no-repeat;
-                    background-size: 100% 100%;
-                    right: 3rem;
-                    bottom: 2.7rem;
+                    background-size: cover;
+                    right: 3.2rem;
+                    bottom: 3.25rem;
                 }
             }
             
             strong {
-                font-family: 'Proxima Nova Semibold';
-                font-style: normal;
-                font-weight: 600;
                 font-size: 2rem;
-                line-height: 2rem;
-                text-transform: uppercase;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
                 display: block;
                 margin-bottom: 1.3rem;
             }
 
             span {
-                font-family: 'Proxima Nova';
                 font-style: normal;
                 font-weight: 300;
                 font-size: 1.8rem;
@@ -206,6 +214,9 @@
         transform: rotate(180deg);
         left: 154.5rem;
     }
+    .swiper-button-next, .swiper-button-prev {
+        display: none;
+    }
     .swiper-button-next:after, .swiper-button-prev:after {
         content: none;
     }
@@ -227,8 +238,10 @@
 @media (max-width: 48em) {
     .baner {
         color: #FFFFFF;
-        height: 133.1rem;
-        margin-bottom: 9rem;
+        height: 155rem;
+        margin-bottom: 0;
+        position: relative;
+        z-index: 0;
         background: linear-gradient(180deg, rgba(0, 0, 0, 0) 88.35%, #000000 100%), linear-gradient(0deg, rgba(211, 102, 113, 0.05), rgba(211, 102, 113, 0.05)), linear-gradient(0deg, rgba(9, 9, 11, 0.3), rgba(9, 9, 11, 0.3));
 
         .container {
@@ -237,25 +250,39 @@
             height: 100rem;
             margin: 0;
             padding: 0;
+            top: -16.2rem;
         }
         &__img {
-            margin-top: -14rem;
+            width: 82.8rem;
+            height: 160.2rem;
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
         }
         &__swiper {
             margin: 0;
             width: 100%;
-            position: absolute;
-            top: 23.5rem;
             height: fit-content;
+            padding-top: 11rem;
     
             &-pagination {
-                display: none;
-                top: 109rem;
-                right: 45.5rem;
+
+                &.swiper-pagination-horizontal {
+                    top: 52rem;
+                    right: 16rem;
+                    gap: 3.2rem;
+
+                    .swiper-pagination-bullet {
+
+                    }
+                }
             }
             &-slide-number {
                 position: absolute;
-                bottom: -20.6rem;
+                bottom: -38.6rem;
                 right: 3.2rem;
                 height: 10rem;
                 width: 12.9rem;
@@ -273,44 +300,61 @@
             flex-direction: column;
     
             &-container {
-                margin-left: 3.5rem;
+                padding: 15.2rem 4rem 0;
+                margin: 0;
             }
             &-title {
-                font-size: 4.9rem;
+                font-size: 5.4rem;
                 line-height: 130%;
-                width: 65rem;
+                width: auto;
                 margin-bottom: 0;
             }
     
             &-info {
-                width: 71rem;
+                width: auto;
                 position: relative;
             }
     
             &-text {
                 margin-left: 0;
                 margin-bottom: 5.5rem;
-                width: 63rem;
-                margin-top: 38rem;
+                width: auto;
+                margin-top: 48rem;
     
                 strong {
                     font-weight: 600;
-                    font-size: 2.9rem;
-                    line-height: 130%;
+                    font-size: 3.2rem;
+                    line-height: 140%;
                     margin-bottom: 2.4rem;
                 }
                 span {
-                    font-size: 2.75rem;
+                    font-size: 3.2rem;
+                    font-style: normal;
+                    font-weight: 300;
                     line-height: 140%;
+                }
+            }
+            &.active {
+                z-index: 2 !important;
+    
+                .baner__slide-img {
+                    width: 37.4rem;
+                }
+                .baner__slide-link {
+                    width: 37.4rem;
+                }
+                .baner__slide-title, .baner__slide-text {
+                    opacity: 1;
+                    transition: opacity 1800ms;
                 }
             }
     
             &-img {
-                width: 34rem;
-                height: 16rem;
+                width: 0;
+                height: 17.4rem;
                 position: absolute;
                 left: 0;
-                top: -33.2rem;
+                top: -43rem;
 
                 img {
                     width: 100%;
@@ -320,32 +364,37 @@
     
             &-link {
                 position: absolute;
-                width: 34rem;
-                height: 13.6rem;
+                width: 0;
+                height: 20.6rem;
                 background-color: #E01327;
-                top: -17.6rem;
-                right: 3.2rem;
+                top: -25.6rem;
+                left: 37.3rem;
+                margin-left: 0;
     
                 a {
                     display: inline-block;
-                    padding: 3.4rem 0 0 2.5rem;
+                    padding: 3rem;
+                    width: 37.4rem;
     
                     &::before {
-                        width: 4.2rem;
-                        height: 2.2rem;
-                        right: -2.5rem;
-                        bottom: 0.5rem;
+                        width: 4.6rem;
+                        height: 1.3rem;
+                        right: 3rem;
+                        bottom: 8.5rem;
                     }
                 }
                 
                 strong {
-                    font-size: 2.95rem;
+                    font-size: 3.2rem;
                     line-height: 140%;
-                    margin-bottom: 0.3rem;
+                    margin-bottom: 1.4rem;
                 }
     
                 span {
-                    font-size: 2.2rem;
+                    font-size: 3.2rem;
+                    line-height: 140%;
+                    width: 21rem;
+                    white-space: break-spaces;
                 }
     
             }
@@ -373,11 +422,11 @@
     
         
         .swiper-pagination-bullet {
-            width: 1rem;
-            height: 1rem;
+            width: 2rem;
+            height: 2rem;
             background: #DADFE2;
             opacity: 0.3;
-            margin-right: 1.6rem;
+            margin-right: 0;
         }
         .swiper-pagination-bullet-active {
             background: #FFFFFF;

@@ -1,0 +1,110 @@
+.our-cases {
+    margin-bottom: 8rem;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &-left {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        color: #0B0C0B;
+
+        &--title {
+            font-size: 1.8rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 150%;
+        }
+        &-logo {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+
+            &--img {
+                width: 11.5rem;
+                height: 7.4rem;
+
+                svg {
+                    width: 11.5rem;
+                    height: 7.4rem;
+                }
+            }
+            &--text {
+                font-size: 3.5rem;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+            }
+        }
+    }
+    &-right {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        width: 37.2rem;
+        &--text {
+            font-size: 1.8rem;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 150%;
+            color: #0B0C0B;
+        }
+        &--city {
+            font-size: 1.6rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            color: #E01327;
+        }
+    }
+}
+
+@media (max-width: 48em) {
+    .our-cases {
+        margin-bottom: 8rem;
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: initial;
+            gap: 4rem;
+        }
+        &-left {
+            gap: 8rem;
+    
+            &--title {
+                font-size: 3.2rem;
+                line-height: 140%;
+            }
+            &-logo {
+                gap: 4rem;
+    
+                &--img {
+                    width: 23rem;
+                    height: 14.8rem;
+    
+                    svg {
+                        width: 23rem;
+                        height: 14.8rem;
+                    }
+                }
+                &--text {
+                    font-size: 4.4rem;
+                }
+            }
+        }
+        &-right {
+            width: auto;
+            &--text {
+                font-size: 3.2rem;
+                line-height: 140%;
+            }
+            &--city {
+                font-size: 3.2rem;
+                line-height: 140%;
+            }
+        }
+    }
+}

@@ -1,8 +1,9 @@
 .last-img {
-    height: 88.1rem;
+    height: 96rem;
     width: 100%;
     position: relative;
     z-index: -1;
+    overflow: hidden;
 }
 @media (max-width: 48em) {
     .last-img {

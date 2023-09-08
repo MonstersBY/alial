@@ -1,3 +1,11 @@
+const rem = function (rem) {
+  if ($(window).width() > 768) {
+      return 0.005208335 * $(window).width() * rem;
+  } else {
+      // где 375 это ширина моб версии макета
+      return (100/375) * (0.1 * $(window).width()) * rem;
+  }
+}
 var sliderBaner = new Swiper(".baner__swiper", {
   loop: false,
   effect: 'fade',
@@ -42,9 +50,6 @@ const sliderGallery = new Swiper(".gallery__swiper", {
     formatFractionTotal: addZero,
   },
   allowTouchMove: false,
-  autoplay: {
-    delay: 5000,
-  },
   slidesPerView: 1,
   spaceBetween: rem(0),
   speed: 1500,
@@ -60,83 +65,117 @@ const sliderGallery = new Swiper(".gallery__swiper", {
   },
   slidesPerView: "auto",
   freeMode: true,
-  scrollbar: {
-    el: ".swiper-scrollbar",
-  },
   mousewheel: true,
 })
 function addZero(num) {
   return (num > 9) ? num : '0' + num
 }
 
+
+var sliderProduction = new Swiper(".production__swiper", {
+  loop: true,
+  pagination: {
+      el: ".production__swiper-pagination",
+  },
+  navigation: {
+      nextEl: ".production__btn-next",
+      prevEl: ".production__btn-prev",
+  },
+});
+sliderProduction.on('realIndexChange', function (x) {
+  const left = x.realIndex ? x.realIndex : '3'
+  const right = x.realIndex + 2 < 4 ? x.realIndex + 2 : '1'
+  $('.production__swiper-left-num').html(`0${left} <span>/0${x.slides.length}</span>`)
+  $('.production__swiper-right-num').html(`0${right} <span>/0${x.slides.length}</span>`)
+})
 const sliderPartners = new Swiper(".partners__swiper", {
-  autoplay: {
-    delay: 5000,
-  },
-  allowTouchMove: false,
-  slidesPerView: 2.5,
-  spaceBetween: rem(1.9),
-  speed: 1500,
-  breakpoints: {
-    769: {
-      slidesPerView: 5.9,
-      spaceBetween: rem(3.1),
-      speed: 1500,
-    }
-  },
-})
-
-const sliderProjects = new Swiper(".projects__swiper", {
-  navigation: {
-    nextEl: ".projects__btn-next",
-    prevEl: ".projects__btn-prev",
-  },
-  pagination: {
-    el: ".projects__swiper-pagination",
-    type: "custom",
-    renderCustom: customPag,
-  },
-  allowTouchMove: false,
-  slidesPerView: 1,
-  spaceBetween: rem(1),
-  speed: 1500,
-  breakpoints: {
-    769: {
-      slidesPerView: 1,
-      spaceBetween: rem(1),
-      speed: 1500,
-    }
-  },
-})
-
-const sliderLicenses = new Swiper(".licenses__swiper", {
-  navigation: {
-    nextEl: ".licenses__btn-next",
-    prevEl: ".licenses__btn-prev",
-  },
-  pagination: {
-    el: ".licenses__swiper-pagination",
-    type: "custom",
-    renderCustom: customPag,
-  },
-  allowTouchMove: false,
+  loop: true,
   slidesPerView: 2,
   slidesPerGroup: 2,
   spaceBetween: rem(2),
-  speed: 1500,
+  navigation: {
+      nextEl: ".partners__btn-next",
+      prevEl: ".partners__btn-prev",
+  },  
+  pagination: {
+    el: ".partners__swiper-pagination",
+  },
   breakpoints: {
     769: {
       slidesPerView: 4,
       slidesPerGroup: 4,
-      spaceBetween: rem(3.1),
-      speed: 1500,
+      spaceBetween: rem(10.5),
     }
   },
 })
-
-function customPag(swiper, current, total) {
-  return `<span class="swiper-pagination-current">${current}</span><span class="swiper-pagination-total">${total}</span>`
+sliderPartners.on('realIndexChange', function (x) {
+  changePartners(x)
+})
+function changePartners(x) {
+  let total
+  if ($(window).width() > 768) {
+    total = 4
+  } else {
+    total = 2
+  }
+  const left = x.realIndex/total ? x.realIndex/total : x.slides.length/total
+  const right = x.realIndex/total +2 < x.slides.length/total +1 ? x.realIndex/total + 2 : '1'
+  $('.partners__swiper-left-num').html(`0${left} <span>/0${x.slides.length/total}</span>`)
+  $('.partners__swiper-right-num').html(`0${right} <span>/0${x.slides.length/total}</span>`)
 }
+changePartners(sliderPartners)
+$(window).resize(function(){
+  changePartners(sliderPartners)
+  changeFactory(sliderFactory)
+});
+
+var sliderFactory = new Swiper(".factory__swiper", {
+  loop: true,
+  pagination: {
+      el: ".factory__swiper-pagination",
+  },
+  slidesPerView: 1,
+  spaceBetween: rem(4),
+  navigation: {
+      nextEl: ".factory__btn-next",
+      prevEl: ".factory__btn-prev",
+  },
+  breakpoints: {
+    769: {
+      slidesPerView: 'auto',
+    }
+  },
+});
+sliderFactory.on('realIndexChange', function (x) {
+  changeFactory(x)
+})
+function changeFactory(x) {
+  $('.factory__swiper--number').html(`0${x.realIndex + 1} <span>/0${x.slides.length}</span>`)
+  const left = x.realIndex ? x.realIndex : x.slides.length
+  const right = x.realIndex + 2 < x.slides.length+1 ? x.realIndex + 2 : '1'
+  $('.factory__swiper-left-num').html(`0${left} <span>/0${x.slides.length}</span>`)
+  $('.factory__swiper-right-num').html(`0${right} <span>/0${x.slides.length}</span>`)
+}
+changeFactory(sliderFactory)
+
+const sliderCertificates = new Swiper(".certificates__swiper", {
+  loop: true,
+  slidesPerView: 'auto',
+  slidesPerGroup: 1,
+  navigation: {
+      nextEl: ".certificates__btn-next",
+      prevEl: ".certificates__btn-prev",
+  },  
+  pagination: {
+    el: ".certificates__swiper-pagination",
+  },
+  breakpoints: {
+    769: {
+      slidesPerView: 4,
+      slidesPerGroup: 4,
+    }
+  },
+})
 
 const header = document.querySelector('header')
 const burgerBtn = header.querySelector('.header__burger')
@@ -145,91 +184,6 @@ const lines = document.querySelector('.lines')
 burgerBtn.addEventListener('click', () => {
   header.classList.toggle('active')
 })
-lines.addEventListener('click', () => {
-  if (header.classList.length == 2) header.classList.toggle('active')
-})
-
-const worldProject = [
-  {
-    id: 1,
-    top: 17.4,
-    left: 37.5,
-  },
-  {
-    id: 2,
-    top: 31.5,
-    left: 29,
-  },
-  {
-    id: 3,
-    top: 39.7,
-    left: 51,
-  },
-  {
-    id: 4,
-    top: 17.3,
-    left: 135.6,
-    mob: {
-      top: 27.3,
-      left: 29.6,
-    },
-  },
-  {
-    id: 5,
-    top: 31.5,
-    left: 108,
-    mob: {
-      top: 50.5,
-      left: 20,
-    },
-  },
-  {
-    id: 6,
-    top: 40.5,
-    left: 135.6,
-    mob: {
-      top: 76.5,
-      left: 17.6,
-    },
-  },
-  {
-    id: 7,
-    top: 41.5,
-    left: 95.4,
-  },
-  {
-    id: 8,
-    top: 57.3,
-    left: 87,
-  },
-]
-
-const worldList = document.querySelector('.world__list')
-const ScreenSize = window.innerWidth;
-for (let i = 0; i < worldProject.length; i++) {
-  console.log(window.innerWidth)
-  if (ScreenSize <= 768) {
-    if(worldProject[i].mob) {
-      createWorldItem(worldProject[i].mob)
-    }
-  } else {
-    createWorldItem(worldProject[i])
-  }
-}
-
-function createWorldItem (item) {
-  const card = document.createElement('div')
-  card.classList.add('world__item')
-  card.innerHTML = `
-    <a href="#" class="world__name">Нефтяной завод переработки нефти</a>
-    <div class="world__circle">
-        <div class="world__circle-center"></div>
-    </div>
-  `
-  card.style.top = item.top + 'rem'
-  card.style.left = item.left + 'rem'
-  worldList.append(card);
-}
 
 const lang = document.querySelector('.header__language')
 const langBox = lang.querySelector('.header__language-box')
@@ -247,6 +201,17 @@ langListBox.forEach((btn) => {
     lang.classList.remove('open')
   });
 });
+
+$('.world-container-map svg path').on('click', function(){
+  const info = $(`.world-container-map-info-item[data-card='${$(this).attr('id')}']`)
+  
+  $(this).toggleClass('active')
+  info.toggleClass('active')
+})
+$('.world-container-filter--item').on('click', function(){
+  $(this).parents('.world-container-filter').find('.world-container-filter--item').removeClass('active')
+  $(this).addClass('active')
+})
 
 wow = new WOW({
   boxClass:     'wow',

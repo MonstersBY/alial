@@ -1,12 +1,13 @@
 .gallery {
     position: relative;
     z-index: 10;
+    background: linear-gradient(180deg, #0B0C0B 33%, #F1F4F5 34%);
+    margin-bottom: 10.5rem;
 
     .container {
         width: 100%;
         position: relative;
         height: 84rem;
-        background-color: #F1F4F5;
         margin: 0 auto;
     }
 
@@ -18,20 +19,15 @@
     .lines {
         z-index: 1;
         width: 192rem;
+        top: -1rem;
 
         .container {
             height: 30rem;
-            background: #141F2B;
             margin: 0;
-        }
-        &__item:nth-child(1) {
-            margin-left: 12rem;
-        }
-        &__item:last-child {
-            margin-right: 12rem;
         }
     }
     &__swiper {
+        overflow: hidden;
 
         // &::before {
         //     content: "";
@@ -59,7 +55,6 @@
             display: block;
             position: absolute;
             width: auto;
-            font-family: 'Proxima Nova Semibold';
             font-style: normal;
             font-weight: 600;
             font-size: 2rem;
@@ -78,25 +73,23 @@
     &__head {
         display: flex;
         flex-direction: column;
-        width: 125rem;
-        padding-left: 61.3rem;
+        width: 127rem;
+        padding-left: 59rem;
         padding-right: 15rem;
 
         strong {
             display: block;
-            font-family: 'Proxima Nova Bold';
-            font-style: normal;
-            font-weight: 700;
             font-size: 3.5rem;
-            line-height: 3.5rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
             color: #151313;
-            margin-top: 9rem;
+            margin-top: 4.5rem;
         }
         span {
             display: block;
-            font-family: 'Proxima Nova';
             font-style: normal;
-            font-weight: 400;
+            font-weight: 300;
             font-size: 1.8rem;
             line-height: 150%;
             color: #151313;
@@ -143,27 +136,27 @@
     }
     &__lavka {
         position: absolute;
-        bottom: 16.5rem;;
-        right: 37.5rem;
-        z-index: 1;
+        bottom: 16.5rem;
+        right: 36rem;
+        z-index: 3;
         width: 23.6rem;
         height: 7.505rem;
 
     }
     &__man {
         position: absolute;
-        bottom: 10.5rem;
-        right: 49.5rem;
-        z-index: 1;
-        width: 38.099rem;
+        bottom: 11rem;
+        right: 48rem;
+        z-index: 3;
+        width: 38.098rem;
         height: 25.389rem;
     }
     &__scroll {
         position: absolute;
         width: 9.328rem;
         height: 4.5rem;
-        bottom: 9rem;
-        right: 26.2rem;
+        bottom: 8.7rem;
+        right: 24.2rem;
     }
 }
 
@@ -171,6 +164,8 @@
     .gallery {
         position: relative;
         z-index: 10;
+        background: unset;
+        margin-bottom: 40rem;
     
         .container {
             width: 100%;
@@ -200,7 +195,7 @@
             }
         }
         &__swiper {
-            box-shadow: 10px 7px 10px rgba(0, 0, 0, 0.08);
+            box-shadow: unset;
 
             &::before {
                 content: none;
@@ -218,15 +213,14 @@
                 display: block;
                 position: absolute;
                 width: auto;
-                font-family: 'Proxima Nova Semibold';
                 font-style: normal;
                 font-weight: 600;
                 font-size: 2.7rem;
                 line-height: 130%;
     
                 text-transform: uppercase;
-                top: 132rem;
-                bottom: 0;
+                top: auto;
+                bottom: -14rem;
                 left: 5rem;
     
                 .swiper-pagination-current {
@@ -243,16 +237,18 @@
             padding-right: 0;
     
             strong {
-                font-size: 3.95rem;
-                line-height: 130%;
-                margin-top: 11rem;
+                font-size: 4.4rem;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+                margin-top: 12rem;
                 margin-left: 4rem;
                 margin-right: 4rem;
             }
             span {
-                font-size: 2.7rem;
+                font-size: 3.2rem;
                 line-height: 140%;
-                margin-top: 4.2rem;
+                margin-top: 4.8rem;
                 width: auto;
                 margin-left: 4rem;
                 margin-right: 4rem;
@@ -293,32 +289,34 @@
             }
         }
         &__lavka {
-            bottom: 30.5rem;
+            bottom: 9.5rem;
             right: 2.5rem;
-            width: 42.6rem;
-            height: 12.505rem;
+            width: 48.2rem;
+            height: 13rem;
         }
         &__man {
-            bottom: 34.5rem;
+            bottom: 16.5rem;
             right: 23.5rem;
-            width: 62.099rem;
+            width: 71.099rem;
             height: 25.389rem;
         }
         &__btn-next, &__btn-prev {
             width: 8.3rem;
             height: 3.1rem;
-            background-image: url(../img/icon/arrowrightblack.svg) !important;
+            background-image: url(../img/icon/arrowrightred.svg) !important;
             background-repeat: no-repeat;
             background-size: 100% 100%;
-            top: 136rem;
+            top: auto;
+            bottom: -13rem;
         }
         &__btn-next {
-            right: 0;
-            left: 63.2rem;
+            right: 4rem;
+            left: auto;
         }
         &__btn-prev {
             transform: rotate(180deg);
-            left: 52.5rem;
+            right: 19rem;
+            left: auto;
         }
         .swiper-button-next:after, .swiper-button-prev:after {
             content: none;

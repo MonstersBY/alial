@@ -1,13 +1,12 @@
 .header {
     width: 100%;
-    padding-top: 2.6rem;
-    padding-bottom: 3.8rem;
-    background: #141F2B;
+    padding-top: 3.2rem;
+    padding-bottom: 3.2rem;
+    background: #0B0C0B;
     color: #FFFFFF;
     text-transform: uppercase;
     position: relative;
     z-index: 10;
-    border-bottom: 1px solid rgba(157, 153, 175, 0.15);
     
 
     &__logo {
@@ -23,15 +22,15 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        width: 29rem;
+        gap: 9rem;
+        width: auto;
     }
     &__language {
         position: relative;
-        font-family: 'Proxima Nova Semibold';
         font-style: normal;
         font-weight: 600;
-        font-size: 2rem;
-        line-height: 2rem;
+        font-size: 1.8rem;
+        line-height: 150%;
         cursor: pointer;
 
         &.open {
@@ -82,57 +81,55 @@
 
     &__right {
         display: flex;
-        width: 98rem;
+        width: fit-content;
     }
     &__lists {
         display: flex;
-        gap: 3rem;
+        gap: 2rem;
         width: 100%;
     }
     
     &__item {
-        font-family: 'Proxima Nova Semibold';
+        font-size: 1.6rem;
         font-style: normal;
         font-weight: 600;
-        font-size: 2rem;
-        line-height: 2rem;
+        line-height: 150%;
+        width: max-content;
 
         text-transform: uppercase;
     }
     &__phone-number {
-        font-family: 'Proxima Nova';
+        font-size: 2rem;
         font-style: normal;
-        font-weight: 600;
-        font-size: 2.8rem;
-        line-height: 2.8rem;
-        margin-top: -1rem;
+        font-weight: 700;
+        line-height: normal;
+        width: 17.9rem;
     }
 }
 
 @media (max-width: 48em) {
     .header {
         width: 100%;
-        padding-top: 4.6rem;
-        padding-bottom: 5.2rem;
-        background: #141F2B;
+        padding-top: 4.8rem;
+        padding-bottom: 4.8rem;
+        background: #0B0C0B;
         color: #FFFFFF;
         text-transform: uppercase;
-        border-bottom: 1px solid rgba(157, 153, 175, 0.15);
         
     
         &__logo {
-            width: 23.9rem;
-            height: 4.6rem;
+            width: 25.6rem;
+            height: 6.6rem;
         }
         &__container {
             position: relative;
         }
         &__left {
-            width: 53rem;
+            width: 58rem;
         }
         &__language {
             font-size: 3.2rem;
-            line-height: 4.4rem;
+            line-height: 140%;;
     
             &-box {
                 &::after {
@@ -240,7 +237,6 @@
         }
         &__phone-number {
             display: none;
-            font-family: 'Proxima Nova';
             font-style: normal;
             font-weight: 600;
             font-size: 2.8rem;
@@ -257,7 +253,6 @@
                 padding-bottom: 5.5rem;
 
                 strong {
-                    font-family: 'Proxima Nova Bold';
                     font-style: normal;
                     font-weight: 700;
                     font-size: 4rem;
@@ -266,7 +261,6 @@
                     margin-bottom: 2.5rem;
                 }
                 span {
-                    font-family: 'Proxima Nova Semibold';
                     font-style: normal;
                     font-weight: 600;
                     font-size: 2.9rem;
@@ -281,7 +275,6 @@
                 margin-top: 9rem;
 
                 span {
-                    font-family: 'Proxima Nova';
                     font-style: normal;
                     font-weight: 400;
                     font-size: 2.7rem;

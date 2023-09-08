@@ -1,5 +1,5 @@
 .footer {
-    background-color: #080E1A;
+    background-color: #0B0C0B;
     color: #FFFFFF;
     margin-top: -11.2rem;
     padding-top: 5.9rem;
@@ -15,12 +15,11 @@
         margin-bottom: 0.4rem;
 
         &-items {
-            font-family: 'Proxima Nova';
             font-style: normal;
             font-weight: 400;
             font-size: 1.8rem;
             line-height: 2.7rem;
-            width: 39.5rem;
+            width: fit-content;
         }
         &-item {
             margin-bottom: 3.6rem;
@@ -35,7 +34,6 @@
             margin-bottom: 6rem;
         }
         &-phone {
-            font-family: 'Proxima Nova Semibold';
             font-style: normal;
             font-weight: 600;
             font-size: 2rem;
@@ -51,11 +49,10 @@
     }
     &__bottom {
         display: flex;
-        gap: 17.7rem;
+        gap: 13.3rem;
 
         &-item {
             display: flex;
-            font-family: 'Proxima Nova';
             font-style: normal;
             font-weight: 400;
             font-size: 1.8rem;
@@ -63,7 +60,7 @@
             color: #92999D;
 
             &:nth-child(2) {
-                margin-right: 11.5rem;
+                margin-right: auto;
             }
             span {
                 display: block;
@@ -81,8 +78,8 @@
 @media (max-width: 48em) {
     .footer {
         margin-top: 0;
-        padding-top: 10.9rem;
-        padding-bottom: 10.9rem;
+        padding-top: 12.5rem;
+        padding-bottom: 12rem;
     
         .container {
             padding: 0;
@@ -96,16 +93,15 @@
             margin-right: 3.6rem;
     
             &-items {
-                font-family: 'Proxima Nova';
                 font-style: normal;
                 font-weight: 400;
-                font-size: 2.75rem;
+                font-size: 3.2rem;
                 line-height: 140%;
-                width: 27.5rem;
+                width: 31.5rem;
 
                 &:nth-child(1) {
                     width: 100%;
-                    margin-bottom: 10rem;
+                    margin-bottom: 12rem;
                 }
                 &:nth-child(2) {
                     margin-right: 8rem;
@@ -116,19 +112,19 @@
                 }
             }
             &-item {
-                margin-bottom: 3.6rem;
+                margin-bottom: 4rem;
     
                 &.prod {
                     color: #92999D;
                 }
             }
             &-logo {
-                width: 23.9rem;
+                width: 25.6rem;
                 height: 6.6rem;
                 margin-bottom: 5.5rem;
             }
             &-phone {
-                font-size: 2.9rem;
+                font-size: 3.2rem;
                 line-height: 140%;
             }
         }
@@ -147,34 +143,34 @@
             margin-right: 3.6rem;
     
             &-item {
-                font-size: 2.75rem;
+                font-size: 3.2rem;
                 line-height: 140%;
-                margin-bottom: 3.5rem;
+                margin-bottom: 4rem;
                     
                 &:nth-child(1) {
-                    margin-right: 11.5rem;
+                    margin-right: 0;
                     grid-row-start: 3;
                     grid-column-start: 1;
                 }
                 &:nth-child(2) {
-                    margin-right: 11.5rem;
+                    margin-right: 0;
                     grid-row-start: 1;
                     grid-column-start: 1;
                 }
                 &:nth-child(3) {
-                    margin-right: 11.5rem;
+                    margin-right: 0;
                     grid-row-start: 2;
                     grid-column-start: 1;
                 }
                 span {
                     display: block;
-                    margin-right: 3.1rem;
+                    margin-right: 4.8rem;
                 }
             }
             &-logo {
                 display: block;
-                width: 32rem;
-                height: 3.8rem;
+                width: 33.4rem;
+                height: 4.8rem;
             }
         }
     }

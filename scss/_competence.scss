@@ -1,0 +1,127 @@
+.competence {
+    margin-bottom: 19rem;
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #0B0C0B;
+        margin-bottom: 6rem;
+    }
+    &__title {
+        font-size: 5.5rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        width: 74.8rem;
+    }
+    &__subtitle {
+        font-size: 1.8rem;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 150%;
+        width: 42.7rem;
+    }
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4rem;
+        column-gap: 5.5rem;
+    }
+    &-item {
+        position: relative;
+        display: flex;
+        width: 42.7rem;
+        height: 45.2rem;
+        padding: 4rem;
+        color: #FFF;
+
+        &--img {
+            position: absolute;
+            width: 42.7rem;
+            height: 45.2rem;
+            top: 0;
+            left: 0;
+            z-index: -1;
+
+            img {
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &--rotate {
+            position: absolute;
+            transform: rotate(90deg);
+            font-size: 1.6rem;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+            letter-spacing: 0.288rem;
+            text-transform: uppercase;
+            top: 10.5rem;
+            right: -3rem;
+        }
+        &--title {
+            height: fit-content;
+            margin-top: auto;
+            font-size: 2.8rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+    }
+}
+
+@media (max-width: 48em) {
+    .competence {
+        margin-bottom: 24rem;
+
+        &__head {
+            display: flex;
+            gap: 4rem;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: initial;
+            margin-bottom: 8rem;
+        }
+        &__title {
+            font-size: 5.4rem;
+            line-height: 130%;
+            width: auto;
+        }
+        &__subtitle {
+            font-size: 3.2rem;
+            line-height: 140%;
+            width: auto;
+        }
+        &-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4rem;
+            column-gap: 4rem;
+        }
+        &-item {
+            position: relative;
+            display: flex;
+            width: 35.4rem;
+            height: 37.4rem;
+            padding: 3rem;
+            color: #FFF;
+    
+            &--img {
+                position: absolute;
+                width: 35.4rem;
+                height: 37.4rem;
+            }
+            &--rotate {
+                font-size: 2.4rem;
+                letter-spacing: 0.432rem;
+                top: 13rem;
+                right: -8rem;
+            }
+            &--title {
+                font-size: 3.2rem;
+                line-height: 140%;
+            }
+        }
+    }
+}

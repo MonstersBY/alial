@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 html {
-    font-family: 'Sofia Pro'; // шрифт по умолчанию по сайту
+    font-family: 'Euclid Circular A'; // шрифт по умолчанию по сайту
     font-size: 0.5208335vw; // на разрешении 1920 0.520835vw === 10px
     font-style: normal;
     font-weight: normal;
@@ -99,9 +99,9 @@ ul li {
 }
 
 .container {
-    width: 168rem;;
-    // margin: 0 auto;
-    margin: 0 12rem;
+    width: 140rem;
+    margin: 0 auto;
+    // margin: 0 12rem;
 }
 
 input[type="number"]::-webkit-inner-spin-button,
@@ -122,7 +122,7 @@ svg {
     html {
         font-size: 5px;
         font-size: 1.5625vw;
-        font-size: calc((100/375) * 5vw); // где 375 это ширина моб версии макета
+        font-size: calc((100/414) * 5vw); // где 414 это ширина моб версии макета
         -webkit-text-size-adjust: none;
     }
 
