@@ -1,3 +1,19 @@
+.title-h1 {
+  font-size: 5.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  color: #0B0C0B
+}
+@media (max-width: 48em) {
+  .title-h1 {
+    font-size: 2.7rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%;
+  }
+}
+
 @import "set";
 
 @import "header";
@@ -14,6 +30,7 @@
 @import "our-cases";
 @import "factory";
 @import "certificates";
+@import "our-projects";
 
 // .wow {
 //   visibility: hidden;
