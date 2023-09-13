@@ -3911,7 +3911,27 @@ svg {
   margin-bottom: 20rem;
 }
 .vacancies .container {
-  width: 131.1rem;
+  position: relative;
+}
+.vacancies .container::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background: rgba(157, 153, 175, 0.1607843137);
+  width: 1px;
+  height: calc(100% + 10rem);
+  left: 0;
+  top: -10rem;
+}
+.vacancies .container::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background: rgba(157, 153, 175, 0.1607843137);
+  width: 1px;
+  height: calc(100% + 10rem);
+  right: 0;
+  top: -10rem;
 }
 .vacancies-head {
   padding-bottom: 10rem;
@@ -3921,19 +3941,27 @@ svg {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-left: 4.5rem;
 }
 .vacancies-head--number {
   font-size: 1.6rem;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
-  width: 20rem;
+  width: 15.6rem;
+}
+.vacancies-head .title-h1 {
+  padding-left: 5.2rem;
 }
 .vacancies-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding: 6rem 0;
+  border-top: 1px solid rgba(157, 153, 175, 0.1607843137);
+}
+.vacancies-item:last-child {
+  border-bottom: 1px solid rgba(157, 153, 175, 0.1607843137);
 }
 .vacancies-item--date {
   display: -webkit-box;
@@ -3944,7 +3972,8 @@ svg {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 0.6rem;
-  width: 20rem;
+  width: 15.6rem;
+  margin-left: 4.5rem;
 }
 .vacancies-item--date strong {
   font-size: 1.6rem;
@@ -3960,7 +3989,30 @@ svg {
   color: #92999D;
 }
 .vacancies-item--info {
-  width: 90.6rem;
+  width: 94.3rem;
+  padding-left: 5.2rem;
+  padding-right: 3.7rem;
+  position: relative;
+}
+.vacancies-item--info::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background: rgba(157, 153, 175, 0.1607843137);
+  width: 1px;
+  height: calc(100% + 12rem);
+  left: 0;
+  top: -6rem;
+}
+.vacancies-item--info::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background: rgba(157, 153, 175, 0.1607843137);
+  width: 1px;
+  height: calc(100% + 12rem);
+  right: 0;
+  top: -6rem;
 }
 .vacancies-item--info p {
   font-size: 1.6rem;
@@ -4025,6 +4077,7 @@ svg {
       -ms-flex-align: center;
           align-items: center;
   margin-left: auto;
+  margin-right: 4.5rem;
 }
 .vacancies-item--link svg {
   width: 3.3rem;
