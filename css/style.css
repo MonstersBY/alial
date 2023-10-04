@@ -4100,6 +4100,7 @@ svg {
   text-align: center;
 }
 .about-company .img-container {
+  margin-bottom: -100rem;
   width: 51.2rem;
   height: 73.4rem;
 }
@@ -4127,7 +4128,7 @@ svg {
   width: 684px;
 }
 .about-company .about-competence__title {
-  color: #2D3238;
+  color: #2d3238;
   font-family: Euclid Circular A;
   font-size: 5.5rem;
   font-style: normal;
@@ -4135,11 +4136,11 @@ svg {
   line-height: normal;
 }
 .about-company .about-competence__subtitle {
-  border-left: 2px solid #DD1444;
+  border-left: 2px solid #dd1444;
   width: 61.4rem;
   padding-left: 3rem;
   margin-top: 4rem;
-  color: #2D3238;
+  color: #2d3238;
   font-family: Euclid Circular A;
   font-size: 1.6rem;
   font-style: normal;
@@ -4148,12 +4149,90 @@ svg {
 }
 .about-company .about-competence__paragraph {
   margin-top: 11.2rem;
-  color: #595E68;
+  padding-bottom: 10rem;
+  color: #595e68;
   font-family: Euclid Circular A;
   font-size: 1.8rem;
   font-style: normal;
   font-weight: 300;
   line-height: 2.7rem;
+}
+.about-company .advantage {
+  width: 100%;
+  min-height: 94.4rem;
+  background: #131316;
+}
+.about-company .advantage__container {
+  height: 100%;
+  min-height: 94.4rem;
+  position: relative;
+  margin: 0 auto;
+  width: 140rem;
+}
+.about-company .advantage__title {
+  position: absolute;
+  top: 16rem;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  font-family: Euclid Circular A;
+  font-size: 5.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.about-company .advantage__blocks {
+  height: 100%;
+  min-height: 94.4rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+  grid-template-columns: repeat(4, 1fr);
+}
+.about-company .advantage__block {
+  padding-left: 1.5rem;
+  width: 100%;
+  padding-top: 30rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 100%;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1/3;
+  border-right: 1px solid rgba(157, 153, 175, 0.25);
+}
+.about-company .advantage__img-container {
+  width: 25rem;
+  height: 13rem;
+}
+.about-company .advantage__img-container > svg {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+.about-company .advantage__block-title {
+  width: 30rem;
+  margin-top: 5rem;
+  color: #fff;
+  font-family: Euclid Circular A;
+  font-size: 2.8rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.about-company .advantage__block-paragraph {
+  width: 30rem;
+  margin-top: 3rem;
+  color: #cdcfd4;
+  font-family: Euclid Circular A;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.about-company .world {
+  margin-top: 20rem;
 }
 
 body {
