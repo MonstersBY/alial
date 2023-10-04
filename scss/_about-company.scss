@@ -1,0 +1,80 @@
+.about-company {
+    margin-top: 16rem;
+
+    .competence {
+        &__title {
+            width: 100%;
+            max-width: 117.5rem;
+            margin: 0 auto;
+            text-align: center;
+        }
+    }
+
+    .container {}
+
+    .img-container {
+        width: 51.2rem;
+        height: 73.4rem;
+
+        >img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .about-competence {
+        .container {
+            justify-content: center;
+            width: 162rem;
+            display: flex;
+            flex-direction: row;
+            gap: 19rem;
+        }
+
+        // .about-competence__arcticle
+        &__arcticle {
+            width: 684px;
+        }
+
+        // .about-competence__title 
+        &__title {
+            color: #2D3238;
+font-family: Euclid Circular A;
+font-size: 5.5rem;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+        }
+
+        // .about-competence__subtitle 
+        &__subtitle {
+            border-left: 2px solid #DD1444;
+            width: 61.4rem;
+            padding-left: 3rem;
+            margin-top: 4rem;
+            color: #2D3238;
+            font-family: Euclid Circular A;
+            font-size: 1.6rem;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+        }
+
+        // .about-competence__paragraph 
+        &__paragraph {
+            margin-top: 11.2rem;
+            color: #595E68;
+            font-family: Euclid Circular A;
+            font-size: 1.8rem;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 2.7rem;
+        }
+
+
+    }
+
+
+
+}
