@@ -4555,6 +4555,9 @@ svg {
 .about-company .world {
   margin-top: 20rem;
 }
+.about-company + footer {
+  margin-top: 20rem;
+}
 
 body {
   position: relative;

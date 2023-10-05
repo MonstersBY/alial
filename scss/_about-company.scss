@@ -247,7 +247,7 @@
 
   .competence {
     margin-top: 16rem;
-    
+
     &__title {
       width: 100%;
       max-width: 117.5rem;
@@ -443,6 +443,10 @@
   }
 
   .world {
+    margin-top: 20rem;
+  }
+
+  +footer{
     margin-top: 20rem;
   }
 }
