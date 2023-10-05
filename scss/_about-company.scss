@@ -1,421 +1,448 @@
 .about-company {
-    position: relative;
-    margin-top: 16rem;
+  margin-top: 0;
+  position: relative;
 
-    .main-banner {
-
-        // .main-banner__back
-        &__back {
-            top: 0;
-            left: 0;
-            position: absolute;
-            width: 100%;
-            height: 94rem;
-
-            >img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                filter: brightness(45%);
-            }
-        }
-
-        &__img {
-            &_tover {
-                height: 40rem;
-                background: linear-gradient(271deg, #D4DADD 2.69%, #BDC5CC 40.53%), #C3C8D2;
-                width: 100%;
-
-                >img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: contain;
-                    object-position: left bottom;
-                }
-            }
-        }
-
-        // .main-banner__container
-        &__container {
-            width: 100%;
-            height: 94rem;
-            display: grid;
-            grid-template-columns: 26rem 1fr 1fr 1fr 1fr 26rem;
-        }
-
-        // .main-banner__block
-        &__block {
-            position: relative;
-            border-right: 1px solid rgba(157, 153, 175, 0.25);
-
-        }
-
-        // .main-banner__img-comtainer
-        &__img-comtainer {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-
-            >img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-        }
-
-        // .main-banner__socials
-        &__socials {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            height: 25.3rem;
-            border-top: 1px solid rgba(157, 153, 175, 0.25);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 2.7rem;
-
-            .social-icon {
-                width: 5.6rem;
-                height: 5.6rem;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                border-radius: 50%;
-                border: 1px solid rgba(255, 255, 255, 0.60);
-            }
-        }
-
-        // .main-banner__block-inner
-        &__block-inner {
-            bottom: 0;
-            width: 70rem;
-            position: absolute;
-        }
-
-        // .main-banner__title
-        &__title {
-            grid-area: a;
-            color: #FFF;
-            text-align: center;
-            font-family: Euclid Circular A;
-            font-size: 5.5rem;
-            font-style: normal;
-            font-weight: 600;
-            line-height: normal;
-
-            &:nth-of-type(1) {
-                text-align: left;
-                padding-left: 10rem;
-            }
-
-            &:nth-of-type(2) {
-                margin-left: 10rem;
-            }
-        }
-
-        // .main-banner__link
-        &__link {
-            margin-top: 5.7rem;
-            margin-left: 35rem;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: flex-start;
-            gap: 1.5rem;
-
-            >span {
-                color: #FFF;
-                font-family: Euclid Circular A;
-                font-size: 2rem;
-                font-style: normal;
-                font-weight: 700;
-                line-height: normal;
-            }
-
-        }
-
-        // .main-banner__text-block
-        &__text-block {
-            margin-top: 19rem;
-            z-index: 10;
-            display: flex;
-            flex-direction: row;
-            box-sizing: border-box;
-            min-height: 25.4rem;
-            padding: 5rem 4rem;
-            gap: 7.4rem;
-            background-color: #4D4D50;
-        }
-
-        // .main-banner__side
-        &__side {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        // .main-banner__project-container
-        &__project-container {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        // .main-banner__project-number
-        &__project-number {
-            color: #FFF;
-            text-align: center;
-            font-family: Euclid Circular A;
-            font-size: 4rem;
-            font-style: normal;
-            font-weight: 300;
-            line-height: normal;
-            letter-spacing: 0.72rem;
-            text-transform: uppercase;
-        }
-
-        // .main-banner__project-text
-        &__project-text {
-            color: #FFF;
-            font-family: Euclid Circular A;
-            font-size: 1.6rem;
-            font-style: normal;
-            font-weight: 300;
-            line-height: normal;
-        }
-
-
-        &__side-title {
-            color: #FFF;
-            font-family: Euclid Circular A;
-            font-size: 1.8rem;
-            font-style: normal;
-            font-weight: 600;
-            line-height: 2.7rem;
-        }
-
-        // .main-banner__block-link
-        &__block-link {
-            display: flex;
-            width: fit-content;
-            color: #FFF;
-            font-family: Euclid Circular A;
-            font-size: 1.6rem;
-            font-style: normal;
-            font-weight: 600;
-            line-height: normal;
-            border-bottom: 1px solid #FFF;
-        }
-
-        // .main-banner__paragraph
-        &__paragraph {
-            color: #FFF;
-            font-family: Euclid Circular A;
-            font-size: 1.6rem;
-            font-style: normal;
-            font-weight: 300;
-            line-height: normal;
-        }
-
-        // .main-banner__circle-icon
-        // .main-banner__color-block
+  .main-banner {
+    .line {
+      position: absolute;
+      left: 35rem;
+      height: 100%;
+      border: 1px solid #b1aec2;
+      opacity: 0.25;
+      background: #fff;
+    }
+    // .main-banner__container
+    &__container {
+      width: 100%;
+      height: 94rem;
+      display: flex;
+      flex-direction: row;
     }
 
-    .competence {
-        &__title {
-            width: 100%;
-            max-width: 117.5rem;
-            margin: 0 auto;
-            text-align: center;
-        }
+    // .main-banner__block
+    &__block {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      border-right: 1px solid rgba(157, 153, 175, 0.25);
     }
 
-    .container {}
+    // .main-banner__back
+    &__back {
+      top: 0;
+      left: 0;
+      position: absolute;
+      width: 100%;
+      height: 94rem;
 
-    .img-container {
-        margin-bottom: -100rem;
-        width: 51.2rem;
-        height: 73.4rem;
-
-        >img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    }
-
-    .about-competence {
-        .container {
-            justify-content: center;
-            width: 162rem;
-            display: flex;
-            flex-direction: row;
-            gap: 19rem;
-        }
-
-        // .about-competence__arcticle
-        &__arcticle {
-            width: 684px;
-        }
-
-        // .about-competence__title
-        &__title {
-            color: #2d3238;
-            font-family: Euclid Circular A;
-            font-size: 5.5rem;
-            font-style: normal;
-            font-weight: 600;
-            line-height: normal;
-        }
-
-        // .about-competence__subtitle
-        &__subtitle {
-            border-left: 2px solid #dd1444;
-            width: 61.4rem;
-            padding-left: 3rem;
-            margin-top: 4rem;
-            color: #2d3238;
-            font-family: Euclid Circular A;
-            font-size: 1.6rem;
-            font-style: normal;
-            font-weight: 300;
-            line-height: normal;
-        }
-
-        // .about-competence__paragraph
-        &__paragraph {
-            margin-top: 11.2rem;
-            padding-bottom: 10rem;
-            color: #595e68;
-            font-family: Euclid Circular A;
-            font-size: 1.8rem;
-            font-style: normal;
-            font-weight: 300;
-            line-height: 2.7rem;
-        }
-    }
-
-    .advantage {
+      > img {
         width: 100%;
-        min-height: 94.4rem;
-        background: #131316;
-        // .advantage__container
-
-        &__container {
-            height: 100%;
-            min-height: 94.4rem;
-            position: relative;
-            margin: 0 auto;
-            width: 140rem;
-        }
-
-        // .advantage__title
-        &__title {
-            position: absolute;
-            top: 16rem;
-            width: 100%;
-            color: #fff;
-            text-align: center;
-            font-family: Euclid Circular A;
-            font-size: 5.5rem;
-            font-style: normal;
-            font-weight: 600;
-            line-height: normal;
-        }
-
-        // .advantage__blocks
-        &__blocks {
-            height: 100%;
-            min-height: 94.4rem;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-        }
-
-        // .advantage__block
-        &__block {
-            padding-left: 1.5rem;
-            width: 100%;
-            padding-top: 30rem;
-            box-sizing: border-box;
-            height: 100%;
-            grid-row: 1 / 3;
-            border-right: 1px solid rgba(157, 153, 175, 0.25);
-            // opacity: 0.25;
-        }
-
-        // .advantage__img-container
-        &__img-container {
-            width: 25rem;
-            height: 13rem;
-
-            >svg {
-                object-fit: contain;
-                width: 100%;
-                height: 100%;
-            }
-        }
-
-        // .advantage__block-title
-        &__block-title {
-            width: 30rem;
-            margin-top: 5rem;
-            color: #fff;
-            font-family: Euclid Circular A;
-            font-size: 2.8rem;
-            font-style: normal;
-            font-weight: 600;
-            line-height: normal;
-        }
-
-        // .advantage__block-paragraph
-        &__block-paragraph {
-            width: 30rem;
-            margin-top: 3rem;
-            color: #cdcfd4;
-            font-family: Euclid Circular A;
-            font-size: 1.6rem;
-            font-style: normal;
-            font-weight: 300;
-            line-height: normal;
-        }
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(45%);
+      }
     }
 
-    .circle-icon {
-        margin: 120px auto 0;
+    &__img {
+      &_tover {
+        height: 40rem;
+        background: linear-gradient(271deg, #d4dadd 2.69%, #bdc5cc 40.53%),
+          #c3c8d2;
+        width: 100%;
+
+        > img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          object-position: left bottom;
+        }
+      }
+    }
+
+    // .main-banner__img-comtainer
+    &__img-comtainer {
+      width: 100%;
+
+      > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    // .main-banner__socials
+    &__socials {
+      width: 100%;
+      height: 25.3rem;
+      border-top: 1px solid rgba(157, 153, 175, 0.25);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2.7rem;
+
+      .social-icon {
+        width: 5.6rem;
+        height: 5.6rem;
         display: flex;
-        width: 17rem;
-        height: 17rem;
+        align-items: center;
+        justify-content: center;
         border-radius: 50%;
-        border: 1px solid rgba(255, 255, 255, 0.40);
-        // .circle-icon__age 
-        &__age {
-            color: #FFF;
-            text-align: center;
-            font-family: Euclid Circular A;
-            font-size: 4rem;
-            font-style: normal;
-            font-weight: 300;
-            line-height: normal;
-            letter-spacing: 0.72rem;
-            text-transform: uppercase;
-        }
-
-        // .circle-icon__text 
-        &__text {
-            color: rgba(255, 255, 255, 0.50);
-            text-align: center;
-            font-family: Euclid Circular A;
-            font-size: 1.6rem;
-            font-style: normal;
-            font-weight: 300;
-            line-height: normal;
-        }
+        border: 1px solid rgba(255, 255, 255, 0.6);
+      }
     }
 
-    .world {
-        margin-top: 20rem;
+    // .main-banner__block-inner
+    &__block-inner {
+      width: 100%;
     }
+
+    // .main-banner__title
+    &__title {
+      grid-area: a;
+      color: #fff;
+      text-align: center;
+      font-family: Euclid Circular A;
+      font-size: 5.5rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+
+      &:nth-of-type(1) {
+        text-align: left;
+        padding-left: 10rem;
+      }
+
+      &:nth-of-type(2) {
+        margin-left: 10rem;
+      }
+    }
+
+    // .main-banner__link
+    &__link {
+      margin-top: 5.7rem;
+      margin-left: 35rem;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 1.5rem;
+
+      > span {
+        color: #fff;
+        font-family: Euclid Circular A;
+        font-size: 2rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+    }
+
+    // .main-banner__text-block
+    &__text-block {
+        position: relative;
+      margin-top: 19rem;
+      z-index: 10;
+      display: flex;
+      flex-direction: row;
+      box-sizing: border-box;
+      min-height: 25.4rem;
+      padding: 5rem 4rem;
+      gap: 7.4rem;
+      background-color: #4d4d50;
+    }
+
+    // .main-banner__side
+    &__side {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    // .main-banner__project-container
+    &__project-container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    // .main-banner__project-number
+    &__project-number {
+      color: #fff;
+      text-align: center;
+      font-family: Euclid Circular A;
+      font-size: 4rem;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+      letter-spacing: 0.72rem;
+      text-transform: uppercase;
+    }
+
+    // .main-banner__project-text
+    &__project-text {
+      color: #fff;
+      font-family: Euclid Circular A;
+      font-size: 1.6rem;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+    }
+
+    &__side-title {
+      color: #fff;
+      font-family: Euclid Circular A;
+      font-size: 1.8rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 2.7rem;
+    }
+
+    // .main-banner__block-link
+    &__block-link {
+      display: flex;
+      width: fit-content;
+      color: #fff;
+      font-family: Euclid Circular A;
+      font-size: 1.6rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      border-bottom: 1px solid #fff;
+    }
+
+    // .main-banner__paragraph
+    &__paragraph {
+      color: #fff;
+      font-family: Euclid Circular A;
+      font-size: 1.6rem;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+    }
+
+    &__color-block {
+      height: 25rem;
+      color: #fff;
+      text-align: right;
+      font-family: Euclid Circular A;
+      font-size: 2rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      background-color: #e01327;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      > a {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 1.2rem;
+      }
+    }
+  }
+
+  .competence {
+    margin-top: 16rem;
+    
+    &__title {
+      width: 100%;
+      max-width: 117.5rem;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+
+  .container {
+  }
+
+  .img-container {
+    margin-bottom: -100rem;
+    width: 51.2rem;
+    height: 73.4rem;
+
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .about-competence {
+    .container {
+      justify-content: center;
+      width: 162rem;
+      display: flex;
+      flex-direction: row;
+      gap: 19rem;
+    }
+
+    // .about-competence__arcticle
+    &__arcticle {
+      width: 684px;
+    }
+
+    // .about-competence__title
+    &__title {
+      color: #2d3238;
+      font-family: Euclid Circular A;
+      font-size: 5.5rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+
+    // .about-competence__subtitle
+    &__subtitle {
+      border-left: 2px solid #dd1444;
+      width: 61.4rem;
+      padding-left: 3rem;
+      margin-top: 4rem;
+      color: #2d3238;
+      font-family: Euclid Circular A;
+      font-size: 1.6rem;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+    }
+
+    // .about-competence__paragraph
+    &__paragraph {
+      margin-top: 11.2rem;
+      padding-bottom: 10rem;
+      color: #595e68;
+      font-family: Euclid Circular A;
+      font-size: 1.8rem;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 2.7rem;
+    }
+  }
+
+  .advantage {
+    width: 100%;
+    min-height: 94.4rem;
+    background: #131316;
+    // .advantage__container
+
+    &__container {
+      height: 100%;
+      min-height: 94.4rem;
+      position: relative;
+      margin: 0 auto;
+      width: 140rem;
+    }
+
+    // .advantage__title
+    &__title {
+      position: absolute;
+      top: 16rem;
+      width: 100%;
+      color: #fff;
+      text-align: center;
+      font-family: Euclid Circular A;
+      font-size: 5.5rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+
+    // .advantage__blocks
+    &__blocks {
+      height: 100%;
+      min-height: 94.4rem;
+      display: flex;
+      flex-direction: r;
+    }
+
+    // .advantage__block
+    &__block {
+      padding-left: 1.5rem;
+      width: 100%;
+      padding-top: 30rem;
+      box-sizing: border-box;
+      height: 100%;
+      grid-row: 1 / 3;
+      border-right: 1px solid rgba(157, 153, 175, 0.25);
+      // opacity: 0.25;
+    }
+
+    // .advantage__img-container
+    &__img-container {
+      width: 25rem;
+      height: 13rem;
+
+      > svg {
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    // .advantage__block-title
+    &__block-title {
+      width: 30rem;
+      margin-top: 5rem;
+      color: #fff;
+      font-family: Euclid Circular A;
+      font-size: 2.8rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+
+    // .advantage__block-paragraph
+    &__block-paragraph {
+      width: 30rem;
+      margin-top: 3rem;
+      color: #cdcfd4;
+      font-family: Euclid Circular A;
+      font-size: 1.6rem;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+    }
+  }
+
+  .circle-icon {
+    margin: 120px auto 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 17rem;
+    height: 17rem;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    // .circle-icon__age
+    &__age {
+      color: #fff;
+      text-align: center;
+      font-family: Euclid Circular A;
+      font-size: 4rem;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+      letter-spacing: 0.72rem;
+      text-transform: uppercase;
+    }
+
+    // .circle-icon__text
+    &__text {
+      color: rgba(255, 255, 255, 0.5);
+      text-align: center;
+      font-family: Euclid Circular A;
+      font-size: 1.6rem;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+    }
+  }
+
+  .world {
+    margin-top: 20rem;
+  }
 }
