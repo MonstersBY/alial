@@ -1,0 +1,97 @@
+.contacts {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  header {
+    background: transparent;
+    border-bottom: 1px solid rgba(157, 153, 175, 0.25);
+  }
+
+  footer {
+    z-index: 1;
+    display: flex;
+    box-sizing: border-box;
+    margin-top: 0;
+    background: #0b0c0b;
+   
+  }
+
+  .wrapper-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  main {
+    box-sizing: border-box;
+    padding: 15rem 0 24rem 1.7rem;
+    max-width: 140rem;
+    margin: 0 auto;
+  }
+
+  // .contacts__subtitle
+  &__subtitle {
+    color: #fff;
+    font-family: Euclid Circular A;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+  }
+  // .contacts__title
+  &__title {
+    margin-top: 1rem;
+    color: #fff;
+    font-family: Euclid Circular A;
+    font-size: 5.5rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  .contactslist {
+    margin-top: 17rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .contacts-item {
+    position: relative;
+    // .contacts-item__title
+    &__title {
+      color: #fff;
+      font-family: Euclid Circular A;
+      font-size: 2rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+    // .contacts-item__text
+    &__text {
+      margin-top: 2.1rem;
+      color: #fff;
+      font-family: Euclid Circular A;
+      font-size: 1.8rem;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 2.7rem; /* 150% */
+    }
+  }
+
+  .anketa-link {
+    a > {
+      display: inline-flex;
+      padding: 2.5rem 3.2rem;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      background: #fff;
+    }
+  }
+}
