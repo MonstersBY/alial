@@ -13,7 +13,7 @@
     grid-template-columns: 26rem 1fr 1fr 1fr 1fr 26rem;
     grid-template-rows: 10.8rem 34.1rem 1fr;
 
-    >.cell {
+    > .cell {
       border-right: 0.1rem solid rgba(157, 153, 175, 0.25);
       border-bottom: 0.1rem solid rgba(157, 153, 175, 0.25);
     }
@@ -22,10 +22,9 @@
   header {
     background: transparent;
 
-    >.container {
+    > .container {
       max-width: 138rem;
     }
-
   }
 
   footer {
@@ -34,7 +33,6 @@
     box-sizing: border-box;
     margin-top: 0;
     background: #0b0c0b;
-
   }
 
   .wrapper-img {
@@ -44,7 +42,7 @@
     width: 100%;
     height: calc(100% - 42.7rem);
 
-    >img {
+    > img {
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -62,6 +60,7 @@
   // .contacts__subtitle
   &__subtitle {
     padding-left: 1.7rem;
+    box-sizing: border-box;
     position: relative;
     z-index: 1;
     color: #fff;
@@ -75,6 +74,7 @@
   // .contacts__title
   &__title {
     padding-left: 1.7rem;
+    box-sizing: border-box;
     position: relative;
     z-index: 1;
     margin-top: 1rem;
@@ -90,12 +90,14 @@
     max-width: 140rem;
     margin-top: 17rem;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: flex-start;
+    grid-template-columns: 34.9rem 34.9rem 34.9rem 34.8rem;
   }
 
   .contacts-item {
     position: relative;
     padding-left: 1.7rem;
+    box-sizing: border-box;
 
     // .contacts-item__title
     &__title {
@@ -117,17 +119,17 @@
       font-weight: 300;
       line-height: 2.7rem;
       /* 150% */
-      >svg{
-        width:3.6rem; 
-        height:1.3rem;
+      > svg {
+        width: 3.6rem;
+        height: 1.3rem;
       }
     }
   }
 
   .link {
     padding-left: 0;
-    >a {
-      width: 34.5rem;
+    > a {
+      width: 100%;
       display: inline-flex;
       box-sizing: border-box;
       padding: 2.5rem 3.2rem;
@@ -139,13 +141,13 @@
     }
 
     .contacts-item__title {
-      color: #0B0C0B;
+      color: #0b0c0b;
     }
 
     .contacts-item__text {
       width: 100%;
       margin: 0 0;
-      color: #0B0C0B;
+      color: #0b0c0b;
       display: flex;
       flex-direction: row;
       justify-content: space-between;

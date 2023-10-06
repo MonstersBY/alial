@@ -4738,6 +4738,8 @@ svg {
 }
 .contacts__subtitle {
   padding-left: 1.7rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   position: relative;
   z-index: 1;
   color: #fff;
@@ -4749,6 +4751,8 @@ svg {
 }
 .contacts__title {
   padding-left: 1.7rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   position: relative;
   z-index: 1;
   margin-top: 1rem;
@@ -4764,12 +4768,17 @@ svg {
   margin-top: 17rem;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-grid-columns: 34.9rem 34.9rem 34.9rem 34.8rem;
+  grid-template-columns: 34.9rem 34.9rem 34.9rem 34.8rem;
 }
 .contacts .contacts-item {
   position: relative;
   padding-left: 1.7rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .contacts .contacts-item__title {
   color: #fff;
@@ -4797,7 +4806,7 @@ svg {
   padding-left: 0;
 }
 .contacts .link > a {
-  width: 34.5rem;
+  width: 100%;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -4818,12 +4827,12 @@ svg {
   background: #fff;
 }
 .contacts .link .contacts-item__title {
-  color: #0B0C0B;
+  color: #0b0c0b;
 }
 .contacts .link .contacts-item__text {
   width: 100%;
   margin: 0 0;
-  color: #0B0C0B;
+  color: #0b0c0b;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
