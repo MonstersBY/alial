@@ -1,16 +1,31 @@
 .about-company {
-  margin-top: 0;
-  position: relative;
+
+  .header{
+    border-bottom: 1px solid rgba(157, 153, 175, 0.25);
+    padding: 0 0;
+    > .container{
+      position: relative;
+      height: 10.8rem;
+      max-width: 139rem;
+      z-index: 1;
+    }
+  }
+
+  main {
+    margin-top: 0;
+    position: relative;
+  }
 
   .main-banner {
     .line {
       position: absolute;
       left: 35rem;
       height: 100%;
-      border: 1px solid #b1aec2;
+      background-color: #b1aec2;
       opacity: 0.25;
-      background: #fff;
+      width: 1px;
     }
+
     // .main-banner__container
     &__container {
       width: 100%;
@@ -21,10 +36,26 @@
 
     // .main-banner__block
     &__block {
+      position: relative;
       display: flex;
       flex-direction: column;
       position: relative;
-      border-right: 1px solid rgba(157, 153, 175, 0.25);
+      // border-right: 1px solid rgba(157, 153, 175, 0.25);
+      &:after{
+        content: "";
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        width: 1px;
+        background-color: rgba(157, 153, 175, 0.25);
+        height: 94rem;
+        z-index: 10;
+      }
+      &:nth-of-type(1),&:nth-of-type(4){
+        &:after{
+        height: 104.8rem;
+        }
+      }
     }
 
     // .main-banner__back
@@ -35,7 +66,7 @@
       width: 100%;
       height: 94rem;
 
-      > img {
+      >img {
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -50,7 +81,7 @@
           #c3c8d2;
         width: 100%;
 
-        > img {
+        >img {
           width: 100%;
           height: 100%;
           object-fit: contain;
@@ -63,7 +94,7 @@
     &__img-comtainer {
       width: 100%;
 
-      > img {
+      >img {
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -89,6 +120,12 @@
         justify-content: center;
         border-radius: 50%;
         border: 1px solid rgba(255, 255, 255, 0.6);
+
+        >a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
       }
     }
 
@@ -110,11 +147,11 @@
 
       &:nth-of-type(1) {
         text-align: left;
-        padding-left: 10rem;
+        margin-left: 4rem;
       }
 
       &:nth-of-type(2) {
-        margin-left: 10rem;
+        margin-left: 15rem;
       }
     }
 
@@ -128,7 +165,7 @@
       justify-content: flex-start;
       gap: 1.5rem;
 
-      > span {
+      >span {
         color: #fff;
         font-family: Euclid Circular A;
         font-size: 2rem;
@@ -140,7 +177,7 @@
 
     // .main-banner__text-block
     &__text-block {
-        position: relative;
+      position: relative;
       margin-top: 19rem;
       z-index: 10;
       display: flex;
@@ -163,7 +200,7 @@
     &__project-container {
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 1rem;
     }
 
     // .main-banner__project-number
@@ -236,7 +273,7 @@
       align-items: center;
       justify-content: center;
 
-      > a {
+      >a {
         display: flex;
         flex-direction: column;
         align-items: flex-end;
@@ -256,15 +293,14 @@
     }
   }
 
-  .container {
-  }
+  .container {}
 
   .img-container {
     margin-bottom: -100rem;
     width: 51.2rem;
     height: 73.4rem;
 
-    > img {
+    >img {
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -282,7 +318,7 @@
 
     // .about-competence__arcticle
     &__arcticle {
-      width: 684px;
+      width: 68.4rem;
     }
 
     // .about-competence__title
@@ -375,7 +411,7 @@
       width: 25rem;
       height: 13rem;
 
-      > svg {
+      >svg {
         object-fit: contain;
         width: 100%;
         height: 100%;
@@ -408,7 +444,7 @@
   }
 
   .circle-icon {
-    margin: 120px auto 0;
+    margin: 12rem auto 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -417,6 +453,7 @@
     height: 17rem;
     border-radius: 50%;
     border: 1px solid rgba(255, 255, 255, 0.4);
+
     // .circle-icon__age
     &__age {
       color: #fff;
@@ -446,7 +483,7 @@
     margin-top: 20rem;
   }
 
-  +footer{
+  footer {
     margin-top: 20rem;
   }
 }
