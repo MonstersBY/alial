@@ -1,0 +1,208 @@
+.card-project {
+
+    .container {
+        margin: 0 auto;
+        padding-top: 8rem;
+        max-width: 140rem;
+    }
+
+    // .card-project__title 
+    &__title {
+        margin: 0 auto;
+        width: 105.6rem;
+        text-align: center;
+
+        &-h2 {
+            margin-top: 8rem;
+            color: #0B0C0B;
+            font-family: Euclid Circular A;
+            font-size: 3.5rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+    }
+
+
+    // .card-project__date
+    &__date {
+        text-align: center;
+        margin: 2rem auto 0;
+        color: #E01327;
+        font-family: Euclid Circular A;
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+    }
+
+    // .card-project__img-container
+    &__img-container {
+        margin: 7rem auto 0;
+        width: 105.6rem;
+        height: 51rem;
+
+        >img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    // .card-project__article
+    &__article {
+        width: 100%;
+        max-width: 98.4rem;
+        margin: 6rem auto 0;
+        display: flex;
+        flex-direction: column;
+
+        p {
+            color: #0B0C0B;
+            font-family: Euclid Circular A;
+            font-size: 1.8rem;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 2.7rem;
+        }
+
+        strong {
+            color: #0B0C0B;
+            font-family: Euclid Circular A;
+            font-size: 1.8rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 2.7rem;
+        }
+    }
+
+    // .card-project__text-block 
+    &__text-block {
+        margin-top: 3rem;
+
+        &:first-of-type {
+            margin-top: 0;
+        }
+
+        >p {
+            margin-top: 2rem;
+
+            &:first-of-type {
+                margin-top: 0;
+            }
+        }
+
+    }
+
+
+    .article__list {
+        margin-top: 3rem;
+
+        >li {
+            margin-top: 1.8rem;
+            display: flex;
+            flex-direction: row;
+            gap: 1.2rem;
+            align-items: center;
+            color: #424245;
+            font-family: Euclid Circular A;
+            font-size: 1.6rem;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+
+            &:first-child {
+                margin-top: 0;
+            }
+
+            &::before {
+                content: "";
+                width: 60px;
+                height: 1px;
+                background: rgba(146, 153, 157, 0.30);
+                padding-right: 1.2rem;
+            }
+        }
+    }
+
+    .title-h2 {
+        margin-top: 8rem;
+    }
+
+    .stages-container {
+        margin-top: 20rem;
+        &__title {
+            color: var(--black, #0B0C0B);
+            font-family: Euclid Circular A;
+            font-size: 5rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 6.5rem;
+        }
+    }
+
+    .stages {
+        margin-top: 7.3rem;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 40rem 40rem;
+        grid-template-areas:
+            "stage-img-1 stage-text-1 stage-img-2 stage-text-2"
+            "stage-text-3 stage-img-3 stage-text-4 stage-img-4";
+
+        // .stages__img-container
+        &__img-container {
+            width: 35.4rem;
+            height: 22.2rem;
+
+            >img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        // .stages__title
+        &__title {
+            padding-left: 2.5rem;
+            color: #0B0C0B;
+            font-family: Euclid Circular A;
+            font-size: 2.8rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+
+        li {
+            display: flex;
+            flex-direction: column;
+
+            >span {
+                margin: 2.3rem auto 0;
+                color: #E01327;
+                font-family: Euclid Circular A;
+                font-size: 1.8rem;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 2.7rem;
+            }
+
+            >p {
+                padding-left: 2.5rem;
+                margin-top: 3.4rem;
+                width: 27.5rem;
+                color: rgba(45, 50, 56, 0.70);
+                font-family: Euclid Circular A;
+                font-size: 1.6rem;
+                font-style: normal;
+                font-weight: 300;
+                line-height: normal;
+            }
+        }
+
+    }
+
+
+
+
+}
