@@ -1,13 +1,57 @@
+.card-project-page{
+    .world{
+        margin-top: 20rem;
+    }
+    .article-box{
+        margin-top: 6rem;
+    }
+    
+    .footer{
+        margin-top: 20rem;
+    }
+
+    .certificates__slide{
+        &:after{
+
+        }
+    }
+
+    .about-company{
+        margin-top: 6rem;
+    }
+}
+
 .card-project {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 140rem;
+
+    .grid-row{
+        border: 1px solid rgba(157, 153, 175, 0.25);
+        border-bottom: none;
+        grid-column: span 3;
+    }
+    .grid-column{
+        border: 1px solid rgba(157, 153, 175, 0.25);
+        border-bottom: none;
+        grid-column: span 1;
+    }
+
+    .grid-column + .grid-column {
+        border-left: none; /* Удаляем левую границу у второго элемента */
+      }
 
     .container {
         margin: 0 auto;
-        padding-top: 8rem;
         max-width: 140rem;
+        display: grid;
+        grid-template-columns: 17.1rem 1fr 17.1rem;
+        grid-auto-rows: auto;
     }
 
     // .card-project__title 
     &__title {
+        padding-top: 8rem;
         margin: 0 auto;
         width: 105.6rem;
         text-align: center;
@@ -34,11 +78,13 @@
         font-style: normal;
         font-weight: 300;
         line-height: normal;
+        padding-bottom: 7rem;
     }
 
     // .card-project__img-container
     &__img-container {
-        margin: 7rem auto 0;
+        grid-area: big-img;
+        margin: 0 auto;
         width: 105.6rem;
         height: 51rem;
 
@@ -52,6 +98,7 @@
     // .card-project__article
     &__article {
         width: 100%;
+        padding-bottom: 10rem;
         max-width: 98.4rem;
         margin: 6rem auto 0;
         display: flex;
@@ -130,9 +177,10 @@
     }
 
     .stages-container {
-        margin-top: 20rem;
+        margin-top: 10rem;
         &__title {
-            color: var(--black, #0B0C0B);
+            padding-left: 1.4rem;
+            color: #0B0C0B;
             font-family: Euclid Circular A;
             font-size: 5rem;
             font-style: normal;
@@ -144,16 +192,16 @@
     .stages {
         margin-top: 7.3rem;
         display: grid;
+        gap: 6rem 0;
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: 40rem 40rem;
         grid-template-areas:
             "stage-img-1 stage-text-1 stage-img-2 stage-text-2"
             "stage-text-3 stage-img-3 stage-text-4 stage-img-4";
 
         // .stages__img-container
         &__img-container {
-            width: 35.4rem;
-            height: 22.2rem;
+            width: 100%;
+            height: 20.9rem;
 
             >img {
                 width: 100%;
@@ -164,6 +212,7 @@
 
         // .stages__title
         &__title {
+            margin-top: 6.2rem;
             padding-left: 2.5rem;
             color: #0B0C0B;
             font-family: Euclid Circular A;
@@ -176,7 +225,6 @@
         li {
             display: flex;
             flex-direction: column;
-
             >span {
                 margin: 2.3rem auto 0;
                 color: #E01327;

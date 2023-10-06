@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .title-h1 {
   font-size: 5.5rem;
   font-style: normal;
@@ -4788,6 +4789,10 @@ svg {
   line-height: 2.7rem;
   /* 150% */
 }
+.contacts .contacts-item__text > svg {
+  width: 3.6rem;
+  height: 1.3rem;
+}
 .contacts .link {
   padding-left: 0;
 }
@@ -4834,12 +4839,50 @@ svg {
           align-items: center;
 }
 
-.card-project .container {
+.card-project-page .world {
+  margin-top: 20rem;
+}
+.card-project-page .article-box {
+  margin-top: 6rem;
+}
+.card-project-page .footer {
+  margin-top: 20rem;
+}
+.card-project-page .about-company {
+  margin-top: 6rem;
+}
+
+.card-project {
   margin: 0 auto;
-  padding-top: 8rem;
+  width: 100%;
   max-width: 140rem;
 }
+.card-project .grid-row {
+  border: 1px solid rgba(157, 153, 175, 0.25);
+  border-bottom: none;
+  -ms-grid-column-span: 3;
+  grid-column: span 3;
+}
+.card-project .grid-column {
+  border: 1px solid rgba(157, 153, 175, 0.25);
+  border-bottom: none;
+  -ms-grid-column-span: 1;
+  grid-column: span 1;
+}
+.card-project .grid-column + .grid-column {
+  border-left: none; /* Удаляем левую границу у второго элемента */
+}
+.card-project .container {
+  margin: 0 auto;
+  max-width: 140rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 17.1rem 1fr 17.1rem;
+  grid-template-columns: 17.1rem 1fr 17.1rem;
+  grid-auto-rows: auto;
+}
 .card-project__title {
+  padding-top: 8rem;
   margin: 0 auto;
   width: 105.6rem;
   text-align: center;
@@ -4862,9 +4905,11 @@ svg {
   font-style: normal;
   font-weight: 300;
   line-height: normal;
+  padding-bottom: 7rem;
 }
 .card-project__img-container {
-  margin: 7rem auto 0;
+  grid-area: big-img;
+  margin: 0 auto;
   width: 105.6rem;
   height: 51rem;
 }
@@ -4876,6 +4921,7 @@ svg {
 }
 .card-project__article {
   width: 100%;
+  padding-bottom: 10rem;
   max-width: 98.4rem;
   margin: 6rem auto 0;
   display: -webkit-box;
@@ -4951,10 +4997,11 @@ svg {
   margin-top: 8rem;
 }
 .card-project .stages-container {
-  margin-top: 20rem;
+  margin-top: 10rem;
 }
 .card-project .stages-container__title {
-  color: var(--black, #0B0C0B);
+  padding-left: 1.4rem;
+  color: #0B0C0B;
   font-family: Euclid Circular A;
   font-size: 5rem;
   font-style: normal;
@@ -4965,15 +5012,15 @@ svg {
   margin-top: 7.3rem;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[4];
+  gap: 6rem 0;
+  -ms-grid-columns: 1fr 0 1fr 0 1fr 0 1fr;
   grid-template-columns: repeat(4, 1fr);
-  -ms-grid-rows: 40rem 40rem;
-  grid-template-rows: 40rem 40rem;
+  -ms-grid-rows: auto 6rem auto;
       grid-template-areas: "stage-img-1 stage-text-1 stage-img-2 stage-text-2" "stage-text-3 stage-img-3 stage-text-4 stage-img-4";
 }
 .card-project .stages__img-container {
-  width: 35.4rem;
-  height: 22.2rem;
+  width: 100%;
+  height: 20.9rem;
 }
 .card-project .stages__img-container > img {
   width: 100%;
@@ -4982,6 +5029,7 @@ svg {
      object-fit: cover;
 }
 .card-project .stages__title {
+  margin-top: 6.2rem;
   padding-left: 2.5rem;
   color: #0B0C0B;
   font-family: Euclid Circular A;
