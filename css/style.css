@@ -9,7 +9,7 @@
 
 @media (max-width: 48em) {
   .title-h1 {
-    font-size: 2.7rem;
+    font-size: 5.4rem;
     font-style: normal;
     font-weight: 600;
     line-height: 130%;
@@ -2544,7 +2544,7 @@ svg {
     line-height: 130%;
   }
   .world__head-info span {
-    font-size: 3.82rem;
+    font-size: 3.2rem;
     line-height: 140%;
   }
   .world-container-filter {
@@ -4179,7 +4179,7 @@ svg {
   font-style: normal;
   font-weight: 300;
   line-height: normal;
-  color: #92999D;
+  color: #92999d;
 }
 .vacancies-item--info {
   width: 94.3rem;
@@ -4283,6 +4283,181 @@ svg {
   line-height: normal;
 }
 
+@media (max-width: 48em) {
+  .vacancies {
+    overflow-x: hidden;
+    margin-top: 10rem;
+    margin-bottom: 24rem;
+    padding-bottom: 0;
+  }
+  .vacancies .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0 4rem 6.4rem;
+  }
+  .vacancies .container::after {
+    width: 0;
+    height: 0;
+  }
+  .vacancies-head {
+    padding-bottom: 0;
+    margin-left: 0;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  .vacancies-head--number {
+    font-size: 3rem;
+    font-weight: 700;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .vacancies-head .title-h1 {
+    padding-left: 0;
+  }
+  .vacancies-item {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0 0;
+    margin-top: 15.1rem;
+    border-top: 0 solid rgba(157, 153, 175, 0.1607843137);
+  }
+  .vacancies-item::before {
+    content: "";
+    position: absolute;
+    width: 100rem;
+    height: 1px;
+    opacity: 0.1;
+    background: #9d99af;
+    top: -7rem;
+    left: -10rem;
+  }
+  .vacancies-item:last-of-type::after {
+    content: "";
+    position: absolute;
+    bottom: -6.4rem;
+    height: 1px;
+    width: 90rem;
+    left: -5rem;
+    opacity: 0.1;
+    background: #9d99af;
+  }
+  .vacancies-item:last-child {
+    border-bottom: 0 solid rgba(157, 153, 175, 0.1607843137);
+  }
+  .vacancies-item--date {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 1.6rem;
+    width: 100%;
+    margin-left: 0;
+  }
+  .vacancies-item--date strong {
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    line-height: 140%;
+  }
+  .vacancies-item--date span {
+    font-size: 3.2rem;
+    font-weight: 300;
+    line-height: 140%;
+  }
+  .vacancies-item--info {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    position: relative;
+  }
+  .vacancies-item--info::before {
+    width: 0;
+  }
+  .vacancies-item--info::after {
+    width: 0;
+  }
+  .vacancies-item--info p {
+    font-size: 3.2rem;
+    margin-bottom: 3.6rem;
+  }
+  .vacancies-item--info p.vacancies-item--info-title {
+    font-size: 4.4rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-top: 1rem;
+    margin-bottom: 6.4rem;
+  }
+  .vacancies-item--info ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 2.4rem;
+    margin-bottom: 3rem;
+  }
+  .vacancies-item--info ul:last-child {
+    margin-bottom: 0;
+  }
+  .vacancies-item--info li {
+    font-size: 3.2rem;
+    line-height: 140%;
+    padding-left: 10.4rem;
+  }
+  .vacancies-item--info li:before {
+    width: 8rem;
+    left: 0;
+    top: 2.2rem;
+  }
+  .vacancies-item--link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 1.6rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 5.6rem;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .vacancies-item--link svg {
+    width: 6.6rem;
+    height: 6.6rem;
+  }
+  .vacancies-item--link strong {
+    font-size: 3rem;
+    line-height: 140%;
+  }
+}
 .about-company .header {
   border-bottom: 1px solid rgba(157, 153, 175, 0.25);
   padding: 0 0;
