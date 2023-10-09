@@ -3632,6 +3632,14 @@ svg {
   font-weight: 700;
 }
 
+.main-our-projects + .footer {
+  margin-top: 20rem;
+}
+
+.main-our-articles + .footer {
+  margin-top: 20rem;
+}
+
 .our-articles .our-projects-item--img {
   width: 64rem;
   height: 32.5rem;
@@ -3670,10 +3678,19 @@ svg {
 }
 
 @media (max-width: 48em) {
+  .main-our-projects .certificates {
+    margin-bottom: 32rem;
+  }
+  .main-our-articles .certificates {
+    margin-bottom: 32rem;
+  }
   .our-projects {
     overflow-x: hidden;
     padding-top: 10rem;
     margin-bottom: 32rem;
+  }
+  .our-projects .container {
+    padding: 0 4rem;
   }
   .our-projects--title {
     text-align: left;
@@ -3736,7 +3753,7 @@ svg {
     content: "";
     display: block;
     position: absolute;
-    width: 120%;
+    width: 150%;
     height: 1px;
     opacity: 0.1;
     background: #9D99AF;
@@ -3793,15 +3810,27 @@ svg {
     height: 1px;
     top: 2.2rem;
   }
+  .our-projects .another-text {
+    width: 110%;
+    margin-bottom: 8rem;
+  }
+  .our-articles .another-text {
+    margin-bottom: 12em;
+  }
+  .our-articles .our-projects-item--img {
+    width: 74.8rem;
+    height: 55rem;
+  }
   .our-articles .our-projects-item p {
-    font-size: 1.8rem;
+    width: 90%;
+    font-size: 3.2rem;
     font-style: normal;
     font-weight: 300;
-    line-height: 150%;
+    line-height: 140%;
     color: #424245;
     overflow: hidden;
     text-overflow: ellipsis;
-    -webkit-line-clamp: 4;
+    -webkit-line-clamp: 5;
     -webkit-box-orient: vertical;
     display: -webkit-box;
   }
@@ -3824,7 +3853,7 @@ svg {
     text-wrap: nowrap;
     font-style: normal;
     font-weight: 300;
-    line-height: 150%;
+    line-height: 140%;
     color: #92999D;
   }
   .another-text .active {
