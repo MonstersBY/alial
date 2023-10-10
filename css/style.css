@@ -4483,9 +4483,28 @@ svg {
   max-width: 139rem;
   z-index: 1;
 }
+@media (max-width: 48em) {
+  .about-company .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 16rem;
+  }
+}
 .about-company main {
   margin-top: 0;
   position: relative;
+}
+.about-company .main-banner_mobile {
+  display: none;
+}
+.about-company .main-banner_desktop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 .about-company .main-banner .line {
   position: absolute;
@@ -4558,10 +4577,10 @@ svg {
   -o-object-position: left bottom;
      object-position: left bottom;
 }
-.about-company .main-banner__img-comtainer {
+.about-company .main-banner__img-container {
   width: 100%;
 }
-.about-company .main-banner__img-comtainer > img {
+.about-company .main-banner__img-container > img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -4611,6 +4630,10 @@ svg {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+.about-company .main-banner__socials .social-icon > a > svg {
+  width: 2.2rem;
+  height: 2.2rem;
 }
 .about-company .main-banner__block-inner {
   width: 100%;
@@ -4852,14 +4875,21 @@ svg {
   font-weight: 300;
   line-height: 2.7rem;
 }
+.about-company .about-competence__paragraph::first-letter {
+  color: #2D3238;
+  font-family: Euclid Circular A;
+  font-size: 6rem;
+  padding-right: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 2.7rem;
+}
 .about-company .advantage {
   width: 100%;
-  min-height: 94.4rem;
   background: #131316;
 }
 .about-company .advantage__container {
   height: 100%;
-  min-height: 94.4rem;
   position: relative;
   margin: 0 auto;
   width: 140rem;
@@ -4906,7 +4936,7 @@ svg {
   border-right: 1px solid rgba(157, 153, 175, 0.25);
 }
 .about-company .advantage__img-container {
-  width: 25rem;
+  width: 21.3rem;
   height: 13rem;
 }
 .about-company .advantage__img-container > svg {
@@ -4980,6 +5010,404 @@ svg {
 }
 .about-company footer {
   margin-top: 20rem;
+}
+@media (max-width: 48em) {
+  .about-company .main-banner_desktop {
+    display: none;
+  }
+  .about-company .main-banner_mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .about-company .main-banner_mobile .main-banner__back > img {
+    -webkit-filter: brightness(100%);
+            filter: brightness(100%);
+  }
+  .about-company .main-banner_mobile .main-banner__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .about-company .main-banner_mobile .main-banner__mobile-top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .about-company .main-banner_mobile .main-banner__mobile-top > .main-banner__img-container {
+    background: linear-gradient(271deg, #D4DADD 2.69%, #BDC5CC 40.53%), #C3C8D2;
+    position: absolute;
+    top: 10rem;
+    left: 0;
+    width: 21.2rem;
+    height: 24rem;
+  }
+  .about-company .main-banner_mobile .main-banner__mobile-top > .main-banner__img-container > img {
+    -o-object-position: left 0;
+       object-position: left 0;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .about-company .main-banner_mobile .main-banner__mobile-top .circle-icon {
+    width: 28rem;
+    height: 28rem;
+    z-index: 1;
+    margin-left: auto;
+    margin-top: 6rem;
+    margin-right: 5rem;
+  }
+  .about-company .main-banner_mobile .main-banner__mobile-top .circle-icon__age {
+    color: #FFF;
+    text-align: center;
+    font-family: Euclid Circular A;
+    font-size: 6rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 1.08rem;
+    text-transform: uppercase;
+  }
+  .about-company .main-banner_mobile .main-banner__mobile-top .circle-icon__text {
+    color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    font-family: Euclid Circular A;
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 140%;
+  }
+  .about-company .main-banner_mobile .main-banner__mobile-content {
+    z-index: 1;
+  }
+  .about-company .main-banner_mobile .main-banner__title-container {
+    margin-top: 6rem;
+  }
+  .about-company .main-banner_mobile .main-banner__title {
+    margin-left: 4rem;
+    text-align: left;
+  }
+  .about-company .main-banner_mobile .main-banner__title:nth-of-type(1) {
+    margin-left: 4rem;
+  }
+  .about-company .main-banner_mobile .main-banner__link {
+    margin-top: 4.8rem;
+    margin-left: 4rem;
+  }
+  .about-company .main-banner_mobile .main-banner__link > span {
+    font-size: 3.2rem;
+    line-height: 140%;
+    /* 4.48rem */
+  }
+  .about-company .main-banner_mobile .main-banner__mobile-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    width: 100%;
+    margin-top: 12rem;
+  }
+  .about-company .main-banner_mobile .main-banner__mobile-footer .main-banner__img-container {
+    position: absolute;
+    -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+    z-index: 1;
+    bottom: 0rem;
+    right: 0;
+    width: 19rem;
+    height: 24rem;
+  }
+  .about-company .main-banner_mobile .main-banner__mobile-footer .main-banner__img-container > img {
+    width: 100%;
+    -o-object-position: left 0;
+       object-position: left 0;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .about-company .main-banner_mobile .main-banner__mobile-secton_bottom .main-banner__text-block {
+    position: relative;
+    margin-top: 0;
+    z-index: 1;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    min-height: 25.4rem;
+    padding: 4.8rem 4rem 30rem;
+    gap: 2.4rem;
+  }
+  .about-company .main-banner_mobile .main-banner__mobile-secton_bottom .main-banner__side {
+    gap: 2.4rem;
+  }
+  .about-company .main-banner_mobile .main-banner__mobile-secton_bottom .main-banner__side_row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .about-company .main-banner_mobile .main-banner__mobile-secton_bottom .main-banner__project-container {
+    margin-right: 7.8rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    gap: 0;
+  }
+  .about-company .main-banner_mobile .main-banner__mobile-secton_bottom .main-banner__project-number {
+    color: #FFF;
+    font-size: 6rem;
+    letter-spacing: 1.08rem;
+  }
+  .about-company .main-banner_mobile .main-banner__mobile-secton_bottom .main-banner__project-text {
+    font-size: 3.2rem;
+    line-height: 140%;
+  }
+  .about-company .main-banner_mobile .main-banner__mobile-secton_bottom .main-banner__block-link {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 140%;
+  }
+  .about-company .main-banner_mobile .main-banner__mobile-secton_bottom .main-banner__side-title {
+    font-size: 3.2rem;
+    line-height: 140%;
+  }
+  .about-company .main-banner_mobile .main-banner__mobile-secton_bottom .main-banner__paragraph {
+    font-size: 3.2rem;
+    line-height: 140%;
+  }
+  .about-company .main-banner_mobile .main-banner__mobile-secton_bottom .main-banner__img-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 134.603px;
+    height: 120px;
+  }
+  .about-company .main-banner_mobile .main-banner__mobile-secton_bottom .main-banner__color-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 47.2rem;
+    height: 19.4rem;
+    padding: 5rem 6.4rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 2rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  .about-company .main-banner_mobile .main-banner__mobile-secton_bottom .main-banner__color-block a > span {
+    gap: 2.4rem;
+    font-size: 3.2rem;
+    line-height: 140%;
+  }
+  .about-company .main-banner .main-banner__socials {
+    margin-left: 4rem;
+    width: 100%;
+    height: auto;
+    border-top: 0px solid rgba(157, 153, 175, 0.25);
+    z-index: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    gap: 2.4rem;
+  }
+  .about-company .main-banner .social-icon {
+    width: 11.2rem;
+    height: 11.2rem;
+  }
+  .about-company .main-banner .social-icon a > svg {
+    width: 4.2rem;
+    height: 4.2rem;
+  }
+  .about-company .competence {
+    margin-top: 120px;
+  }
+  .about-company .competence__title {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: left;
+  }
+  .about-company .about-competence .container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    gap: 8rem;
+  }
+  .about-company .about-competence .img-container {
+    width: 74.8rem;
+    height: 107rem;
+    margin-bottom: -26rem;
+  }
+  .about-company .about-competence__arcticle {
+    width: 100%;
+  }
+  .about-company .about-competence__title {
+    font-size: 5.4rem;
+    line-height: 130%;
+  }
+  .about-company .about-competence__subtitle {
+    border-left: 2px solid #dd1444;
+    width: 100%;
+    padding-left: 2.4rem;
+    margin-top: 3rem;
+    font-family: Euclid Circular A;
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 140%;
+  }
+  .about-company .about-competence__paragraph {
+    margin-top: 10.6rem;
+    padding-bottom: 0;
+    color: #2D3238;
+    font-family: Euclid Circular A;
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 140%;
+  }
+  .about-company .about-competence__paragraph::first-letter {
+    padding-right: 1rem;
+    color: #2D3238;
+    font-family: Euclid Circular A;
+    font-size: 6rem;
+    font-style: normal;
+    font-weight: 600;
+  }
+  .about-company .advantage {
+    width: 100%;
+    padding: 0 4rem 24rem;
+    background: #131316;
+  }
+  .about-company .advantage__container {
+    height: 100%;
+    min-height: 94.4rem;
+    width: 100%;
+  }
+  .about-company .advantage__title {
+    text-align: left;
+    padding-top: 50rem;
+    position: static;
+    color: #FFF;
+    text-align: center;
+    font-family: Euclid Circular A;
+    font-size: 5.4rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%;
+  }
+  .about-company .advantage__blocks {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .about-company .advantage__block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding-left: 0;
+    gap: 4rem;
+    width: 100%;
+    padding-top: 6rem;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    min-height: auto;
+    border-right: 0 solid rgba(157, 153, 175, 0.25);
+  }
+  .about-company .advantage__block__text-container {
+    width: 100%;
+    max-width: 100%;
+  }
+  .about-company .advantage__block:first-of-type {
+    padding-top: 8rem;
+  }
+  .about-company .advantage__img-container {
+    width: 100%;
+    max-width: 21.4rem;
+    height: 13rem;
+  }
+  .about-company .advantage__img-container > svg {
+    -o-object-fit: contain;
+       object-fit: contain;
+    width: 100%;
+    height: 100%;
+  }
+  .about-company .advantage__block-title {
+    width: 100%;
+    margin-top: 0;
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+  }
+  .about-company .advantage__block-paragraph {
+    width: 100%;
+    margin-top: 3rem;
+    color: #CDCFD4;
+    font-family: Euclid Circular A;
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 140%;
+  }
 }
 
 .contacts {
