@@ -1,3 +1,13 @@
+.vacancies-main{
+  .certificates{
+    margin-bottom: 0;
+  }
+
+  + .footer{
+    margin-top: 20rem;
+  }
+}
+
 .vacancies {
   margin-top: 10rem;
   margin-bottom: 20rem;
@@ -323,6 +333,18 @@
           line-height: 140%;
         }
       }
+    }
+  }
+}
+
+@media (max-width: 48em) {
+  .vacancies-main{
+    .certificates{
+      margin-bottom: 0;
+    }
+  
+    +.footer{
+      margin-top: 32rem;
     }
   }
 }

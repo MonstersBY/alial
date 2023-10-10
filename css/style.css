@@ -4099,6 +4099,13 @@ svg {
   left: -9.5rem;
 }
 
+.vacancies-main .certificates {
+  margin-bottom: 0;
+}
+.vacancies-main + .footer {
+  margin-top: 20rem;
+}
+
 .vacancies {
   margin-top: 10rem;
   margin-bottom: 20rem;
@@ -4456,6 +4463,14 @@ svg {
   .vacancies-item--link strong {
     font-size: 3rem;
     line-height: 140%;
+  }
+}
+@media (max-width: 48em) {
+  .vacancies-main .certificates {
+    margin-bottom: 0;
+  }
+  .vacancies-main + .footer {
+    margin-top: 32rem;
   }
 }
 .about-company .header {
@@ -5094,6 +5109,8 @@ svg {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-filter: brightness(45%);
+          filter: brightness(45%);
 }
 .contacts main {
   -webkit-box-sizing: border-box;
@@ -5215,6 +5232,114 @@ svg {
           align-items: center;
 }
 
+@media (max-width: 48em) {
+  .contacts {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contacts .back-grid {
+    display: none;
+  }
+  .contacts header {
+    background: transparent;
+    position: relative;
+  }
+  .contacts header::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: rgba(157, 153, 175, 0.25);
+    bottom: -2.8rem;
+    left: 0;
+  }
+  .contacts header > .container {
+    max-width: 100%;
+  }
+  .contacts .wrapper-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .contacts .wrapper-img > img {
+    width: 100%;
+    height: calc(100% - 150rem);
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: left 25% top 0;
+       object-position: left 25% top 0;
+  }
+  .contacts main {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 18rem 4rem 38.5rem;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .contacts__subtitle {
+    padding-left: 0;
+    font-size: 3.2rem;
+    line-height: 140%;
+  }
+  .contacts__title {
+    padding-left: 0;
+    margin-top: 1rem;
+    font-size: 5.5rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  .contacts .contactslist {
+    max-width: 140rem;
+    margin-top: 8rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 4.8rem;
+  }
+  .contacts .contacts-item {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding-left: 0;
+  }
+  .contacts .contacts-item__title {
+    font-size: 3.2rem;
+    line-height: 140%;
+  }
+  .contacts .contacts-item__text {
+    margin-top: 1rem;
+    font-size: 3.2rem;
+    line-height: 140%;
+  }
+  .contacts .contacts-item__text > svg {
+    width: 7.2rem;
+    height: 2.4rem;
+  }
+  .contacts .link {
+    padding-left: 0;
+    margin-top: 3.2rem;
+  }
+  .contacts .link > a {
+    width: 100%;
+    padding: 5rem 10rem;
+    gap: 2rem;
+  }
+  .contacts .link .contacts-item__title {
+    color: #0b0c0b;
+  }
+}
 .card-project-page .world {
   margin-top: 20rem;
 }
