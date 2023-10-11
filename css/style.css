@@ -3685,11 +3685,26 @@ svg {
     margin-bottom: 32rem;
   }
   .our-projects {
-    overflow-x: hidden;
-    padding-top: 10rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    overflow: hidden;
+    margin-top: 10rem;
+    padding-top: 0;
     margin-bottom: 32rem;
   }
   .our-projects .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     padding: 0 4rem;
   }
   .our-projects--title {

@@ -200,11 +200,17 @@
     }
 
     .our-projects {
-        overflow-x: hidden;
-        padding-top: 10rem;
+        display: flex;
+        box-sizing: border-box;
+        overflow: hidden;
+        margin-top: 10rem;
+        padding-top: 0;
         margin-bottom: 32rem;
 
         .container {
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
             padding: 0 4rem;
         }
 
