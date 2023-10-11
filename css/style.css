@@ -168,7 +168,6 @@ svg {
   padding-bottom: 3.2rem;
   background: #0B0C0B;
   color: #FFFFFF;
-  text-transform: uppercase;
   position: relative;
   z-index: 10;
 }
@@ -289,7 +288,6 @@ svg {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  text-transform: uppercase;
 }
 .header__phone-number {
   font-size: 2rem;
@@ -306,7 +304,6 @@ svg {
     padding-bottom: 4.8rem;
     background: #0B0C0B;
     color: #FFFFFF;
-    text-transform: uppercase;
   }
   .header__logo {
     width: 25.6rem;
@@ -1746,6 +1743,7 @@ svg {
   width: 55.3rem;
 }
 .production__slide-left--subtitle {
+  color: #92999D;
   font-size: 1.6rem;
   font-style: normal;
   font-weight: 300;
@@ -1996,6 +1994,7 @@ svg {
   overflow: hidden;
   padding: 0 3rem 3.6rem;
   border-bottom: 1px solid #EDEDF1;
+  border-top: 1px solid #EDEDF1;
 }
 .partners__swiper-right, .partners__swiper-left {
   position: absolute;
