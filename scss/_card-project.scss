@@ -439,14 +439,7 @@
                 /* 4.48rem */
             }
 
-            strong {
-                color: #0B0C0B;
-                font-size: 3rem;
-                font-style: normal;
-                font-weight: 700;
-                line-height: 140%;
-                /* 4.2rem */
-            }
+            
         }
 
         // .card-project__text-block 
@@ -458,18 +451,30 @@
             }
 
             >p {
-                margin-top: 0;
+                margin-top: 4rem;
 
                 &:first-of-type {
                     margin-top: 3rem;
                 }
             }
 
+            >strong {
+                display: flex;
+                box-sizing: border-box;
+                margin-top: 4.8rem;
+                color: #0B0C0B;
+                font-size: 3rem;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 140%;
+                /* 4.2rem */
+            }
+
         }
 
 
         .article__list {
-            margin-top: 0;
+            margin-top: 4.8rem;
 
             >li {
                 margin-top: 3.2rem;
