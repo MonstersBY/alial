@@ -3903,7 +3903,10 @@ svg {
           justify-content: space-evenly;
   margin-bottom: 6rem;
 }
-.article-head--date {
+.article-head--mobile-date {
+  display: none;
+}
+.article-head--desk-date {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3916,14 +3919,14 @@ svg {
           flex-direction: column;
   gap: 2.8rem;
 }
-.article-head--date span {
+.article-head--desk-date span {
   font-size: 1.6rem;
   font-style: normal;
   font-weight: 300;
   line-height: normal;
   color: #92999D;
 }
-.article-head--date strong {
+.article-head--desk-date strong {
   font-size: 3.5rem;
   font-style: normal;
   font-weight: 600;
@@ -4114,6 +4117,242 @@ svg {
   left: -9.5rem;
 }
 
+@media (max-width: 48em) {
+  .article {
+    margin-top: 10rem;
+  }
+  .article--subtitle {
+    font-family: Euclid Circular A;
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 140%;
+    /* 22.4px */
+  }
+  .article--title {
+    width: 100%;
+    font-family: Euclid Circular A;
+    font-size: 5.4rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%;
+    /* 35.1px */
+    margin-bottom: 4.8rem;
+  }
+  .article-head {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    margin-bottom: 8rem;
+  }
+  .article-head--mobile-date {
+    margin-bottom: 4.8rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .article-head--mobile-date span {
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 140%;
+    color: #92999D;
+  }
+  .article-head--mobile-date strong {
+    font-family: Euclid Circular A;
+    font-size: 4.4rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  .article-head--desk-date {
+    display: none;
+  }
+  .article-head--img {
+    width: 100%;
+    height: 55rem;
+  }
+  .article-head--img img {
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .article-head--socials {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 1.6rem;
+    margin-bottom: 8rem;
+  }
+  .article-head--socials > div {
+    width: 9.6rem;
+    height: 9.6rem;
+    border-radius: 50%;
+    border: 1px solid #CDCDCD;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .article-head--socials-teleg svg {
+    width: 4.6rem;
+    height: 4.6rem;
+  }
+  .article-head--socials-face svg {
+    width: 4rem;
+    height: 4rem;
+  }
+  .article-head--socials-twitter svg {
+    width: 3.6rem;
+    height: 3.6rem;
+  }
+  .article--text {
+    width: 100%;
+    margin: 0 auto 16rem;
+  }
+  .article--text p {
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 140%;
+    margin-bottom: 3rem;
+  }
+  .article--text p.article--text-title {
+    font-size: 4.4rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  .article--text strong {
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+    margin-bottom: 3rem;
+  }
+  .article--text ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 1.8rem;
+  }
+  .article--text ul li {
+    padding-left: 10.4rem;
+    margin-top: 3.2rem;
+    gap: 2.4rem;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    font-size: 3.2rem;
+  }
+  .article--text ul li:first-child {
+    margin-top: 0;
+  }
+  .article--text ul li::before {
+    padding-right: 2.4rem;
+    margin-top: 1rem;
+    content: "";
+    width: 40px;
+    height: 1px;
+    background: rgba(146, 153, 157, 0.3);
+  }
+  .article--literature p {
+    color: #92999D;
+  }
+  .article--literature p.article--text-title {
+    color: #0B0C0B;
+  }
+  .article-box {
+    margin-top: 14rem;
+    margin-bottom: 10rem;
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .article-box--time {
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 0.432rem;
+    text-transform: uppercase;
+    top: -3.2rem;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  .article-box--video {
+    width: 100%;
+    height: 55rem;
+  }
+  .article-box--video > video {
+    width: 100%;
+    height: 100%;
+  }
+  .article-box--title {
+    margin-bottom: 3rem;
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+    /* 4.48rem */
+  }
+  .article-box--text {
+    margin-bottom: 3rem;
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 140%;
+  }
+  .article-box--link {
+    margin-bottom: 8rem;
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+    /* 4.48rem */
+  }
+  .article-box .article-box-right {
+    width: 100%;
+  }
+}
 .vacancies-main .certificates {
   margin-bottom: 0;
 }
