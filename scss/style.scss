@@ -5,6 +5,7 @@
   line-height: normal;
   color: #0B0C0B
 }
+
 @media (max-width: 48em) {
   .title-h1 {
     font-size: 5.4rem;
@@ -36,6 +37,8 @@
 @import "about-company";
 @import "contacts";
 @import "card-project";
+@import "card-product";
+@import "form";
 
 // .wow {
 //   visibility: hidden;
@@ -44,9 +47,86 @@ body {
   position: relative;
   background-color: #F1F4F5;
 }
+
 :root {
   --animate-duration: 2s;
 }
+
+.switcher .switcher__container .switcher__content {
+  display: none;
+}
+
+.switcher .switcher__container .switcher__content.active {
+  display: block;
+}
+
+.switcher {
+  &__control {
+    display: flex;
+    flex-direction: row;
+    gap: 5.6rem;
+  }
+
+  &__btn {
+    color: #92999D;
+    font-family: Euclid Circular A;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 2.7rem;
+
+    &.active{
+      color:#0B0C0B;
+      font-weight: 600;
+    }
+  }
+}
+
+.request-link {
+  display: flex;
+  width: 34.5rem;
+  display: inline-flex;
+  padding: 2.5rem 3.2rem;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  background: #E01327;
+  display: flex;
+  flex-direction: column;
+
+  &-title {
+      color: var(--white, #FFF);
+      /* desk/text bold 20 */
+      font-family: Euclid Circular A;
+      font-size: 2rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+  }
+
+  &-text {
+    width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+
+      >span {
+          color: #FFF;
+          font-family: Euclid Circular A;
+          font-size: 1.8rem;
+          font-style: normal;
+          font-weight: 300;
+          line-height: 2.7rem;
+      }
+
+      >svg {
+          width: 3.6rem;
+          height: 1.2rem;
+      }
+  }
+}
+
 @media (min-width: 48.01em) {
   .mobile {
     display: none;
@@ -57,6 +137,7 @@ body {
   .desktop {
     display: none;
   }
+
   .container {
     padding: 0 3.6rem;
   }

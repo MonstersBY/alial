@@ -6554,6 +6554,274 @@ svg {
     line-height: 140%; /* 4.48rem */
   }
 }
+.card-product__top-section {
+  position: relative;
+  padding: 14rem 0 6.5rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-left: 1px solid rgba(157, 153, 175, 0.1);
+  border-bottom: 1px solid rgba(157, 153, 175, 0.1);
+  border-right: 1px solid rgba(157, 153, 175, 0.1);
+}
+.card-product__top-section::after {
+  position: absolute;
+  top: 8rem;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 1px;
+  opacity: 0.1;
+  background: #9D99AF;
+}
+.card-product .request-link {
+  margin-top: auto;
+}
+.card-product_side {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.card-product_side_left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  max-width: 66rem;
+}
+.card-product_side_right {
+  margin-top: auto;
+  margin-right: 7rem;
+}
+.card-product_side_right .card-product__img-wrapper {
+  width: 56.7rem;
+  height: 50.5rem;
+}
+.card-product_side_right .card-product__img-wrapper > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card-product__title {
+  width: 100%;
+  color: #0B0C0B;
+  font-family: Euclid Circular A;
+  font-size: 3.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.card-product__text {
+  width: 100%;
+  margin-top: 4rem;
+  color: #979DA4;
+  font-family: Euclid Circular A;
+  font-size: 2.8rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.card-product__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 14.3rem;
+  right: 0;
+  gap: 1rem;
+}
+.card-product__link > svg {
+  width: 2.7rem;
+  height: 2.7rem;
+}
+.card-product__link > span {
+  color: #0B0C0B;
+  text-align: center;
+  font-family: Euclid Circular A;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.card-product .switcher__control {
+  margin-top: 52px;
+}
+.card-product__characteristic {
+  padding: 10rem 0;
+  border-left: 1px solid rgba(157, 153, 175, 0.1);
+  border-right: 1px solid rgba(157, 153, 175, 0.1);
+}
+.card-product .description-table {
+  margin-top: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.4rem;
+}
+.card-product .description-table__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-right: 7.3rem;
+  width: 100%;
+  gap: 2.4rem;
+}
+.card-product .description-table__row-title {
+  width: 100%;
+  color: var(--Black, #151313);
+  font-family: Euclid Circular A;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.7rem;
+}
+.card-product .description-table__row-text {
+  width: 100%;
+  max-width: 62.7rem;
+  color: #979DA4;
+  font-family: Euclid Circular A;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.7rem;
+  /* 150% */
+}
+
+.form .container {
+  padding-top: 10rem;
+  padding-bottom: 20rem;
+  border-left: 1px solid rgba(157, 153, 175, 0.1);
+  border-right: 1px solid rgba(157, 153, 175, 0.1);
+}
+.form__title {
+  color: #0B0C0B;
+  font-family: Euclid Circular A;
+  font-size: 55px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.form__subtitle {
+  margin-top: 1.4rem;
+  color: #6A717A;
+  font-family: Euclid Circular A;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 2.7rem;
+}
+.form__fields {
+  margin-top: 8rem;
+  margin-top: 8rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 6rem;
+}
+.form__field {
+  background: #FFF;
+  width: 100%;
+  color: #0B0C0B;
+  padding: 2.7rem 2.8rem;
+  font-family: Euclid Circular A;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 2.7rem;
+}
+.form__field ::-webkit-input-placeholder {
+  color: #92999D;
+}
+.form__field ::-moz-placeholder {
+  color: #92999D;
+}
+.form__field :-ms-input-placeholder {
+  color: #92999D;
+}
+.form__field ::-ms-input-placeholder {
+  color: #92999D;
+}
+.form__field ::placeholder {
+  color: #92999D;
+}
+.form__textarea {
+  width: 100%;
+  margin-top: 4rem;
+  background: #FFF;
+  min-height: 16.3rem;
+  color: #0B0C0B;
+  font-family: Euclid Circular A;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 2.7rem;
+  padding: 2.7rem 2.8rem;
+}
+.form__textarea ::-webkit-input-placeholder {
+  color: #92999D;
+}
+.form__textarea ::-moz-placeholder {
+  color: #92999D;
+}
+.form__textarea :-ms-input-placeholder {
+  color: #92999D;
+}
+.form__textarea ::-ms-input-placeholder {
+  color: #92999D;
+}
+.form__textarea ::placeholder {
+  color: #92999D;
+}
+.form__submit {
+  margin-top: 6rem;
+}
+
 body {
   position: relative;
   background-color: #F1F4F5;
@@ -6561,6 +6829,96 @@ body {
 
 :root {
   --animate-duration: 2s;
+}
+
+.switcher .switcher__container .switcher__content {
+  display: none;
+}
+
+.switcher .switcher__container .switcher__content.active {
+  display: block;
+}
+
+.switcher__control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 5.6rem;
+}
+.switcher__btn {
+  color: #92999D;
+  font-family: Euclid Circular A;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 2.7rem;
+}
+.switcher__btn.active {
+  color: #0B0C0B;
+  font-weight: 600;
+}
+
+.request-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 34.5rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 2.5rem 3.2rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1rem;
+  background: #E01327;
+  display: flex;
+  flex-direction: column;
+}
+.request-link-title {
+  color: var(--white, #FFF);
+  /* desk/text bold 20 */
+  font-family: Euclid Circular A;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.request-link-text {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.request-link-text > span {
+  color: #FFF;
+  font-family: Euclid Circular A;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 2.7rem;
+}
+.request-link-text > svg {
+  width: 3.6rem;
+  height: 1.2rem;
 }
 
 @media (min-width: 48.01em) {
