@@ -6727,6 +6727,45 @@ svg {
   line-height: 2.7rem;
   /* 150% */
 }
+.card-product .characteristics-table thead > tr {
+  background: #ECEEF3;
+  padding: 1.6rem 3.2rem 1.7rem 3.2rem;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+.card-product .characteristics-table thead > tr > th {
+  text-align: left;
+  color: #151313;
+  font-family: Euclid Circular A;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+}
+.card-product .characteristics-table tbody > tr {
+  background: rgba(255, 255, 255, 0.36);
+  height: 6.7rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.card-product .characteristics-table tbody > tr > td {
+  color: #979DA4;
+  font-family: Euclid Circular A;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.7rem;
+}
+.card-product .characteristics-table tbody > tr > td:first-child {
+  width: 66rem;
+  padding: 2rem 10rem 2rem 3.2rem;
+}
+.card-product .characteristics-table tbody > tr > td:nth-of-type(3) {
+  padding-left: 3.2rem;
+}
 
 .form .container {
   padding-top: 10rem;

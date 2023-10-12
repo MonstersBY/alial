@@ -26,7 +26,7 @@
 
     }
 
-    .request-link{
+    .request-link {
         margin-top: auto;
     }
 
@@ -119,11 +119,12 @@
 
     }
 
-    &__characteristic{
+    &__characteristic {
         padding: 10rem 0;
         border-left: 1px solid rgba(157, 153, 175, 0.1);
         border-right: 1px solid rgba(157, 153, 175, 0.1);
     }
+
     .description-table {
         margin-top: 4rem;
         display: flex;
@@ -165,6 +166,59 @@
             }
 
         }
+    }
+
+    .characteristics-table {
+
+        thead {
+            >tr {
+                background: #ECEEF3;
+                padding: 1.6rem 3.2rem 1.7rem 3.2rem;
+                align-items: flex-start;
+                flex-shrink: 0;
+
+                >th {
+                    text-align: left;
+                    color: #151313;
+                    font-family: Euclid Circular A;
+                    font-size: 2rem;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 130%;
+                }
+            }
+        }
+
+        tbody {
+            >tr {
+                background: rgba(255, 255, 255, 0.36);
+                height: 6.7rem;
+                
+                box-sizing: border-box;
+
+                >td {
+                    color: #979DA4;
+                    font-family: Euclid Circular A;
+                    font-size: 1.8rem;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 2.7rem;
+
+                    &:first-child{
+                        width:66rem;
+                        padding: 2rem 10rem 2rem 3.2rem;
+                    }
+
+                    &:nth-of-type(2){
+                    }
+
+                    &:nth-of-type(3){
+                        padding-left: 3.2rem;
+                    }
+                }
+            }
+        }
+
     }
 
 }
