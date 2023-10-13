@@ -72,8 +72,6 @@
         line-height: normal;
     }
 
-
-
     // .card-product__text
     &__text {
         width: 100%;
@@ -144,7 +142,7 @@
             // .description-table__row-title 
             &-title {
                 width: 100%;
-                color: var(--Black, #151313);
+                color: #151313;
                 font-family: Euclid Circular A;
                 font-size: 1.8rem;
                 font-style: normal;
@@ -168,57 +166,271 @@
         }
     }
 
-    .characteristics-table {
+    .table-container {
+        width: 140rem;
+        margin: 4rem 0 10rem;
+        overflow-x: scroll;
 
-        thead {
-            >tr {
-                background: #ECEEF3;
-                padding: 1.6rem 3.2rem 1.7rem 3.2rem;
-                align-items: flex-start;
-                flex-shrink: 0;
+        &::-webkit-scrollbar {
+            width: 1rem;
+            height: 1rem;
+        }
 
-                >th {
-                    text-align: left;
-                    color: #151313;
-                    font-family: Euclid Circular A;
-                    font-size: 2rem;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: 130%;
+        &::-webkit-scrollbar-thumb {
+            border-radius: 1.2rem;
+            background-color: #424245;
+        }
+
+        &::-webkit-scrollbar-track {
+
+            border-radius: 1.2rem;
+            background-color: #ECEEF3;
+        }
+
+
+        .table {
+            border-spacing: 0;
+            width: 100%;
+
+            thead {
+                >tr {
+                    width: 100%;
+                    max-width: 100%;
+                    background: #ECEEF3;
+                    height: 5.9rem;
+                    align-items: flex-start;
+                    flex-shrink: 0;
+
+                    >th {
+                        vertical-align: top;
+                        padding: 2rem 3.2rem;
+                        white-space: nowrap;
+                        text-align: left;
+                        color: #151313;
+                        font-family: Euclid Circular A;
+                        font-size: 2rem;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 130%;
+
+                    }
                 }
+            }
+
+
+            tbody {
+                >tr {
+                    width: 100%;
+                    max-width: 100%;
+                    background: rgba(255, 255, 255, 0.36);
+                    height: 6.7rem;
+                    box-sizing: border-box;
+
+                    >td {
+                        vertical-align: top;
+                        padding: 2rem 3.2rem;
+                        box-sizing: border-box;
+                        color: #979DA4;
+                        font-family: Euclid Circular A;
+                        font-size: 1.8rem;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 2.7rem;
+                        border-bottom: 1px solid rgba(146, 153, 157, 0.25);
+                    }
+                }
+            }
+
+            &.characteristics-table {
+                thead {
+                    >tr {
+
+
+                        >th {
+
+
+                            &:nth-of-type(1) {
+                                width: 66rem;
+                            }
+
+                            &:nth-of-type(2) {
+                                width: 66rem;
+                            }
+
+                            &:nth-of-type(3) {
+                                border-left: 1px solid rgba(146, 153, 157, 0.25);
+                                position: sticky;
+                                right: 0;
+                                z-index: 10;
+                            }
+                        }
+                    }
+                }
+
+                tbody {
+                    >tr {
+
+                        >td {
+
+                            &:nth-of-type(1) {
+                                width: 66rem;
+                            }
+
+                            &:nth-of-type(2) {
+                                width: 66rem;
+                            }
+
+                            &:nth-of-type(3) {
+                                width: 52rem;
+                                border-left: 1px solid rgba(146, 153, 157, 0.25);
+                                position: sticky;
+                                right: 0;
+                                z-index: 10;
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            &.size-table {
+                table-layout: fixed;
+
+                thead {
+                    >tr {
+                        height: 28.7rem;
+
+                        >th {
+                            height: 100%;
+                            writing-mode: vertical-lr;
+                            rotate: (180deg);
+                        }
+                    }
+                }
+
+                tbody {
+                    >tr {
+                        td {
+                            border-left: 1px solid rgba(146, 153, 157, 0.25);
+
+                            :last-of-type(1) {
+                                position: sticky;
+                                right: 0;
+                            }
+
+                            :last-of-type(2) {
+                                position: sticky;
+                                right: 0;
+                            }
+                        }
+
+
+                    }
+                }
+
             }
         }
 
-        tbody {
-            >tr {
-                background: rgba(255, 255, 255, 0.36);
-                height: 6.7rem;
-                
-                box-sizing: border-box;
 
-                >td {
-                    color: #979DA4;
-                    font-family: Euclid Circular A;
-                    font-size: 1.8rem;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: 2.7rem;
+    }
 
-                    &:first-child{
-                        width:66rem;
-                        padding: 2rem 10rem 2rem 3.2rem;
-                    }
+}
 
-                    &:nth-of-type(2){
-                    }
+.design-documentation {
+    margin-bottom: 20rem;
+    width: 100%;
+    position: relative;
 
-                    &:nth-of-type(3){
-                        padding-left: 3.2rem;
-                    }
-                }
-            }
+    // .design-documentation__back 
+    &__back {
+        position: absolute;
+
+        // .design-documentation__back_textures 
+        &_textures {
+            bottom: 0;
+            left: -2.7rem;
+            width: 56rem;
+            height: 39.1rem;
+            z-index: -1;
+        }
+
+        // .design-documentation__back_design
+        &_design {
+            top: 0;
+            right: 40.6rem;
+            width: 64rem;
+            height: 49rem;
+            z-index: 1;
+        }
+
+        // .design-documentation__back_machining
+        &_machining {
+            top: 0;
+            right: 0;
+            width: 36.6rem;
+            height: 49rem;
+            z-index: 1;
+        }
+
+        >img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
     }
 
+    // .design-documentation__top
+    &__top {
+        width: 100%;
+        position: relative;
+        padding: 8.8rem 0 6.3rem 26.7rem;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        z-index: 2;
+    }
+
+    // .design-documentation__subtitle
+    &__subtitle {
+        width: 86rem;
+        color: #0B0C0B;
+        font-family: Euclid Circular A;
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        letter-spacing: 0.288rem;
+        text-transform: uppercase;
+    }
+
+    // .design-documentation__title 
+    &__title {
+        width: 86rem;
+        color: var(--black, #0B0C0B);
+        /* desk/h2 */
+        font-family: Euclid Circular A;
+        font-size: 3.5rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+    // .design-documentation__bottom
+    &__bottom {
+        width: 100%;
+        padding: 6rem 0 8.6rem 26rem;
+        background: #0B0C0B;
+    }
+
+    &__paragraph {
+        width: 40.7rem;
+        color: #FFF;
+        font-family: Euclid Circular A;
+        font-size: 1.8rem;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 2.7rem;
+    }
 }
