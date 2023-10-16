@@ -7036,6 +7036,273 @@ svg {
   margin-top: 6rem;
 }
 
+.other-products {
+  margin-bottom: 9rem;
+}
+.other-products-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto 6rem;
+  padding-left: 5rem;
+}
+.other-products-head--title {
+  font-size: 5.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.other-products-head--text {
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 150%;
+}
+.other-products-box {
+  position: relative;
+}
+.other-products__swiper {
+  overflow: hidden;
+}
+.other-products__slide {
+  padding: 1.4rem 1.66rem 2.2rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #141F2B;
+  position: relative;
+  height: unset;
+}
+.other-products__slide--img {
+  width: 100%;
+  height: 29rem;
+  margin: 0 auto;
+}
+.other-products__slide--img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.other-products__slide-info {
+  margin-left: 2.3rem;
+  margin-top: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: auto;
+  color: #0B0C0B;
+  height: 10rem;
+}
+.other-products__slide-info--text {
+  color: #DADFE2;
+  font-family: Euclid Circular A;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.other-products__slide-info svg {
+  width: 3.6rem;
+  height: 1.2rem;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  content: unset;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: 5.5rem;
+  height: 1rem;
+  bottom: auto;
+  top: -8rem;
+}
+.swiper-button-prev svg,
+.swiper-button-next svg {
+  width: 5.5rem;
+  height: 1rem;
+}
+
+.swiper-button-prev {
+  left: auto;
+  right: 8rem;
+}
+
+.swiper-button-next {
+  left: auto;
+  right: 0;
+}
+
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: auto;
+  top: -10rem;
+  left: 0;
+  right: auto;
+  margin: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2.2rem;
+}
+.swiper-pagination-bullets.swiper-pagination-horizontal .swiper-pagination-bullet {
+  -webkit-transition: margin 0.5s ease-in;
+  transition: margin 0.5s ease-in;
+  background: #92999D;
+  width: 0.9rem;
+  height: 0.9rem;
+  margin-left: 0;
+  opacity: 1;
+}
+.swiper-pagination-bullets.swiper-pagination-horizontal .swiper-pagination-bullet-active {
+  background: #E01327;
+  margin-right: 5rem;
+}
+
+@media (max-width: 48em) {
+  .certificates {
+    margin-bottom: 32rem;
+  }
+  .certificates .container {
+    padding: 0;
+  }
+  .certificates-head {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: initial;
+        -ms-flex-align: initial;
+            align-items: initial;
+    gap: 2rem;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0 0 8rem;
+    padding-left: 4rem;
+  }
+  .certificates-head--title {
+    font-size: 5.4rem;
+    line-height: 130%;
+  }
+  .certificates-head--text {
+    font-size: 3.2rem;
+    line-height: 140%;
+  }
+  .certificates-box {
+    position: relative;
+  }
+  .certificates__swiper {
+    padding-left: 4rem;
+    padding-right: 20.5rem;
+  }
+  .certificates__slide {
+    padding: 3rem;
+  }
+  .certificates__slide--img {
+    width: 41.6rem;
+    height: 53rem;
+  }
+  .certificates__slide--left {
+    font-size: 3.2rem;
+    line-height: 140%;
+    left: -11rem;
+    top: 17rem;
+  }
+  .certificates__slide-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 4rem;
+    color: #0B0C0B;
+    height: 10rem;
+  }
+  .certificates__slide-info--class {
+    font-size: 3.2rem;
+    max-width: 28rem;
+  }
+  .certificates__slide-info--name {
+    max-width: 28rem;
+    font-size: 4.4rem;
+  }
+  .certificates .swiper-button-prev:after,
+  .certificates .swiper-button-next:after {
+    content: unset;
+  }
+  .certificates .swiper-button-prev,
+  .certificates .swiper-button-next {
+    width: 10rem;
+    height: 2.5rem;
+    bottom: -9rem;
+    top: auto;
+  }
+  .certificates .swiper-button-prev svg,
+  .certificates .swiper-button-next svg {
+    width: 10rem;
+    height: 2.5rem;
+  }
+  .certificates .swiper-button-prev {
+    left: auto;
+    right: 19rem;
+  }
+  .certificates .swiper-button-next {
+    left: auto;
+    right: 4rem;
+  }
+  .certificates .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: -8rem;
+    top: auto;
+    left: 4rem;
+    right: auto;
+    margin: 0;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 3rem;
+  }
+  .certificates .swiper-pagination-bullets.swiper-pagination-horizontal .swiper-pagination-bullet {
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-left: 0;
+    opacity: 1;
+  }
+  .certificates .swiper-pagination-bullets.swiper-pagination-horizontal .swiper-pagination-bullet-active {
+    margin-right: 5rem;
+  }
+}
 body {
   position: relative;
   background-color: #F1F4F5;

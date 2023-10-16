@@ -177,6 +177,26 @@ const sliderCertificates = new Swiper(".certificates__swiper", {
   },
 })
 
+const sliderOtherProducts = new Swiper(".other-products__swiper", {
+  loop: true,
+  slidesPerView: 'auto',
+  slidesPerGroup: 1,
+  navigation: {
+      nextEl: ".other-products__btn-next",
+      prevEl: ".other-products__btn-prev",
+  },  
+  pagination: {
+    el: ".other-products__swiper-pagination",
+  },
+  breakpoints: {
+    769: {
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+      spaceBetween: 6 * parseFloat(getComputedStyle(document.documentElement).fontSize),
+    }
+  },
+})
+
 const header = document.querySelector('header')
 const burgerBtn = header.querySelector('.header__burger')
 const lines = document.querySelector('.lines')
