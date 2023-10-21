@@ -7185,36 +7185,31 @@ svg {
   width: 3.6rem;
   height: 1.2rem;
 }
-
-.swiper-button-prev:after,
-.swiper-button-next:after {
+.other-products .swiper-button-prev:after,
+.other-products .swiper-button-next:after {
   content: unset;
 }
-
-.swiper-button-prev,
-.swiper-button-next {
+.other-products .swiper-button-prev,
+.other-products .swiper-button-next {
   width: 5.5rem;
   height: 1rem;
   bottom: auto;
   top: -8rem;
 }
-.swiper-button-prev svg,
-.swiper-button-next svg {
+.other-products .swiper-button-prev svg,
+.other-products .swiper-button-next svg {
   width: 5.5rem;
   height: 1rem;
 }
-
-.swiper-button-prev {
+.other-products .swiper-button-prev {
   left: auto;
   right: 8rem;
 }
-
-.swiper-button-next {
+.other-products .swiper-button-next {
   left: auto;
   right: 0;
 }
-
-.swiper-pagination-bullets.swiper-pagination-horizontal {
+.other-products .swiper-pagination-bullets.swiper-pagination-horizontal {
   bottom: auto;
   top: -10rem;
   left: 0;
@@ -7228,7 +7223,7 @@ svg {
   display: flex;
   gap: 2.2rem;
 }
-.swiper-pagination-bullets.swiper-pagination-horizontal .swiper-pagination-bullet {
+.other-products .swiper-pagination-bullets.swiper-pagination-horizontal .swiper-pagination-bullet {
   -webkit-transition: margin 0.5s ease-in;
   transition: margin 0.5s ease-in;
   background: #92999D;
@@ -7237,7 +7232,7 @@ svg {
   margin-left: 0;
   opacity: 1;
 }
-.swiper-pagination-bullets.swiper-pagination-horizontal .swiper-pagination-bullet-active {
+.other-products .swiper-pagination-bullets.swiper-pagination-horizontal .swiper-pagination-bullet-active {
   background: #E01327;
   margin-right: 5rem;
 }
