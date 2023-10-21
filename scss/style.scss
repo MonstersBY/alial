@@ -3,7 +3,7 @@
   font-style: normal;
   font-weight: 600;
   line-height: normal;
-  color: #0B0C0B
+  color: #0b0c0b;
 }
 
 @media (max-width: 48em) {
@@ -41,13 +41,12 @@
 @import "form";
 @import "other-products";
 
-
 // .wow {
 //   visibility: hidden;
 // }
 body {
   position: relative;
-  background-color: #F1F4F5;
+  background-color: #f1f4f5;
 }
 
 :root {
@@ -70,16 +69,142 @@ body {
   }
 
   &__btn {
-    color: #92999D;
+    color: #92999d;
     font-family: Euclid Circular A;
     font-size: 1.8rem;
     font-style: normal;
     font-weight: 300;
     line-height: 2.7rem;
 
-    &.active{
-      color:#0B0C0B;
+    &.active {
+      color: #0b0c0b;
       font-weight: 600;
+    }
+  }
+}
+.overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #131316;
+}
+
+.link{
+  transition: opacity 0.3s ease;
+  &:hover{
+    opacity: 0.8;
+  }
+}
+
+.button {
+  
+  &:hover{
+    button{
+      background-color: darken(#fff,10%)
+    }
+  }
+  padding-left: 0;
+  svg {
+    width: 3.6rem;
+    height: 1.2rem;
+  }
+  > button {
+    transition: background-color 0.2s ease-in-out;
+    width: 100%;
+    max-width: 35rem;
+    display: inline-flex;
+    box-sizing: border-box;
+    padding: 2.5rem 3.2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.3rem;
+    background: #fff;
+  }
+
+  &__title {
+    color: #0b0c0b;
+    font-family: Euclid Circular A;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  &__text {
+    width: 100%;
+    margin: 0 0;
+    color: #0b0c0b;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Euclid Circular A;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 2.7rem;
+  }
+
+  &_type_red{
+
+    > button {
+      background: #E01327;
+    }
+  
+    .button__title {
+      color: #FFF;
+    }
+  
+    .button__text {
+      color: #FFF;
+    }
+
+    svg{
+      path{
+        fill: #FFF; 
+      } 
+    }
+
+    &:hover{
+      button{
+        background-color: darken(#E01327,10%)
+      }
+    }
+  }
+}
+
+@media (max-width: 48em) {
+  .button {
+    
+    svg {
+      width: 7.2rem;
+      height: 2.4rem;
+    }
+
+    > button {
+      max-width: 100%;
+      padding: 5rem 6.4rem;
+      gap: 2rem;
+    }
+
+    &__title {
+      font-size: 3.2rem;
+      font-weight: 600;
+      line-height: 140%;
+    }
+
+    &__text {
+      width: 100%;
+      font-size: 3.2rem;
+      font-weight: 300;
+      line-height: 140%;
     }
   }
 }
@@ -92,40 +217,40 @@ body {
   flex-direction: column;
   justify-content: center;
   gap: 1rem;
-  background: #E01327;
+  background: #e01327;
   display: flex;
   flex-direction: column;
 
   &-title {
-      color: var(--white, #FFF);
-      /* desk/text bold 20 */
-      font-family: Euclid Circular A;
-      font-size: 2rem;
-      font-style: normal;
-      font-weight: 700;
-      line-height: normal;
+    color: var(--white, #fff);
+    /* desk/text bold 20 */
+    font-family: Euclid Circular A;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
   }
 
   &-text {
     width: 100%;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 
-      >span {
-          color: #FFF;
-          font-family: Euclid Circular A;
-          font-size: 1.8rem;
-          font-style: normal;
-          font-weight: 300;
-          line-height: 2.7rem;
-      }
+    > span {
+      color: #fff;
+      font-family: Euclid Circular A;
+      font-size: 1.8rem;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 2.7rem;
+    }
 
-      >svg {
-          width: 3.6rem;
-          height: 1.2rem;
-      }
+    > svg {
+      width: 3.6rem;
+      height: 1.2rem;
+    }
   }
 }
 

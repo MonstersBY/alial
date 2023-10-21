@@ -3,26 +3,79 @@
   display: flex;
   flex-direction: column;
 
+  .form {
+    z-index: 12;
+    width: 100%;
+    position: absolute;
+    display: none;
+    top: 15.6vh;
+    left: 0;
+    .container {
+      position: relative;
+      z-index: 13;
+      margin: 0 auto;
+    }
+    &.active {
+      display: block;
+    }
+
+    .button{
+      margin-top: 8rem;
+    }
+  }
+
+  .close-btn {
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    top: -5rem;
+    right: 0;
+    transition: opacity 1s ease;
+    > svg {
+      width: 3.1rem;
+      height: 3.1rem;
+    }
+    :hover{
+      opacity: 0.6;
+    }
+  }
+
   .back-grid {
     width: 100%;
     height: calc(100% - 42.7rem);
     position: absolute;
-    top: 0;
     left: 0;
     display: grid;
+    z-index: -1;
     grid-template-columns: 26rem 1fr 1fr 1fr 1fr 26rem;
     grid-template-rows: 10.8rem 34.1rem 1fr;
 
-    >.cell {
+    > .cell {
       border-right: 0.1rem solid rgba(157, 153, 175, 0.25);
       border-bottom: 0.1rem solid rgba(157, 153, 175, 0.25);
+    }
+  }
+
+  .form-grid{
+    margin: 0 auto;
+    width: 140rem;
+    height: 100%;
+    display: grid;
+    z-index: 15;
+    grid-template-columns: repeat(4,1fr);
+
+    > .cell {
+      border-right: 1px solid rgba(157, 153, 175, 0.25);
+      &:first-of-type{
+        border-left: 1px solid rgba(157, 153, 175, 0.25);
+      }
     }
   }
 
   header {
     background: transparent;
 
-    >.container {
+    > .container {
       max-width: 138rem;
     }
   }
@@ -36,13 +89,14 @@
   }
 
   .wrapper-img {
+    z-index: -1;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: calc(100% - 42.7rem);
 
-    >img {
+    > img {
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -96,6 +150,9 @@
   }
 
   .contacts-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
     position: relative;
     padding-left: 1.7rem;
     box-sizing: border-box;
@@ -112,7 +169,6 @@
 
     // .contacts-item__text
     &__text {
-      margin-top: 2.1rem;
       color: #fff;
       font-family: Euclid Circular A;
       font-size: 1.8rem;
@@ -121,45 +177,16 @@
       line-height: 2.7rem;
 
       /* 150% */
-      >svg {
+      > svg {
         width: 3.6rem;
         height: 1.3rem;
       }
     }
   }
-
-  .link {
-    padding-left: 0;
-
-    >a {
-      width: 100%;
-      display: inline-flex;
-      box-sizing: border-box;
-      padding: 2.5rem 3.2rem;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
-      gap: 1.3rem;
-      background: #fff;
-    }
-
-    .contacts-item__title {
-      color: #0b0c0b;
-    }
-
-    .contacts-item__text {
-      width: 100%;
-      margin: 0 0;
-      color: #0b0c0b;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-    }
-  }
 }
 
 @media (max-width: 48em) {
+
   .contacts {
     position: relative;
     display: flex;
@@ -167,6 +194,29 @@
 
     .back-grid {
       display: none;
+    }
+
+    .form-grid{
+      display: none;
+     }
+
+     .form {
+      top: 24.8rem;
+  
+      .button{
+        margin-top: 5.4rem;
+      }
+    }
+
+     .close-btn {
+      position: absolute;
+      display: block;
+      top: -12.8rem;
+      right: 4rem;
+      > svg {
+        width: 4.8rem;
+        height: 4.8rem;
+      }
     }
 
     header {
@@ -183,11 +233,10 @@
         left: 0;
       }
 
-      >.container {
+      > .container {
         max-width: 100%;
       }
     }
-
 
     .wrapper-img {
       position: absolute;
@@ -196,7 +245,7 @@
       width: 100%;
       height: 100%;
 
-      >img {
+      > img {
         width: 100%;
         height: calc(100% - 150rem);
         object-fit: cover;
@@ -229,6 +278,7 @@
     }
 
     .contactslist {
+      
       max-width: 140rem;
       margin-top: 8rem;
       display: flex;
@@ -252,28 +302,11 @@
         font-size: 3.2rem;
         line-height: 140%;
 
-        >svg {
+        > svg {
           width: 7.2rem;
           height: 2.4rem;
         }
       }
     }
-
-    .link {
-      padding-left: 0;
-      margin-top: 3.2rem;
-
-      >a {
-        width: 100%;
-        padding: 5rem 10rem;
-        gap: 2rem;
-      }
-
-      .contacts-item__title {
-        color: #0b0c0b;
-      }
-
-    }
   }
-
 }

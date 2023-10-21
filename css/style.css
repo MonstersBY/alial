@@ -4,7 +4,7 @@
   font-style: normal;
   font-weight: 600;
   line-height: normal;
-  color: #0B0C0B;
+  color: #0b0c0b;
 }
 
 @media (max-width: 48em) {
@@ -5673,14 +5673,49 @@ svg {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+.contacts .form {
+  z-index: 12;
+  width: 100%;
+  position: absolute;
+  display: none;
+  top: 15.6vh;
+  left: 0;
+}
+.contacts .form .container {
+  position: relative;
+  z-index: 13;
+  margin: 0 auto;
+}
+.contacts .form.active {
+  display: block;
+}
+.contacts .form .button {
+  margin-top: 8rem;
+}
+.contacts .close-btn {
+  cursor: pointer;
+  position: absolute;
+  display: block;
+  top: -5rem;
+  right: 0;
+  -webkit-transition: opacity 1s ease;
+  transition: opacity 1s ease;
+}
+.contacts .close-btn > svg {
+  width: 3.1rem;
+  height: 3.1rem;
+}
+.contacts .close-btn :hover {
+  opacity: 0.6;
+}
 .contacts .back-grid {
   width: 100%;
   height: calc(100% - 42.7rem);
   position: absolute;
-  top: 0;
   left: 0;
   display: -ms-grid;
   display: grid;
+  z-index: -1;
   -ms-grid-columns: 26rem 1fr 1fr 1fr 1fr 26rem;
   grid-template-columns: 26rem 1fr 1fr 1fr 1fr 26rem;
   -ms-grid-rows: 10.8rem 34.1rem 1fr;
@@ -5762,6 +5797,22 @@ svg {
   border-right: 0.1rem solid rgba(157, 153, 175, 0.25);
   border-bottom: 0.1rem solid rgba(157, 153, 175, 0.25);
 }
+.contacts .form-grid {
+  margin: 0 auto;
+  width: 140rem;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  z-index: 15;
+  -ms-grid-columns: (1fr)[4];
+  grid-template-columns: repeat(4, 1fr);
+}
+.contacts .form-grid > .cell {
+  border-right: 1px solid rgba(157, 153, 175, 0.25);
+}
+.contacts .form-grid > .cell:first-of-type {
+  border-left: 1px solid rgba(157, 153, 175, 0.25);
+}
 .contacts header {
   background: transparent;
 }
@@ -5779,6 +5830,7 @@ svg {
   background: #0b0c0b;
 }
 .contacts .wrapper-img {
+  z-index: -1;
   position: absolute;
   top: 0;
   left: 0;
@@ -5840,6 +5892,14 @@ svg {
   grid-template-columns: 34.9rem 34.9rem 34.9rem 34.8rem;
 }
 .contacts .contacts-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.4rem;
   position: relative;
   padding-left: 1.7rem;
   -webkit-box-sizing: border-box;
@@ -5854,7 +5914,6 @@ svg {
   line-height: normal;
 }
 .contacts .contacts-item__text {
-  margin-top: 2.1rem;
   color: #fff;
   font-family: Euclid Circular A;
   font-size: 1.8rem;
@@ -5866,51 +5925,6 @@ svg {
 .contacts .contacts-item__text > svg {
   width: 3.6rem;
   height: 1.3rem;
-}
-.contacts .link {
-  padding-left: 0;
-}
-.contacts .link > a {
-  width: 100%;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 2.5rem 3.2rem;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  gap: 1.3rem;
-  background: #fff;
-}
-.contacts .link .contacts-item__title {
-  color: #0b0c0b;
-}
-.contacts .link .contacts-item__text {
-  width: 100%;
-  margin: 0 0;
-  color: #0b0c0b;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 @media (max-width: 48em) {
@@ -5926,6 +5940,25 @@ svg {
   }
   .contacts .back-grid {
     display: none;
+  }
+  .contacts .form-grid {
+    display: none;
+  }
+  .contacts .form {
+    top: 24.8rem;
+  }
+  .contacts .form .button {
+    margin-top: 5.4rem;
+  }
+  .contacts .close-btn {
+    position: absolute;
+    display: block;
+    top: -12.8rem;
+    right: 4rem;
+  }
+  .contacts .close-btn > svg {
+    width: 4.8rem;
+    height: 4.8rem;
   }
   .contacts header {
     background: transparent;
@@ -6007,18 +6040,6 @@ svg {
   .contacts .contacts-item__text > svg {
     width: 7.2rem;
     height: 2.4rem;
-  }
-  .contacts .link {
-    padding-left: 0;
-    margin-top: 3.2rem;
-  }
-  .contacts .link > a {
-    width: 100%;
-    padding: 5rem 10rem;
-    gap: 2rem;
-  }
-  .contacts .link .contacts-item__title {
-    color: #0b0c0b;
   }
 }
 .card-project-page .world {
@@ -6942,23 +6963,17 @@ svg {
   line-height: 2.7rem;
 }
 
-.form .container {
-  padding-top: 10rem;
-  padding-bottom: 19.5rem;
-  border-left: 1px solid rgba(157, 153, 175, 0.1);
-  border-right: 1px solid rgba(157, 153, 175, 0.1);
-}
 .form__title {
-  color: #0B0C0B;
+  color: #0b0c0b;
   font-family: Euclid Circular A;
-  font-size: 55px;
+  font-size: 5.5rem;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
 }
 .form__subtitle {
   margin-top: 1.4rem;
-  color: #6A717A;
+  color: #6a717a;
   font-family: Euclid Circular A;
   font-size: 1.8rem;
   font-style: normal;
@@ -6979,9 +6994,9 @@ svg {
   gap: 6rem;
 }
 .form__field {
-  background: #FFF;
+  background: #fff;
   width: 100%;
-  color: #0B0C0B;
+  color: #0b0c0b;
   padding: 2.7rem 2.8rem;
   font-family: Euclid Circular A;
   font-size: 1.8rem;
@@ -6990,26 +7005,26 @@ svg {
   line-height: 2.7rem;
 }
 .form__field ::-webkit-input-placeholder {
-  color: #92999D;
+  color: #92999d;
 }
 .form__field ::-moz-placeholder {
-  color: #92999D;
+  color: #92999d;
 }
 .form__field :-ms-input-placeholder {
-  color: #92999D;
+  color: #92999d;
 }
 .form__field ::-ms-input-placeholder {
-  color: #92999D;
+  color: #92999d;
 }
 .form__field ::placeholder {
-  color: #92999D;
+  color: #92999d;
 }
 .form__textarea {
   width: 100%;
   margin-top: 4rem;
-  background: #FFF;
+  background: #fff;
   min-height: 16.3rem;
-  color: #0B0C0B;
+  color: #0b0c0b;
   font-family: Euclid Circular A;
   font-size: 1.8rem;
   font-style: normal;
@@ -7018,24 +7033,71 @@ svg {
   padding: 2.7rem 2.8rem;
 }
 .form__textarea ::-webkit-input-placeholder {
-  color: #92999D;
+  color: #92999d;
 }
 .form__textarea ::-moz-placeholder {
-  color: #92999D;
+  color: #92999d;
 }
 .form__textarea :-ms-input-placeholder {
-  color: #92999D;
+  color: #92999d;
 }
 .form__textarea ::-ms-input-placeholder {
-  color: #92999D;
+  color: #92999d;
 }
 .form__textarea ::placeholder {
-  color: #92999D;
+  color: #92999d;
 }
 .form__submit {
   margin-top: 6rem;
 }
+.form_theme_dark .form__title {
+  color: #fff;
+}
+.form_theme_dark .form__field {
+  background: #424245;
+}
+.form_theme_dark .form__textarea {
+  background: #424245;
+}
 
+@media (max-width: 48em) {
+  .form__title {
+    width: 100%;
+    font-size: 5.4rem;
+    line-height: 130%;
+  }
+  .form__subtitle {
+    margin-top: 4rem;
+    font-size: 3.2rem;
+    line-height: 140%;
+  }
+  .form__fields {
+    margin-top: 5.4rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 5.4rem;
+  }
+  .form__field {
+    background: #fff;
+    width: 100%;
+    color: #0b0c0b;
+    padding: 5.4rem 5.6rem;
+    font-size: 3.6rem;
+    line-height: 5.4rem;
+  }
+  .form__textarea {
+    margin-top: 5.4rem;
+    min-height: 43.8rem;
+    font-size: 3.6rem;
+    line-height: 5.4rem;
+    padding: 5.4rem 5.6rem;
+  }
+  .form__submit {
+    margin-top: 5.4rem;
+  }
+}
 .other-products {
   margin-bottom: 9rem;
 }
@@ -7305,7 +7367,7 @@ svg {
 }
 body {
   position: relative;
-  background-color: #F1F4F5;
+  background-color: #f1f4f5;
 }
 
 :root {
@@ -7331,7 +7393,7 @@ body {
   gap: 5.6rem;
 }
 .switcher__btn {
-  color: #92999D;
+  color: #92999d;
   font-family: Euclid Circular A;
   font-size: 1.8rem;
   font-style: normal;
@@ -7339,10 +7401,140 @@ body {
   line-height: 2.7rem;
 }
 .switcher__btn.active {
-  color: #0B0C0B;
+  color: #0b0c0b;
   font-weight: 600;
 }
 
+.overlay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #131316;
+}
+
+.link {
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+.link:hover {
+  opacity: 0.8;
+}
+
+.button {
+  padding-left: 0;
+}
+.button:hover button {
+  background-color: #e6e6e6;
+}
+.button svg {
+  width: 3.6rem;
+  height: 1.2rem;
+}
+.button > button {
+  -webkit-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
+  width: 100%;
+  max-width: 35rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 2.5rem 3.2rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 1.3rem;
+  background: #fff;
+}
+.button__title {
+  color: #0b0c0b;
+  font-family: Euclid Circular A;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.button__text {
+  width: 100%;
+  margin: 0 0;
+  color: #0b0c0b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: Euclid Circular A;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 2.7rem;
+}
+.button_type_red > button {
+  background: #E01327;
+}
+.button_type_red .button__title {
+  color: #FFF;
+}
+.button_type_red .button__text {
+  color: #FFF;
+}
+.button_type_red svg path {
+  fill: #FFF;
+}
+.button_type_red:hover button {
+  background-color: #b10f1f;
+}
+
+@media (max-width: 48em) {
+  .button svg {
+    width: 7.2rem;
+    height: 2.4rem;
+  }
+  .button > button {
+    max-width: 100%;
+    padding: 5rem 6.4rem;
+    gap: 2rem;
+  }
+  .button__title {
+    font-size: 3.2rem;
+    font-weight: 600;
+    line-height: 140%;
+  }
+  .button__text {
+    width: 100%;
+    font-size: 3.2rem;
+    font-weight: 300;
+    line-height: 140%;
+  }
+}
 .request-link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7360,12 +7552,12 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 1rem;
-  background: #E01327;
+  background: #e01327;
   display: flex;
   flex-direction: column;
 }
 .request-link-title {
-  color: var(--white, #FFF);
+  color: var(--white, #fff);
   /* desk/text bold 20 */
   font-family: Euclid Circular A;
   font-size: 2rem;
@@ -7390,7 +7582,7 @@ body {
           justify-content: space-between;
 }
 .request-link-text > span {
-  color: #FFF;
+  color: #fff;
   font-family: Euclid Circular A;
   font-size: 1.8rem;
   font-style: normal;
