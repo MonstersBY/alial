@@ -47,12 +47,12 @@
         <div class="header__right">
           <ul class="header__lists">
             <li class="header__item"><a href="#">О компании</a></li>
-                    <li class="header__item"><a href="#">Продукция</a></li>
-                    <li class="header__item"><a href="#">Проекты</a></li>
-                    <li class="header__item"><a href="#">Новости</a></li>
-                    <li class="header__item"><a href="#">Статьи</a></li>
-                    <li class="header__item"><a href="#">Карьера</a></li>
-                    <li class="header__item"><a href="#">Контакты</a></li>
+            <li class="header__item"><a href="#">Продукция</a></li>
+            <li class="header__item"><a href="#">Проекты</a></li>
+            <li class="header__item"><a href="#">Новости</a></li>
+            <li class="header__item"><a href="#">Статьи</a></li>
+            <li class="header__item"><a href="#">Карьера</a></li>
+            <li class="header__item"><a href="#">Контакты</a></li>
           </ul>
           <div class="header__mob mobile">
             <div class="header__mob-contact">
@@ -72,6 +72,12 @@
     </header>
 
     <main>
+      <section class="grid">
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+      </section>
       <section class="card-project">
         <div class="container">
           <div class="grid-row card-project__title-container">
@@ -163,17 +169,24 @@
               </div>
               <div class="article-box">
                 <div class="article-box--video">
-                    <video width="320" height="240" controls>
-                        <source src="./video/MxYJEx5Z.mp4" type="video/mp4">
-                    </video>
+                  <video width="320" height="240" controls>
+                    <source src="./video/MxYJEx5Z.mp4" type="video/mp4" />
+                  </video>
                 </div>
                 <div class="article-box-right">
-                    <div class="article-box--title">Видео о запорной арматуре простым языком</div>
-                    <div class="article-box--text">Наш специалист - Николай расскажет об основыных преимущетсвах запорной арматуры в сравнении с другими видами тезники для работы в сфере: нефти, газа, химической промышленности и т.д.</div>
-                    <div class="article-box--link">Скопировать ссылку</div>
-                    <div class="article-box--time">7 минут</div>
+                  <div class="article-box--title">
+                    Видео о запорной арматуре простым языком
+                  </div>
+                  <div class="article-box--text">
+                    Наш специалист - Николай расскажет об основыных
+                    преимущетсвах запорной арматуры в сравнении с другими видами
+                    тезники для работы в сфере: нефти, газа, химической
+                    промышленности и т.д.
+                  </div>
+                  <div class="article-box--link">Скопировать ссылку</div>
+                  <div class="article-box--time">7 минут</div>
                 </div>
-            </div>
+              </div>
 
               <div class="card-project__text-block">
                 <p>
@@ -213,61 +226,62 @@
             </div>
           </div>
           <div class="grid-column"></div>
-          <div class="grid-row">
-            <div class="stages-container">
-              <div class="stages-container__title">Этапы работы по проекту</div>
-              <ul class="stages">
-                <li style="grid-area: stage-img-1">
-                  <div class="stages__img-container">
-                    <img src="./img/card-project/img1.webp" alt="" />
-                  </div>
-                  <span>01</span>
-                </li>
-
-                <li style="grid-area: stage-img-2">
-                    <div class="stages__img-container">
-                      <img src="./img/card-project/img1.webp" alt="" />
-                    </div>
-                    <span>02</span>
-                </li>
-
-                <li style="grid-area: stage-img-3">
-                  <div class="stages__img-container">
-                    <img src="./img/card-project/img1.webp" alt="" />
-                  </div>
-                  <span>03</span>
-                </li>
-
-                <li style="grid-area: stage-img-4">
-                  <div class="stages__img-container">
-                    <img src="./img/card-project/img1.webp" alt="" />
-                  </div>
-                  <span>04</span>
-                </li>
-
-                <li style="grid-area: stage-text-1">
-                  <div class="stages__title">Этап 1</div>
-                  <p>Выплавка основных элементов запорной арматуры</p>
-                </li>
-
-                <li style="grid-area: stage-text-2">
-                  <div class="stages__title">Этап 2</div>
-                  <p>Выплавка основных элементов запорной арматуры</p>
-                </li>
-
-                <li style="grid-area: stage-text-3">
-                  <div class="stages__title">Этап 3</div>
-                  <p>Выплавка основных элементов запорной арматуры</p>
-                </li>
-
-                <li style="grid-area: stage-text-4">
-                  <div class="stages__title">Этап 4</div>
-                  <p>Выплавка основных элементов запорной арматуры</p>
-                </li>
-              </ul>
-            </div>
-          </div>
         </div>
+      </section>
+      <section class="stages">
+        <div class="container">
+          <div class="stages__title">Этапы работы по проекту</div>
+          <ul class="stages-list">
+            <li style="grid-area: stage-img-1">
+              <div class="stages__img-container">
+                <img src="./img/card-project/img1.webp" alt="" />
+              </div>
+              <span>01</span>
+            </li>
+  
+            <li style="grid-area: stage-img-2">
+              <div class="stages__img-container">
+                <img src="./img/card-project/img1.webp" alt="" />
+              </div>
+              <span>02</span>
+            </li>
+  
+            <li style="grid-area: stage-img-3">
+              <div class="stages__img-container">
+                <img src="./img/card-project/img1.webp" alt="" />
+              </div>
+              <span>03</span>
+            </li>
+  
+            <li style="grid-area: stage-img-4">
+              <div class="stages__img-container">
+                <img src="./img/card-project/img1.webp" alt="" />
+              </div>
+              <span>04</span>
+            </li>
+  
+            <li style="grid-area: stage-text-1">
+              <div class="stages__name">Этап 1</div>
+              <p>Выплавка основных элементов запорной арматуры</p>
+            </li>
+  
+            <li style="grid-area: stage-text-2">
+              <div class="stages__name">Этап 2</div>
+              <p>Выплавка основных элементов запорной арматуры</p>
+            </li>
+  
+            <li style="grid-area: stage-text-3">
+              <div class="stages__name">Этап 3</div>
+              <p>Выплавка основных элементов запорной арматуры</p>
+            </li>
+  
+            <li style="grid-area: stage-text-4">
+              <div class="stages__name">Этап 4</div>
+              <p>Выплавка основных элементов запорной арматуры</p>
+            </li>
+          </ul>
+        </div>
+        
       </section>
 
       <section class="world">

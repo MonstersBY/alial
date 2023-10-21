@@ -47,7 +47,6 @@
             font-size: 15rem;
             font-weight: bold;
             height: 11rem;
-            width: 17.9rem;
             z-index: 5;
             
             img {
@@ -80,6 +79,7 @@
         }
 
         &-title {
+            user-select: none;
             font-size: 5.5rem;
             font-style: normal;
             font-weight: 600;
@@ -90,11 +90,13 @@
         }
 
         &-info {
+            user-select: none;
             width: 76.1rem;
             position: relative;
         }
 
         &-text {
+            user-select: none;
             margin-left: auto;
             margin-bottom: 5.5rem;
             width: 27.8rem;
@@ -285,8 +287,7 @@
                 bottom: -38.6rem;
                 right: 3.2rem;
                 height: 10rem;
-                width: 12.9rem;
-    
+
                 img {
                     width: auto;
                     height: 100%;

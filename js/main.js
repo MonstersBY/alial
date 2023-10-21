@@ -12,7 +12,6 @@ var sliderBaner = new Swiper(".baner__swiper", {
   slidesPerView: 1,
   freeMode: true,
   slideActiveClass: "active",
-  loopedSlides: 8,
   autoplay: {
     delay: 8000,
     disableOnInteraction: false,

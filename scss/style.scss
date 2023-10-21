@@ -40,6 +40,7 @@
 @import "card-product";
 @import "form";
 @import "other-products";
+@import "stages";
 
 // .wow {
 //   visibility: hidden;
@@ -82,6 +83,8 @@ body {
     }
   }
 }
+
+
 .overlay {
   display: flex;
   align-items: center;
@@ -101,7 +104,25 @@ body {
     opacity: 0.8;
   }
 }
+.grid{
+  z-index: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  width: 140rem;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
 
+  > .cell {
+    border-right: 1px solid rgba(157, 153, 175, 0.25);
+    &:first-of-type{
+      border-left: 1px solid rgba(157, 153, 175, 0.25);
+    }
+  }
+}
 .button {
   
   &:hover{
