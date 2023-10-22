@@ -32,6 +32,7 @@
 @import "factory";
 @import "certificates";
 @import "our-projects";
+@import "our-articles";
 @import "article";
 @import "vacancies";
 @import "about-company";
@@ -117,10 +118,19 @@ body {
   grid-template-columns: repeat(4,1fr);
 
   > .cell {
-    border-right: 1px solid rgba(157, 153, 175, 0.25);
+    border-right: 1px solid rgba(157, 153, 175, 0.1);
     &:first-of-type{
-      border-left: 1px solid rgba(157, 153, 175, 0.25);
+      border-left: 1px solid rgba(157, 153, 175, 0.1);
     }
+  }
+}
+
+
+
+
+@media (max-width: 48em) {
+  .grid{
+    display: none;
   }
 }
 .button {
