@@ -487,7 +487,6 @@ svg {
   }
 }
 .footer {
-  margin-top: 20rem;
   position: relative;
   background-color: #0B0C0B;
   color: #FFFFFF;
@@ -571,7 +570,6 @@ svg {
 
 @media (max-width: 48em) {
   .footer {
-    margin-top: 32rem;
     padding-top: 12.5rem;
     padding-bottom: 12rem;
   }
@@ -2714,7 +2712,11 @@ svg {
   }
 }
 .competence {
-  margin-bottom: 19rem;
+  margin: 19rem 0;
+}
+.competence .container {
+  border-left: 1px solid rgba(157, 153, 175, 0.1);
+  border-right: 1px solid rgba(157, 153, 175, 0.1);
 }
 .competence__head {
   display: -webkit-box;
@@ -2755,6 +2757,7 @@ svg {
           column-gap: 5.5rem;
 }
 .competence-item {
+  z-index: 1;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2803,7 +2806,7 @@ svg {
 
 @media (max-width: 48em) {
   .competence {
-    margin-bottom: 24rem;
+    margin: 24rem 0;
   }
   .competence__head {
     display: -webkit-box;
@@ -3247,7 +3250,7 @@ svg {
   }
 }
 .certificates {
-  margin-bottom: 9rem;
+  padding-bottom: 20rem;
 }
 .certificates-head {
   display: -webkit-box;
@@ -3394,7 +3397,8 @@ svg {
 
 @media (max-width: 48em) {
   .certificates {
-    margin-bottom: 32rem;
+    padding-bottom: 32rem;
+    margin-bottom: 0;
   }
   .certificates .container {
     padding: 0;
@@ -4078,10 +4082,6 @@ svg {
   font-weight: 700;
 }
 
-.main-our-articles + .footer {
-  margin-top: 20rem;
-}
-
 .another-text {
   margin-bottom: 6rem;
   display: -webkit-box;
@@ -4103,9 +4103,6 @@ svg {
 }
 
 @media (max-width: 48em) {
-  .main-our-articles .certificates {
-    margin-bottom: 32rem;
-  }
   .our-articles {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -5519,9 +5516,6 @@ svg {
           align-items: flex-end;
   gap: 1.2rem;
 }
-.about-company .competence {
-  margin-top: 16rem;
-}
 .about-company .competence__title {
   width: 100%;
   max-width: 117.5rem;
@@ -5538,62 +5532,6 @@ svg {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-}
-.about-company .about-competence .container {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 162rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  gap: 19rem;
-}
-.about-company .about-competence__arcticle {
-  width: 68.4rem;
-}
-.about-company .about-competence__title {
-  color: #2d3238;
-  font-family: Euclid Circular A;
-  font-size: 5.5rem;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-}
-.about-company .about-competence__subtitle {
-  border-left: 2px solid #dd1444;
-  width: 61.4rem;
-  padding-left: 3rem;
-  margin-top: 4rem;
-  color: #2d3238;
-  font-family: Euclid Circular A;
-  font-size: 1.6rem;
-  font-style: normal;
-  font-weight: 300;
-  line-height: normal;
-}
-.about-company .about-competence__paragraph {
-  margin-top: 11.2rem;
-  padding-bottom: 10rem;
-  color: #595e68;
-  font-family: Euclid Circular A;
-  font-size: 1.8rem;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 2.7rem;
-}
-.about-company .about-competence__paragraph::first-letter {
-  color: #2D3238;
-  font-family: Euclid Circular A;
-  font-size: 6rem;
-  padding-right: 1rem;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 2.7rem;
 }
 .about-company .advantage {
   width: 100%;
@@ -5717,9 +5655,6 @@ svg {
   line-height: normal;
 }
 .about-company .world {
-  margin-top: 20rem;
-}
-.about-company footer {
   margin-top: 20rem;
 }
 @media (max-width: 48em) {
@@ -5983,61 +5918,6 @@ svg {
     margin: 0 auto;
     text-align: left;
   }
-  .about-company .about-competence .container {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
-    gap: 8rem;
-  }
-  .about-company .about-competence .img-container {
-    width: 74.8rem;
-    height: 107rem;
-    margin-bottom: -26rem;
-  }
-  .about-company .about-competence__arcticle {
-    width: 100%;
-  }
-  .about-company .about-competence__title {
-    font-size: 5.4rem;
-    line-height: 130%;
-  }
-  .about-company .about-competence__subtitle {
-    border-left: 2px solid #dd1444;
-    width: 100%;
-    padding-left: 2.4rem;
-    margin-top: 3rem;
-    font-family: Euclid Circular A;
-    font-size: 3.2rem;
-    font-style: normal;
-    font-weight: 300;
-    line-height: 140%;
-  }
-  .about-company .about-competence__paragraph {
-    margin-top: 10.6rem;
-    padding-bottom: 0;
-    color: #2D3238;
-    font-family: Euclid Circular A;
-    font-size: 3.2rem;
-    font-style: normal;
-    font-weight: 300;
-    line-height: 140%;
-  }
-  .about-company .about-competence__paragraph::first-letter {
-    padding-right: 1rem;
-    color: #2D3238;
-    font-family: Euclid Circular A;
-    font-size: 6rem;
-    font-style: normal;
-    font-weight: 600;
-  }
   .about-company .advantage {
     width: 100%;
     padding: 0 4rem 24rem;
@@ -6121,6 +6001,120 @@ svg {
   }
 }
 
+.about-competence .container {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 162rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 19rem;
+}
+.about-competence__arcticle {
+  width: 68.4rem;
+}
+.about-competence__title {
+  color: #2d3238;
+  font-family: Euclid Circular A;
+  font-size: 5.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.about-competence__subtitle {
+  border-left: 2px solid #dd1444;
+  width: 61.4rem;
+  padding-left: 3rem;
+  margin-top: 4rem;
+  color: #2d3238;
+  font-family: Euclid Circular A;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.about-competence__paragraph {
+  margin-top: 11.2rem;
+  padding-bottom: 10rem;
+  color: #595e68;
+  font-family: Euclid Circular A;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 2.7rem;
+}
+.about-competence__paragraph::first-letter {
+  color: #2D3238;
+  font-family: Euclid Circular A;
+  font-size: 6rem;
+  padding-right: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 2.7rem;
+}
+
+@media (max-width: 48em) {
+  .about-competence .container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    gap: 8rem;
+  }
+  .about-competence .img-container {
+    width: 74.8rem;
+    height: 107rem;
+    margin-bottom: -26rem;
+  }
+  .about-competence__arcticle {
+    width: 100%;
+  }
+  .about-competence__title {
+    font-size: 5.4rem;
+    line-height: 130%;
+  }
+  .about-competence__subtitle {
+    border-left: 2px solid #dd1444;
+    width: 100%;
+    padding-left: 2.4rem;
+    margin-top: 3rem;
+    font-family: Euclid Circular A;
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 140%;
+  }
+  .about-competence__paragraph {
+    margin-top: 10.6rem;
+    padding-bottom: 0;
+    color: #2D3238;
+    font-family: Euclid Circular A;
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 140%;
+  }
+  .about-competence__paragraph::first-letter {
+    padding-right: 1rem;
+    color: #2D3238;
+    font-family: Euclid Circular A;
+    font-size: 6rem;
+    font-style: normal;
+    font-weight: 600;
+  }
+}
 .contacts {
   position: relative;
   display: -webkit-box;
@@ -7547,13 +7541,13 @@ svg {
 }
 
 @media (max-width: 48em) {
-  .certificates {
+  .other-products {
     margin-bottom: 32rem;
   }
-  .certificates .container {
+  .other-products .container {
     padding: 0;
   }
-  .certificates-head {
+  .other-products-head {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -7571,35 +7565,35 @@ svg {
     margin: 0 0 8rem;
     padding-left: 4rem;
   }
-  .certificates-head--title {
+  .other-products-head--title {
     font-size: 5.4rem;
     line-height: 130%;
   }
-  .certificates-head--text {
+  .other-products-head--text {
     font-size: 3.2rem;
     line-height: 140%;
   }
-  .certificates-box {
+  .other-products-box {
     position: relative;
   }
-  .certificates__swiper {
+  .other-products__swiper {
     padding-left: 4rem;
     padding-right: 20.5rem;
   }
-  .certificates__slide {
+  .other-products__slide {
     padding: 3rem;
   }
-  .certificates__slide--img {
+  .other-products__slide--img {
     width: 41.6rem;
     height: 53rem;
   }
-  .certificates__slide--left {
+  .other-products__slide--left {
     font-size: 3.2rem;
     line-height: 140%;
     left: -11rem;
     top: 17rem;
   }
-  .certificates__slide-info {
+  .other-products__slide-info {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -7613,39 +7607,39 @@ svg {
     color: #0B0C0B;
     height: 10rem;
   }
-  .certificates__slide-info--class {
+  .other-products__slide-info--class {
     font-size: 3.2rem;
     max-width: 28rem;
   }
-  .certificates__slide-info--name {
+  .other-products__slide-info--name {
     max-width: 28rem;
     font-size: 4.4rem;
   }
-  .certificates .swiper-button-prev:after,
-  .certificates .swiper-button-next:after {
+  .other-products .swiper-button-prev:after,
+  .other-products .swiper-button-next:after {
     content: unset;
   }
-  .certificates .swiper-button-prev,
-  .certificates .swiper-button-next {
+  .other-products .swiper-button-prev,
+  .other-products .swiper-button-next {
     width: 10rem;
     height: 2.5rem;
     bottom: -9rem;
     top: auto;
   }
-  .certificates .swiper-button-prev svg,
-  .certificates .swiper-button-next svg {
+  .other-products .swiper-button-prev svg,
+  .other-products .swiper-button-next svg {
     width: 10rem;
     height: 2.5rem;
   }
-  .certificates .swiper-button-prev {
+  .other-products .swiper-button-prev {
     left: auto;
     right: 19rem;
   }
-  .certificates .swiper-button-next {
+  .other-products .swiper-button-next {
     left: auto;
     right: 4rem;
   }
-  .certificates .swiper-pagination-bullets.swiper-pagination-horizontal {
+  .other-products .swiper-pagination-bullets.swiper-pagination-horizontal {
     bottom: -8rem;
     top: auto;
     left: 4rem;
@@ -7659,13 +7653,13 @@ svg {
     display: flex;
     gap: 3rem;
   }
-  .certificates .swiper-pagination-bullets.swiper-pagination-horizontal .swiper-pagination-bullet {
+  .other-products .swiper-pagination-bullets.swiper-pagination-horizontal .swiper-pagination-bullet {
     width: 1.2rem;
     height: 1.2rem;
     margin-left: 0;
     opacity: 1;
   }
-  .certificates .swiper-pagination-bullets.swiper-pagination-horizontal .swiper-pagination-bullet-active {
+  .other-products .swiper-pagination-bullets.swiper-pagination-horizontal .swiper-pagination-bullet-active {
     margin-right: 5rem;
   }
 }

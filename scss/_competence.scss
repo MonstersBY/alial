@@ -1,5 +1,11 @@
 .competence {
-    margin-bottom: 19rem;
+    margin: 19rem 0;
+
+    .container{
+        border-left: 1px solid rgba(157, 153, 175, 0.1);
+        border-right: 1px solid rgba(157, 153, 175, 0.1);
+    }
+   
     &__head {
         display: flex;
         justify-content: space-between;
@@ -28,6 +34,7 @@
         column-gap: 5.5rem;
     }
     &-item {
+        z-index: 1;
         position: relative;
         display: flex;
         width: 42.7rem;
@@ -73,7 +80,8 @@
 
 @media (max-width: 48em) {
     .competence {
-        margin-bottom: 24rem;
+       
+        margin: 24rem 0;
 
         &__head {
             display: flex;

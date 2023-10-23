@@ -1,5 +1,5 @@
 .certificates {
-    margin-bottom: 9rem;
+    padding-bottom: 20rem;
 
     &-head {
         display: flex;
@@ -148,7 +148,8 @@
 
 @media (max-width: 48em) {
     .certificates {
-        margin-bottom: 32rem;
+        padding-bottom: 32rem;
+        margin-bottom: 0;
 
         .container {
             padding: 0;

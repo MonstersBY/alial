@@ -1,5 +1,4 @@
 .about-company {
-
   .header {
     border-bottom: 1px solid rgba(157, 153, 175, 0.25);
     padding: 0 0;
@@ -306,7 +305,6 @@
   }
 
   .competence {
-    margin-top: 16rem;
 
     &__title {
       width: 100%;
@@ -331,67 +329,7 @@
   }
 
 
-  .about-competence {
-    .container {
-      justify-content: center;
-      width: 162rem;
-      display: flex;
-      flex-direction: row;
-      gap: 19rem;
-    }
-
-    // .about-competence__arcticle
-    &__arcticle {
-      width: 68.4rem;
-    }
-
-    // .about-competence__title
-    &__title {
-      color: #2d3238;
-      font-family: Euclid Circular A;
-      font-size: 5.5rem;
-      font-style: normal;
-      font-weight: 600;
-      line-height: normal;
-    }
-
-    // .about-competence__subtitle
-    &__subtitle {
-      border-left: 2px solid #dd1444;
-      width: 61.4rem;
-      padding-left: 3rem;
-      margin-top: 4rem;
-      color: #2d3238;
-      font-family: Euclid Circular A;
-      font-size: 1.6rem;
-      font-style: normal;
-      font-weight: 300;
-      line-height: normal;
-    }
-
-    // .about-competence__paragraph
-    &__paragraph {
-      margin-top: 11.2rem;
-      padding-bottom: 10rem;
-      color: #595e68;
-      font-family: Euclid Circular A;
-      font-size: 1.8rem;
-      font-style: normal;
-      font-weight: 300;
-      line-height: 2.7rem;
-
-      &::first-letter {
-        color: #2D3238;
-        font-family: Euclid Circular A;
-        font-size: 6rem;
-        padding-right: 1rem;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 2.7rem;
-      }
-    }
-  }
-
+  
   .advantage {
     width: 100%;
     background: #131316;
@@ -512,10 +450,6 @@
   }
 
   .world {
-    margin-top: 20rem;
-  }
-
-  footer {
     margin-top: 20rem;
   }
 
@@ -772,68 +706,6 @@
         max-width: 100%;
         margin: 0 auto;
         text-align: left;
-      }
-    }
-
-    .about-competence {
-
-      .container {
-        justify-content: center;
-        width: 100%;
-        display: flex;
-        flex-direction: column-reverse;
-        gap: 8rem;
-      }
-
-      .img-container {
-        width: 74.8rem;
-        height: 107rem;
-        margin-bottom: -26rem;
-      }
-
-      // .about-competence__arcticle
-      &__arcticle {
-        width: 100%;
-      }
-
-      // .about-competence__title
-      &__title {
-        font-size: 5.4rem;
-        line-height: 130%;
-      }
-
-      // .about-competence__subtitle
-      &__subtitle {
-        border-left: 2px solid #dd1444;
-        width: 100%;
-        padding-left: 2.4rem;
-        margin-top: 3rem;
-        font-family: Euclid Circular A;
-        font-size: 3.2rem;
-        font-style: normal;
-        font-weight: 300;
-        line-height: 140%;
-      }
-
-      // .about-competence__paragraph
-      &__paragraph {
-        margin-top: 10.6rem;
-        padding-bottom: 0;
-        color: #2D3238;
-        font-family: Euclid Circular A;
-        font-size: 3.2rem;
-        font-style: normal;
-        font-weight: 300;
-        line-height: 140%;
-
-        &::first-letter {
-          padding-right: 1rem;
-          color: #2D3238;
-          font-family: Euclid Circular A;
-          font-size: 6rem;
-          font-style: normal;
-          font-weight: 600;
-        }
       }
     }
 
