@@ -1,5 +1,15 @@
 .world {
-    margin-bottom: 6rem;
+    position: relative;
+    background-color: #F1F4F5;
+
+    .container {
+        padding-top: 20rem;
+        padding-bottom: 4rem;
+        border-right: 0.1rem solid rgba(157, 153, 175, 0.1);
+        border-left: 0.1rem solid rgba(157, 153, 175, 0.1);
+
+    }
+
     &__head {
         display: flex;
         justify-content: space-between;
@@ -19,6 +29,7 @@
                 letter-spacing: 0.288rem;
                 text-transform: uppercase;
             }
+
             strong {
                 font-size: 5.5rem;
                 font-style: normal;
@@ -26,6 +37,7 @@
                 line-height: normal;
             }
         }
+
         &-info {
             display: flex;
             align-items: center;
@@ -44,6 +56,7 @@
                 line-height: normal;
                 color: #E01327;
             }
+
             span {
                 font-size: 1.8rem;
                 font-style: normal;
@@ -52,6 +65,7 @@
             }
         }
     }
+
     &-container {
 
         &-filter {
@@ -59,6 +73,7 @@
             gap: 3.5rem;
             position: relative;
             padding-bottom: 7rem;
+
             &--item {
                 color: #9D99AF;
                 font-size: 1.8rem;
@@ -72,6 +87,7 @@
                     color: #0B0C0B;
                 }
             }
+
             &-circle {
                 position: absolute;
                 display: flex;
@@ -89,6 +105,7 @@
                     &.active {
                         margin-right: 3.7rem;
                         background: #D22E54;
+
                         &::after {
                             content: unset;
                         }
@@ -109,7 +126,7 @@
                 }
             }
         }
-        
+
         &-map {
             width: 118.4rem;
             height: 62.3rem;
@@ -129,12 +146,15 @@
                     }
                 }
             }
+
             &-info-item {
                 position: absolute;
+
                 &.active {
                     .world-container-map-info-item--circle {
                         background: #D22E54;
                     }
+
                     .world-map__information {
                         opacity: 1;
                         z-index: 1;
@@ -151,10 +171,12 @@
 
 
                 }
+
                 &:nth-child(1) {
                     top: 31rem;
                     left: 41rem;
                 }
+
                 &:nth-child(2) {
                     top: 31rem;
                     left: 23rem;
@@ -162,6 +184,7 @@
             }
         }
     }
+
     &-map__information {
         transition: all 0.5s ease-in-out;
         width: 45.5rem;
@@ -178,8 +201,8 @@
             content: '';
             position: absolute;
             display: block;
-            width: 0; 
-            height: 0; 
+            width: 0;
+            height: 0;
             border-left: 1rem solid transparent;
             border-right: 1rem solid transparent;
             border-top: 1rem solid #fff;
@@ -203,6 +226,7 @@
                     object-fit: cover;
                 }
             }
+
             &--text {
                 display: flex;
                 flex-direction: column;
@@ -214,6 +238,7 @@
                     font-weight: 300;
                     line-height: 150%;
                 }
+
                 strong {
                     color: #DD1444;
                     font-size: 1.8rem;
@@ -223,12 +248,14 @@
                 }
             }
         }
+
         &-items {
             display: flex;
             flex-wrap: wrap;
             row-gap: 0.5rem;
             column-gap: 4rem;
         }
+
         &-item {
             width: 17.5rem;
             display: flex;
@@ -241,6 +268,7 @@
                 font-weight: 300;
                 line-height: 150%;
             }
+
             strong {
                 color: #0B0C0B;
                 font-size: 1.8rem;
@@ -254,9 +282,19 @@
         }
     }
 }
+
 @media (max-width: 48em) {
     .world {
+
+        .container {
+            padding-top: 32rem;
+            border-right: none;
+            border-left: none;
+            padding-bottom: 12rem;
+        }
+
         margin-bottom: 15rem;
+
         &__head {
             display: flex;
             flex-direction: column;
@@ -264,46 +302,50 @@
             align-items: initial;
             gap: 4rem;
             margin-bottom: 8rem;
-    
+
             &-left {
                 display: flex;
                 flex-direction: column;
                 gap: 1rem;
-    
+
                 span {
                     font-size: 2.4rem;
                     letter-spacing: 0.432rem;
                 }
+
                 strong {
                     font-size: 5.4rem;
                     line-height: 130%;
                 }
             }
+
             &-info {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
                 gap: 0;
-    
+
                 &-item {
                     display: flex;
                     flex-direction: column;
                     align-items: initial;
                     gap: 1rem;
                 }
-    
+
                 strong {
                     font-size: 5.4rem;
                     line-height: 130%;
                 }
+
                 span {
                     font-size: 3.2rem;
                     line-height: 140%;
                 }
             }
         }
+
         &-container {
-    
+
             &-filter {
                 display: flex;
                 gap: 4rem;
@@ -311,31 +353,34 @@
                 padding-bottom: 4rem;
                 overflow-y: hidden;
                 overflow-x: auto;
+
                 &--item {
                     font-size: 3rem;
                     line-height: 140%;
-    
+
                     &.active {
                         font-weight: 700;
                     }
                 }
+
                 &-circle {
                     gap: 2.2rem;
                     bottom: 1rem;
                     left: 1.5rem;
-    
+
                     span {
                         position: relative;
                         width: 1.8rem;
                         height: 1.8rem;
-    
+
                         &.active {
                             margin-right: 3.5rem;
+
                             &::after {
                                 content: unset;
                             }
                         }
-    
+
                         &::after {
                             width: 0.5rem;
                             height: 0.5rem;
@@ -343,7 +388,7 @@
                     }
                 }
             }
-            
+
             &-map {
                 width: 82.8rem;
                 margin-left: -4rem;
@@ -351,33 +396,39 @@
                 position: relative;
                 overflow-x: auto;
                 overflow-y: hidden;
-    
+
                 svg {
                     width: 175.2rem;
                     height: 92rem;
                     position: relative;
                     left: 0;
                 }
+
                 &-info-item {
                     position: absolute;
+
                     &.active {
                         .world-container-map-info-item--circle {
                             background: #D22E54;
                         }
+
                         .world-map__information {
                             opacity: 1;
                             z-index: 1;
                         }
                     }
+
                     &--circle {
                         width: 1.6rem;
                         height: 1.6rem;
                         border: 0.4rem solid #FFF;
                     }
+
                     &:nth-child(1) {
                         top: 45rem;
                         left: 62rem;
                     }
+
                     &:nth-child(2) {
                         top: 47rem;
                         left: 34rem;
@@ -385,6 +436,7 @@
                 }
             }
         }
+
         &-map__information {
             width: 72.5rem;
             padding: 3rem 4rem;
@@ -393,39 +445,41 @@
             position: absolute;
             opacity: 0;
             z-index: -1;
-    
+
             &::after {
                 content: '';
                 position: absolute;
                 display: block;
-                width: 0; 
-                height: 0; 
+                width: 0;
+                height: 0;
                 border-left: 1rem solid transparent;
                 border-right: 1rem solid transparent;
                 border-top: 1rem solid #fff;
                 bottom: -1rem;
                 left: 7.6rem;
             }
-    
+
             &-head {
                 display: flex;
                 align-items: center;
                 margin-left: -4rem;
                 gap: 3.6rem;
                 margin-bottom: 2rem;
-    
+
                 &--img {
                     width: 24.8rem;
                     height: 9rem;
                 }
+
                 &--text {
-    
+
                     span {
                         font-size: 3rem;
                         font-style: normal;
                         font-weight: 400;
                         line-height: 140%;
                     }
+
                     strong {
                         font-size: 3rem;
                         font-style: normal;
@@ -434,17 +488,20 @@
                     }
                 }
             }
+
             &-items {
                 row-gap: 0.8rem;
                 column-gap: 3.6rem;
             }
+
             &-item {
                 width: 30.4rem;
-    
+
                 span {
                     font-size: 3.2rem;
                     line-height: 140%;
                 }
+
                 strong {
                     font-size: 3.2rem;
                     font-weight: 300;

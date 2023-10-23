@@ -257,7 +257,7 @@
         &__box {
             display: flex;
             flex-direction: column;
-            height: 100%;
+            height: fit-content;
             margin-top: 0;
             background: linear-gradient(0deg, #F8F8F8, #F8F8F8), #F8F8F8;
             
@@ -274,9 +274,13 @@
         &__img {
             margin-top: 6.6rem;
             position: relative;
-            height: auto;
+            height: 100rem;
             width: 100%;
-    
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
             &-detail {
                 width: 28.568rem;
                 height: 24.891rem;
@@ -285,6 +289,7 @@
                 img {
                     width: 100%;
                     height: 100%;
+                    object-fit: cover;
                 }
             }
         }

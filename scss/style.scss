@@ -119,9 +119,9 @@ body {
   grid-template-columns: repeat(4,1fr);
 
   > .cell {
-    border-right: 1px solid rgba(157, 153, 175, 0.1);
+    border-right: 0.1rem solid rgba(157, 153, 175, 0.1);
     &:first-of-type{
-      border-left: 1px solid rgba(157, 153, 175, 0.1);
+      border-left: 0.1rem  solid rgba(157, 153, 175, 0.1);
     }
   }
 }

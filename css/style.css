@@ -977,7 +977,7 @@ svg {
   .baner__swiper-slide-number {
     position: absolute;
     bottom: -38.6rem;
-    right: 3.2rem;
+    right: 4rem;
     height: 10rem;
   }
   .baner__swiper-slide-number img {
@@ -1628,7 +1628,9 @@ svg {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    height: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
     margin-top: 0;
     background: -webkit-gradient(linear, left bottom, left top, from(#F8F8F8), to(#F8F8F8)), #F8F8F8;
     background: linear-gradient(0deg, #F8F8F8, #F8F8F8), #F8F8F8;
@@ -1644,8 +1646,14 @@ svg {
   .gallery__img {
     margin-top: 6.6rem;
     position: relative;
-    height: auto;
+    height: 100rem;
     width: 100%;
+  }
+  .gallery__img img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .gallery__img-detail {
     width: 28.568rem;
@@ -1655,6 +1663,8 @@ svg {
   .gallery__img-detail img {
     width: 100%;
     height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .gallery__lavka {
     bottom: 9.5rem;
@@ -2203,7 +2213,14 @@ svg {
   }
 }
 .world {
-  margin-bottom: 6rem;
+  position: relative;
+  background-color: #F1F4F5;
+}
+.world .container {
+  padding-top: 20rem;
+  padding-bottom: 4rem;
+  border-right: 0.1rem solid rgba(157, 153, 175, 0.1);
+  border-left: 0.1rem solid rgba(157, 153, 175, 0.1);
 }
 .world__head {
   display: -webkit-box;
@@ -2486,6 +2503,12 @@ svg {
 @media (max-width: 48em) {
   .world {
     margin-bottom: 15rem;
+  }
+  .world .container {
+    padding-top: 32rem;
+    border-right: none;
+    border-left: none;
+    padding-bottom: 12rem;
   }
   .world__head {
     display: -webkit-box;
@@ -3530,22 +3553,6 @@ svg {
   padding-top: 8rem;
   padding-bottom: 20rem;
 }
-.our-projects .container .background-line {
-  display: block;
-  position: absolute;
-  top: 0;
-  width: 1px;
-  height: 100%;
-  background: #9d99af;
-  opacity: 0.1;
-  z-index: 0;
-}
-.our-projects .container .background-line_left {
-  left: 63.9rem;
-}
-.our-projects .container .background-line_right {
-  right: 11.8rem;
-}
 .our-projects--title {
   text-align: center;
   margin-bottom: 6rem;
@@ -3559,17 +3566,6 @@ svg {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-.our-projects__header::after {
-  content: "";
-  display: block;
-  position: absolute;
-  bottom: 0;
-  left: -25rem;
-  width: 200rem;
-  height: 1px;
-  background: #9d99af;
-  opacity: 0.1;
 }
 .our-projects-list {
   position: relative;
@@ -3606,7 +3602,29 @@ svg {
       -ms-flex-align: center;
           align-items: center;
   gap: 12rem;
-  border-bottom: 1px solid rgba(157, 153, 175, 0.1);
+  position: relative;
+}
+.our-projects-item:first-of-type::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -30rem;
+  width: 250rem;
+  height: 1px;
+  background: #9d99af;
+  opacity: 0.1;
+}
+.our-projects-item::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: -30rem;
+  width: 250rem;
+  height: 1px;
+  background: #9d99af;
+  opacity: 0.1;
 }
 .our-projects-item:nth-child(2n) {
   -webkit-box-orient: horizontal;
@@ -3798,6 +3816,13 @@ svg {
             flex-direction: column-reverse;
     border-bottom: none;
   }
+  .our-projects-item:first-of-type::before {
+    display: none;
+  }
+  .our-projects-item::after {
+    content: "";
+    display: none;
+  }
   .our-projects-item:nth-child(2n) {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -3912,17 +3937,16 @@ svg {
 }
 .our-articles .container {
   position: relative;
-  border-left: 1px solid rgba(157, 153, 175, 0.1);
-  border-right: 1px solid rgba(157, 153, 175, 0.1);
   background-color: #f1f4f5;
   padding-top: 8rem;
-  padding-bottom: 20rem;
+  border-right: 0.1rem solid rgba(157, 153, 175, 0.1);
+  border-left: 0.1rem solid rgba(157, 153, 175, 0.1);
 }
 .our-articles .container .background-line {
   display: block;
   position: absolute;
   top: 0;
-  width: 1px;
+  width: 0.1rem;
   height: 100%;
   background: #9d99af;
   opacity: 0.1;
@@ -3947,7 +3971,7 @@ svg {
   top: 0;
   left: -30rem;
   width: 200rem;
-  height: 1px;
+  height: 0.1rem;
   background: #9d99af;
   opacity: 0.1;
 }
@@ -3957,11 +3981,12 @@ svg {
   bottom: 0;
   left: -30rem;
   width: 200rem;
-  height: 1px;
+  height: 0.1rem;
   background: #9d99af;
   opacity: 0.1;
 }
 .our-articles-item {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3969,10 +3994,28 @@ svg {
       -ms-flex-align: center;
           align-items: center;
   gap: 12rem;
-  border-bottom: 1px solid rgba(157, 153, 175, 0.1);
 }
-.our-articles-item:last-of-type {
-  border-bottom: none;
+.our-articles-item:first-of-type::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -30rem;
+  width: 250rem;
+  height: 0.1rem;
+  background: #9d99af;
+  opacity: 0.1;
+}
+.our-articles-item::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: -30rem;
+  width: 250rem;
+  height: 0.1rem;
+  background: #9d99af;
+  opacity: 0.1;
 }
 .our-articles-item:nth-child(2n) {
   -webkit-box-orient: horizontal;
@@ -4073,7 +4116,7 @@ svg {
   display: block;
   position: absolute;
   width: 6rem;
-  height: 1px;
+  height: 0.1rem;
   background: rgba(146, 153, 157, 0.3);
   left: 0;
   top: 1.1rem;
@@ -4112,12 +4155,13 @@ svg {
     overflow: hidden;
     margin-top: 10rem;
     padding-top: 0;
-    padding-bottom: 32rem;
   }
   .our-articles .container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    border-right: none;
+    border-bottom: none;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -4169,6 +4213,13 @@ svg {
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
   }
+  .our-articles-item:first-of-type::before {
+    display: none;
+  }
+  .our-articles-item::after {
+    content: "";
+    display: none;
+  }
   .our-articles-item:nth-child(2n) {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -4191,7 +4242,7 @@ svg {
     display: block;
     position: absolute;
     width: 150%;
-    height: 1px;
+    height: 0.2rem;
     opacity: 0.1;
     background: #9d99af;
     left: -5rem;
@@ -4257,7 +4308,7 @@ svg {
   .our-articles-item-info li:before {
     content: "";
     width: 8rem;
-    height: 1px;
+    height: 0.2rem;
     top: 2.2rem;
   }
   .our-articles .another-text {
@@ -4295,8 +4346,9 @@ svg {
   background-color: #f1f4f5;
   position: relative;
   padding-top: 8rem;
-  border-left: 1px solid rgba(157, 153, 175, 0.1);
-  border-right: 1px solid rgba(157, 153, 175, 0.1);
+  border-left: 0.1rem solid rgba(157, 153, 175, 0.1);
+  border-bottom: 0.1rem solid rgba(157, 153, 175, 0.1);
+  border-right: 0.1rem solid rgba(157, 153, 175, 0.1);
 }
 .article--subtitle {
   font-size: 1.6rem;
@@ -4309,7 +4361,7 @@ svg {
 .article--title {
   text-align: center;
   padding-bottom: 6rem;
-  border-bottom: 1px solid rgba(157, 153, 175, 0.1);
+  border-bottom: 0.1rem solid rgba(157, 153, 175, 0.1);
 }
 .article-head {
   display: -webkit-box;
@@ -4318,7 +4370,7 @@ svg {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-bottom: 1px solid rgba(157, 153, 175, 0.1);
+  border-bottom: 0.1rem solid rgba(157, 153, 175, 0.1);
 }
 .article-head--mobile-date {
   display: none;
@@ -4422,8 +4474,8 @@ svg {
   padding: 6rem 3.6rem 8rem;
   width: 105.6rem;
   margin: 0 auto;
-  border-left: 1px solid rgba(157, 153, 175, 0.1);
-  border-right: 1px solid rgba(157, 153, 175, 0.1);
+  border-left: 0.1rem solid rgba(157, 153, 175, 0.1);
+  border-right: 0.1rem solid rgba(157, 153, 175, 0.1);
 }
 .article--text p {
   font-size: 1.8rem;
@@ -4435,7 +4487,7 @@ svg {
 .article--text p:last-of-type {
   margin-bottom: 0;
 }
-.article--text p.article--text-title {
+.article--text .article--text-title {
   padding-top: 8rem;
   font-size: 3.5rem;
   font-style: normal;
@@ -4485,10 +4537,11 @@ svg {
 .article--literature p {
   color: #92999d;
 }
-.article--literature p.article--text-title {
+.article--literature .article--text-title {
   color: #0b0c0b;
 }
 .article-box {
+  position: relative;
   border-left: 1px solid rgba(157, 153, 175, 0.1);
   border-right: 1px solid rgba(157, 153, 175, 0.1);
   width: 105.6rem;
@@ -4507,10 +4560,56 @@ svg {
 .article-box--video {
   width: 48.7rem;
   height: 32.5rem;
+  position: relative;
 }
 .article-box--video video {
   width: 48.7rem;
   height: 32.5rem;
+}
+.article-box--video .article-box--img-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-filter: brightness(80%);
+          filter: brightness(80%);
+}
+.article-box--video .article-box--img-wrapper > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.article-box--btn-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.article-box--btn-play svg {
+  width: 2rem;
+  height: 2rem;
+}
+.article-box--btn-play svg path {
+  fill: #E01327;
 }
 .article-box-right {
   position: relative;
@@ -4561,12 +4660,13 @@ svg {
 
 @media (max-width: 48em) {
   .article {
-    padding-bottom: 24rem;
+    padding-bottom: 0;
   }
   .article .container {
     padding-top: 10rem;
     border-left: none;
     border-right: none;
+    border-bottom: none;
   }
   .article--subtitle {
     font-family: Euclid Circular A;
@@ -4692,20 +4792,21 @@ svg {
     border-left: none;
     border-right: none;
   }
-  .article--text p {
-    font-size: 3.2rem;
-    font-style: normal;
-    font-weight: 300;
-    line-height: 140%;
-    margin-bottom: 4.8rem;
-  }
-  .article--text p.article--text-title {
+  .article--text .article--text-title {
     width: 90%;
     padding-top: 16rem;
     font-size: 4.4rem;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+    margin-bottom: 4.8rem;
+  }
+  .article--text p {
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 140%;
+    margin-bottom: 4.8rem;
   }
   .article--text strong {
     font-size: 3rem;
@@ -4746,7 +4847,7 @@ svg {
   .article--literature p {
     color: #92999d;
   }
-  .article--literature p.article--text-title {
+  .article--literature .article--text-title {
     color: #0b0c0b;
   }
   .article-box {
@@ -4782,6 +4883,7 @@ svg {
     height: 100%;
   }
   .article-box--title {
+    width: 90%;
     margin-bottom: 3rem;
     font-size: 3.2rem;
     font-style: normal;
@@ -6125,41 +6227,6 @@ svg {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-.contacts .form {
-  z-index: 12;
-  width: 100%;
-  position: absolute;
-  display: none;
-  top: 15.6vh;
-  left: 0;
-}
-.contacts .form .container {
-  position: relative;
-  z-index: 13;
-  margin: 0 auto;
-}
-.contacts .form.active {
-  display: block;
-}
-.contacts .form .button {
-  margin-top: 8rem;
-}
-.contacts .close-btn {
-  cursor: pointer;
-  position: absolute;
-  display: block;
-  top: -5rem;
-  right: 0;
-  -webkit-transition: opacity 1s ease;
-  transition: opacity 1s ease;
-}
-.contacts .close-btn > svg {
-  width: 3.1rem;
-  height: 3.1rem;
-}
-.contacts .close-btn :hover {
-  opacity: 0.6;
-}
 .contacts .back-grid {
   width: 100%;
   height: calc(100% - 42.7rem);
@@ -6248,22 +6315,6 @@ svg {
 .contacts .back-grid > .cell {
   border-right: 0.1rem solid rgba(157, 153, 175, 0.25);
   border-bottom: 0.1rem solid rgba(157, 153, 175, 0.25);
-}
-.contacts .form-grid {
-  margin: 0 auto;
-  width: 140rem;
-  height: 100%;
-  display: -ms-grid;
-  display: grid;
-  z-index: 15;
-  -ms-grid-columns: (1fr)[4];
-  grid-template-columns: repeat(4, 1fr);
-}
-.contacts .form-grid > .cell {
-  border-right: 1px solid rgba(157, 153, 175, 0.25);
-}
-.contacts .form-grid > .cell:first-of-type {
-  border-left: 1px solid rgba(157, 153, 175, 0.25);
 }
 .contacts header {
   background: transparent;
@@ -6392,25 +6443,6 @@ svg {
   }
   .contacts .back-grid {
     display: none;
-  }
-  .contacts .form-grid {
-    display: none;
-  }
-  .contacts .form {
-    top: 24.8rem;
-  }
-  .contacts .form .button {
-    margin-top: 5.4rem;
-  }
-  .contacts .close-btn {
-    position: absolute;
-    display: block;
-    top: -12.8rem;
-    right: 4rem;
-  }
-  .contacts .close-btn > svg {
-    width: 4.8rem;
-    height: 4.8rem;
   }
   .contacts header {
     background: transparent;
@@ -7363,6 +7395,81 @@ svg {
   background: #424245;
 }
 
+.form-modal {
+  z-index: 12;
+  width: 100%;
+  position: absolute;
+  display: none;
+  top: 15.6vh;
+  left: 0;
+}
+.form-modal .container {
+  position: relative;
+  z-index: 13;
+  margin: 0 auto;
+}
+.form-modal.active {
+  display: block;
+}
+.form-modal .button {
+  margin-top: 8rem;
+}
+
+.form-grid {
+  margin: 0 auto;
+  width: 140rem;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  z-index: 15;
+  -ms-grid-columns: (1fr)[4];
+  grid-template-columns: repeat(4, 1fr);
+}
+.form-grid > .cell {
+  border-right: 1px solid rgba(157, 153, 175, 0.25);
+}
+.form-grid > .cell:first-of-type {
+  border-left: 1px solid rgba(157, 153, 175, 0.25);
+}
+
+.close-btn {
+  cursor: pointer;
+  position: absolute;
+  display: block;
+  top: -5rem;
+  right: 0;
+  -webkit-transition: opacity 1s ease;
+  transition: opacity 1s ease;
+}
+.close-btn > svg {
+  width: 3.1rem;
+  height: 3.1rem;
+}
+.close-btn :hover {
+  opacity: 0.6;
+}
+
+@media (max-width: 48em) {
+  .form-modal .form-grid {
+    display: none;
+  }
+  .form-modal .form {
+    top: 24.8rem;
+  }
+  .form-modal .form .button {
+    margin-top: 5.4rem;
+  }
+  .form-modal .close-btn {
+    position: absolute;
+    display: block;
+    top: -12.8rem;
+    right: 4rem;
+  }
+  .form-modal .close-btn > svg {
+    width: 4.8rem;
+    height: 4.8rem;
+  }
+}
 @media (max-width: 48em) {
   .form__title {
     width: 100%;
@@ -7957,10 +8064,10 @@ body {
   grid-template-columns: repeat(4, 1fr);
 }
 .grid > .cell {
-  border-right: 1px solid rgba(157, 153, 175, 0.1);
+  border-right: 0.1rem solid rgba(157, 153, 175, 0.1);
 }
 .grid > .cell:first-of-type {
-  border-left: 1px solid rgba(157, 153, 175, 0.1);
+  border-left: 0.1rem solid rgba(157, 153, 175, 0.1);
 }
 
 @media (max-width: 48em) {

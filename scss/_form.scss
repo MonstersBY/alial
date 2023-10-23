@@ -1,4 +1,5 @@
 .form {
+
   // .form__title
   &__title {
     color: #0b0c0b;
@@ -75,6 +76,7 @@
 
   //   Темная тема
   &_theme_dark {
+
     // .form__title
     .form__title {
       color: #fff;
@@ -92,31 +94,120 @@
   }
 }
 
+.form-modal {
+  z-index: 12;
+  width: 100%;
+  position: absolute;
+  display: none;
+  top: 15.6vh;
+  left: 0;
+
+  .container {
+    position: relative;
+    z-index: 13;
+    margin: 0 auto;
+  }
+
+  &.active {
+    display: block;
+  }
+
+  .button {
+    margin-top: 8rem;
+  }
+}
+
+.form-grid {
+  margin: 0 auto;
+  width: 140rem;
+  height: 100%;
+  display: grid;
+  z-index: 15;
+  grid-template-columns: repeat(4, 1fr);
+
+  >.cell {
+    border-right: 1px solid rgba(157, 153, 175, 0.25);
+
+    &:first-of-type {
+      border-left: 1px solid rgba(157, 153, 175, 0.25);
+    }
+  }
+}
+
+.close-btn {
+  cursor: pointer;
+  position: absolute;
+  display: block;
+  top: -5rem;
+  right: 0;
+  transition: opacity 1s ease;
+
+  >svg {
+    width: 3.1rem;
+    height: 3.1rem;
+  }
+
+  :hover {
+    opacity: 0.6;
+  }
+}
+
+
+@media (max-width: 48em) {
+  .form-modal {
+    .form-grid {
+      display: none;
+    }
+
+    .form {
+      top: 24.8rem;
+
+      .button {
+        margin-top: 5.4rem;
+      }
+    }
+
+    .close-btn {
+      position: absolute;
+      display: block;
+      top: -12.8rem;
+      right: 4rem;
+
+      >svg {
+        width: 4.8rem;
+        height: 4.8rem;
+      }
+    }
+  }
+
+}
+
 @media (max-width: 48em) {
   .form {
+
     // .form__title
     &__title {
       width: 100%;
       font-size: 5.4rem;
-      line-height: 130%; 
+      line-height: 130%;
     }
-  
+
     // .form__subtitle
     &__subtitle {
       margin-top: 4rem;
       font-size: 3.2rem;
-      line-height: 140%; 
+      line-height: 140%;
     }
-  
+
     // .form__field
-  
+
     // .form__fields
     &__fields {
       margin-top: 5.4rem;
       flex-direction: column;
       gap: 5.4rem;
     }
-  
+
     // .form__field
     &__field {
       background: #fff;
@@ -124,9 +215,9 @@
       color: #0b0c0b;
       padding: 5.4rem 5.6rem;
       font-size: 3.6rem;
-      line-height: 5.4rem; 
+      line-height: 5.4rem;
     }
-  
+
     // .form__textarea
     &__textarea {
       margin-top: 5.4rem;
@@ -135,7 +226,7 @@
       line-height: 5.4rem;
       padding: 5.4rem 5.6rem;
     }
-  
+
     // .form__submit
     &__submit {
       margin-top: 5.4rem;
