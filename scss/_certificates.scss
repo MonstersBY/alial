@@ -1,5 +1,6 @@
 .certificates {
     margin-bottom: 9rem;
+
     &-head {
         display: flex;
         align-items: center;
@@ -7,7 +8,7 @@
         width: fit-content;
         margin: 0 auto 6rem;
         padding-left: 5rem;
-        
+
 
         &--title {
             font-size: 5.5rem;
@@ -15,6 +16,7 @@
             font-weight: 600;
             line-height: normal;
         }
+
         &--text {
             font-size: 1.8rem;
             font-style: normal;
@@ -22,12 +24,15 @@
             line-height: 150%;
         }
     }
+
     &-box {
         position: relative;
     }
+
     &__swiper {
         overflow: hidden;
     }
+
     &__slide {
         padding: 2.5rem 2.5rem 2rem;
         background: rgba(255, 255, 255, 0.95);
@@ -47,6 +52,7 @@
                 object-fit: cover;
             }
         }
+
         &--left {
             position: absolute;
             font-size: 1.6rem;
@@ -58,6 +64,7 @@
             left: -5rem;
             top: 10rem;
         }
+
         &-info {
             display: flex;
             justify-content: space-between;
@@ -73,6 +80,7 @@
                 line-height: normal;
                 max-width: 14.2rem;
             }
+
             &--name {
                 max-width: 14rem;
                 font-size: 2.8rem;
@@ -83,27 +91,35 @@
             }
         }
     }
-    .swiper-button-prev:after, .swiper-button-next:after {
+
+    .swiper-button-prev:after,
+    .swiper-button-next:after {
         content: unset;
     }
-    .swiper-button-prev, .swiper-button-next {
+
+    .swiper-button-prev,
+    .swiper-button-next {
         width: 5.5rem;
         height: 1rem;
         bottom: auto;
         top: -8rem;
+
         svg {
             width: 5.5rem;
             height: 1rem;
         }
     }
+
     .swiper-button-prev {
         left: auto;
         right: 8rem;
     }
+
     .swiper-button-next {
         left: auto;
         right: 0;
     }
+
     .swiper-pagination-bullets.swiper-pagination-horizontal {
         bottom: auto;
         top: -10rem;
@@ -122,6 +138,7 @@
             margin-left: 0;
             opacity: 1;
         }
+
         .swiper-pagination-bullet-active {
             background: #E01327;
             margin-right: 5rem;
@@ -136,6 +153,7 @@
         .container {
             padding: 0;
         }
+
         &-head {
             display: flex;
             flex-direction: column;
@@ -144,37 +162,43 @@
             width: fit-content;
             margin: 0 0 8rem;
             padding-left: 4rem;
-            
-    
+
+
             &--title {
                 font-size: 5.4rem;
                 line-height: 130%;
             }
+
             &--text {
                 font-size: 3.2rem;
                 line-height: 140%;
             }
         }
+
         &-box {
             position: relative;
         }
+
         &__swiper {
             padding-left: 4rem;
             padding-right: 20.5rem;
         }
+
         &__slide {
             padding: 3rem;
-    
+
             &--img {
                 width: 41.6rem;
                 height: 53rem;
             }
+
             &--left {
                 font-size: 3.2rem;
                 line-height: 140%;
                 left: -11rem;
                 top: 17rem;
             }
+
             &-info {
                 display: flex;
                 justify-content: space-between;
@@ -182,38 +206,47 @@
                 margin-top: 4rem;
                 color: #0B0C0B;
                 height: 10rem;
-    
+
                 &--class {
                     font-size: 3.2rem;
                     max-width: 28rem;
                 }
+
                 &--name {
                     max-width: 28rem;
                     font-size: 4.4rem;
                 }
             }
         }
-        .swiper-button-prev:after, .swiper-button-next:after {
+
+        .swiper-button-prev:after,
+        .swiper-button-next:after {
             content: unset;
         }
-        .swiper-button-prev, .swiper-button-next {
+
+        .swiper-button-prev,
+        .swiper-button-next {
             width: 10rem;
             height: 2.5rem;
             bottom: -9rem;
             top: auto;
+
             svg {
                 width: 10rem;
                 height: 2.5rem;
             }
         }
+
         .swiper-button-prev {
             left: auto;
             right: 19rem;
         }
+
         .swiper-button-next {
             left: auto;
             right: 4rem;
         }
+
         .swiper-pagination-bullets.swiper-pagination-horizontal {
             bottom: -8rem;
             top: auto;
@@ -223,13 +256,14 @@
             width: fit-content;
             display: flex;
             gap: 3rem;
-    
+
             .swiper-pagination-bullet {
                 width: 1.2rem;
                 height: 1.2rem;
                 margin-left: 0;
                 opacity: 1;
             }
+
             .swiper-pagination-bullet-active {
                 margin-right: 5rem;
             }
