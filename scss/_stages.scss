@@ -1,11 +1,7 @@
 .stages {
+  margin-top: 10rem;
   &__title {
-    border-left: 1px solid rgba(157, 153, 175, 0.25);
-    border-right: 1px solid rgba(157, 153, 175, 0.25);
-    position: relative;
-    background-color: #f1f4f5;
-    z-index: 2;
-    padding: 10rem 0 7.3rem;
+    margin-bottom: 7.3rem;
     padding-left: 1.4rem;
     color: #0b0c0b;
     font-family: Euclid Circular A;

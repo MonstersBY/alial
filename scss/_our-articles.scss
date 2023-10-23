@@ -253,14 +253,9 @@
       display: flex;
       gap: 20rem;
       flex-direction: column;
+      padding-bottom: 8rem;
 
       &::before {
-        content: "";
-        width: 0;
-        height: 0;
-      }
-
-      &::after {
         content: "";
         width: 0;
         height: 0;

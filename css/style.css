@@ -3759,7 +3759,7 @@ svg {
     overflow: hidden;
     margin-top: 10rem;
     padding-top: 0;
-    padding-bottom: 32rem;
+    padding-bottom: 24rem;
   }
   .our-projects__header::after {
     display: none;
@@ -4189,13 +4189,9 @@ svg {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    padding-bottom: 8rem;
   }
   .our-articles-list::before {
-    content: "";
-    width: 0;
-    height: 0;
-  }
-  .our-articles-list::after {
     content: "";
     width: 0;
     height: 0;
@@ -4881,6 +4877,17 @@ svg {
   .article-box--video > video {
     width: 100%;
     height: 100%;
+  }
+  .article-box--btn-play {
+    width: 16rem;
+    height: 16rem;
+  }
+  .article-box--btn-play svg {
+    width: 4rem;
+    height: 4rem;
+  }
+  .article-box--btn-play svg path {
+    fill: #E01327;
   }
   .article-box--title {
     width: 90%;
@@ -5756,9 +5763,6 @@ svg {
   font-weight: 300;
   line-height: normal;
 }
-.about-company .world {
-  margin-top: 20rem;
-}
 @media (max-width: 48em) {
   .about-company .main-banner_desktop {
     display: none;
@@ -6526,23 +6530,41 @@ svg {
     height: 2.4rem;
   }
 }
-.card-project-page .world {
-  margin-top: 20rem;
-}
 .card-project-page .article-box {
   margin-top: 6rem;
+  padding: 0 0;
+  border: none;
+  width: 98.4rem;
 }
-.card-project-page .footer {
-  margin-top: 20rem;
+.card-project-page .article-box--video {
+  width: 48.7rem;
+  height: 32.5rem;
+  position: relative;
+}
+.card-project-page .article-box--video video {
+  width: 48.7rem;
+  height: 32.5rem;
+}
+.card-project-page .article-box--video .article-box--img-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-filter: brightness(80%);
+          filter: brightness(80%);
+}
+.card-project-page .article-box--video .article-box--img-wrapper > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .card-project-page .about-company {
   margin-top: 6rem;
 }
 
 @media (max-width: 48em) {
-  .card-project-page .world {
-    margin-top: 24rem;
-  }
   .card-project-page .article-box {
     margin-top: 14rem;
     width: 100%;
@@ -6571,6 +6593,17 @@ svg {
     width: 100%;
     height: 100%;
   }
+  .card-project-page .article-box--btn-play {
+    width: 16rem;
+    height: 16rem;
+  }
+  .card-project-page .article-box--btn-play svg {
+    width: 4rem;
+    height: 4rem;
+  }
+  .card-project-page .article-box--btn-play svg path {
+    fill: #E01327;
+  }
   .card-project-page .article-box--title {
     margin-bottom: 3rem;
     font-size: 3.2rem;
@@ -6597,9 +6630,6 @@ svg {
   .card-project-page .article-box .article-box-right {
     width: 100%;
   }
-  .card-project-page .footer {
-    margin-top: 20rem;
-  }
   .card-project-page .about-company {
     margin-top: 6rem;
   }
@@ -6612,13 +6642,13 @@ svg {
   max-width: 140rem;
 }
 .card-project .grid-row {
-  border: 1px solid rgba(157, 153, 175, 0.25);
+  border: 1px solid rgba(157, 153, 175, 0.1);
   border-bottom: none;
   -ms-grid-column-span: 3;
   grid-column: span 3;
 }
 .card-project .grid-column {
-  border: 1px solid rgba(157, 153, 175, 0.25);
+  border: 1px solid rgba(157, 153, 175, 0.1);
   border-bottom: none;
   -ms-grid-column-span: 1;
   grid-column: span 1;
@@ -6628,6 +6658,7 @@ svg {
   /* Удаляем левую границу у второго элемента */
 }
 .card-project .container {
+  border-bottom: 0.1rem solid rgba(157, 153, 175, 0.1);
   margin: 0 auto;
   max-width: 140rem;
   display: -ms-grid;
@@ -6676,7 +6707,7 @@ svg {
 }
 .card-project__article {
   width: 100%;
-  padding-bottom: 10rem;
+  padding-bottom: 4rem;
   max-width: 98.4rem;
   margin: 6rem auto 0;
   display: -webkit-box;
@@ -6783,6 +6814,7 @@ svg {
     -ms-grid-columns: 100%;
     grid-template-columns: 100%;
     grid-auto-rows: auto;
+    border-bottom: none;
   }
   .card-project__title-container {
     margin-top: 10rem;
@@ -7338,6 +7370,10 @@ svg {
   font-style: normal;
   font-weight: 300;
   line-height: 2.7rem;
+  font-family: Euclid Circular A;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 2.7rem;
 }
 .form__field ::-webkit-input-placeholder {
   color: #92999d;
@@ -7390,9 +7426,11 @@ svg {
 }
 .form_theme_dark .form__field {
   background: #424245;
+  color: #FFF;
 }
 .form_theme_dark .form__textarea {
   background: #424245;
+  color: #FFF;
 }
 
 .form-modal {
@@ -7412,7 +7450,12 @@ svg {
   display: block;
 }
 .form-modal .button {
+  width: 54rem;
   margin-top: 8rem;
+  gap: 1.4rem;
+}
+.form-modal .button button {
+  padding: 3rem;
 }
 
 .form-grid {
@@ -7770,13 +7813,11 @@ svg {
     margin-right: 5rem;
   }
 }
+.stages {
+  margin-top: 10rem;
+}
 .stages__title {
-  border-left: 1px solid rgba(157, 153, 175, 0.25);
-  border-right: 1px solid rgba(157, 153, 175, 0.25);
-  position: relative;
-  background-color: #f1f4f5;
-  z-index: 2;
-  padding: 10rem 0 7.3rem;
+  margin-bottom: 7.3rem;
   padding-left: 1.4rem;
   color: #0b0c0b;
   font-family: Euclid Circular A;

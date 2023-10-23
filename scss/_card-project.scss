@@ -1,16 +1,35 @@
 .card-project-page {
-  .world {
-    margin-top: 20rem;
-  }
 
   .article-box {
     margin-top: 6rem;
-  }
+    padding: 0 0;
+    border: none;
+    width: 98.4rem;
 
-  .footer {
-    margin-top: 20rem;
+    &--video {
+      width: 48.7rem;
+      height: 32.5rem;
+      position: relative;
+      video {
+        width: 48.7rem;
+        height: 32.5rem;
+      }
+      .article-box--img-wrapper{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        filter: brightness(80%);
+        >img{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+         
+        }
+      }
+    }
   }
-
   
 
   .about-company {
@@ -20,9 +39,6 @@
 
 @media (max-width: 48em) {
   .card-project-page {
-    .world {
-      margin-top: 24rem;
-    }
 
     .article-box {
       margin-top: 14rem;
@@ -45,12 +61,27 @@
         width: 100%;
         height: 55rem;
 
-        > video {
+        >video {
           width: 100%;
           height: 100%;
         }
       }
 
+      &--btn-play {
+        width: 16rem;
+        height: 16rem;
+  
+        svg {
+          width: 4rem;
+          height: 4rem;
+  
+          path {
+            fill: #E01327;
+          }
+        }
+      }
+
+      
       &--title {
         margin-bottom: 3rem;
         font-size: 3.2rem;
@@ -82,10 +113,6 @@
       }
     }
 
-    .footer {
-      margin-top: 20rem;
-    }
-
     .about-company {
       margin-top: 6rem;
     }
@@ -100,13 +127,13 @@
   max-width: 140rem;
 
   .grid-row {
-    border: 1px solid rgba(157, 153, 175, 0.25);
+    border: 1px solid rgba(157, 153, 175, 0.1);
     border-bottom: none;
     grid-column: span 3;
   }
 
   .grid-column {
-    border: 1px solid rgba(157, 153, 175, 0.25);
+    border: 1px solid rgba(157, 153, 175, 0.1);
     border-bottom: none;
     grid-column: span 1;
   }
@@ -117,6 +144,7 @@
   }
 
   .container {
+    border-bottom: 0.1rem solid rgba(157, 153, 175, 0.1);
     margin: 0 auto;
     max-width: 140rem;
     display: grid;
@@ -172,7 +200,7 @@
   // .card-project__article
   &__article {
     width: 100%;
-    padding-bottom: 10rem;
+    padding-bottom: 4rem;
     max-width: 98.4rem;
     margin: 6rem auto 0;
     display: flex;
@@ -279,6 +307,7 @@
       display: grid;
       grid-template-columns: 100%;
       grid-auto-rows: auto;
+      border-bottom: none;
     }
 
     // .card-project__title-container

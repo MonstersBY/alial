@@ -227,7 +227,6 @@
          
         }
       }
-
     }
 
     &--btn-play {
@@ -525,6 +524,21 @@
           height: 100%;
         }
       }
+
+      &--btn-play {
+        width: 16rem;
+        height: 16rem;
+  
+        svg {
+          width: 4rem;
+          height: 4rem;
+  
+          path {
+            fill: #E01327;
+          }
+        }
+      }
+      
 
       &--title {
         width: 90%;
