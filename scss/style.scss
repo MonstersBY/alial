@@ -43,6 +43,7 @@
 @import "form";
 @import "other-products";
 @import "stages";
+@import "catalog";
 
 // .wow {
 //   visibility: hidden;
@@ -54,6 +55,25 @@ body {
 
 :root {
   --animate-duration: 2s;
+}
+
+
+.title-h1 {
+  color: #0B0C0B;
+  font-family: Euclid Circular A;
+  font-size: 5.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.title-h2 {
+  color: var(--black, #0B0C0B);
+  font-family: Euclid Circular A;
+  font-size: 3.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 }
 
 .switcher .switcher__container .switcher__content {
@@ -72,6 +92,7 @@ body {
   }
 
   &__btn {
+    cursor: pointer;
     color: #92999d;
     font-family: Euclid Circular A;
     font-size: 1.8rem;
@@ -100,13 +121,15 @@ body {
   background-color: #131316;
 }
 
-.link{
+.link {
   transition: opacity 0.3s ease;
-  &:hover{
+
+  &:hover {
     opacity: 0.8;
   }
 }
-.grid{
+
+.grid {
   z-index: 0;
   position: absolute;
   top: 50%;
@@ -116,12 +139,13 @@ body {
   width: 140rem;
   height: 100%;
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(4, 1fr);
 
-  > .cell {
+  >.cell {
     border-right: 0.1rem solid rgba(157, 153, 175, 0.1);
-    &:first-of-type{
-      border-left: 0.1rem  solid rgba(157, 153, 175, 0.1);
+
+    &:first-of-type {
+      border-left: 0.1rem solid rgba(157, 153, 175, 0.1);
     }
   }
 }
@@ -130,97 +154,119 @@ body {
 
 
 @media (max-width: 48em) {
-  .grid{
+
+
+  .title-h1 {
+    font-size: 5.4rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%;
+  }
+
+  .grid {
     display: none;
   }
-}
-.button {
-  
-  &:hover{
-    button{
-      background-color: darken(#fff,10%)
-    }
-  }
-  padding-left: 0;
-  svg {
-    width: 3.6rem;
-    height: 1.2rem;
-  }
-  > button {
-    transition: background-color 0.2s ease-in-out;
-    width: 100%;
-    max-width: 35rem;
-    display: inline-flex;
-    box-sizing: border-box;
-    padding: 2.5rem 3.2rem;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 1.3rem;
-    background: #fff;
-  }
-
-  &__title {
-    color: #0b0c0b;
-    font-family: Euclid Circular A;
-    font-size: 2rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-  }
-
-  &__text {
-    width: 100%;
-    margin: 0 0;
-    color: #0b0c0b;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    font-family: Euclid Circular A;
-    font-size: 1.8rem;
-    font-style: normal;
-    font-weight: 300;
-    line-height: 2.7rem;
-  }
-
-  &_type_red{
-
-    > button {
-      background: #E01327;
+  .switcher {
+    &__control {
+      gap: 4rem;
     }
   
-    .button__title {
-      color: #FFF;
+    &__btn {
+      font-size: 3rem;
     }
-  
-    .button__text {
-      color: #FFF;
+  }
+  .button {
+
+    &:hover {
+      button {
+        background-color: darken(#fff, 10%)
+      }
     }
 
-    svg{
-      path{
-        fill: #FFF; 
-      } 
+    padding-left: 0;
+
+    svg {
+      width: 3.6rem;
+      height: 1.2rem;
     }
 
-    &:hover{
-      button{
-        background-color: darken(#E01327,10%)
+    >button {
+      transition: background-color 0.2s ease-in-out;
+      width: 100%;
+      max-width: 35rem;
+      display: inline-flex;
+      box-sizing: border-box;
+      padding: 2.5rem 3.2rem;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 1.3rem;
+      background: #fff;
+    }
+
+    &__title {
+      color: #0b0c0b;
+      font-family: Euclid Circular A;
+      font-size: 2rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+
+    &__text {
+      width: 100%;
+      margin: 0 0;
+      color: #0b0c0b;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      font-family: Euclid Circular A;
+      font-size: 1.8rem;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 2.7rem;
+    }
+
+    &_type_red {
+
+      >button {
+        background: #E01327;
+      }
+
+      .button__title {
+        color: #FFF;
+      }
+
+      .button__text {
+        color: #FFF;
+      }
+
+      svg {
+        path {
+          fill: #FFF;
+        }
+      }
+
+      &:hover {
+        button {
+          background-color: darken(#E01327, 10%)
+        }
       }
     }
   }
 }
 
+
 @media (max-width: 48em) {
   .button {
-    
+
     svg {
       width: 7.2rem;
       height: 2.4rem;
     }
 
-    > button {
+    >button {
       max-width: 100%;
       padding: 5rem 6.4rem;
       gap: 2rem;
@@ -270,7 +316,7 @@ body {
     align-items: center;
     justify-content: space-between;
 
-    > span {
+    >span {
       color: #fff;
       font-family: Euclid Circular A;
       font-size: 1.8rem;
@@ -279,7 +325,7 @@ body {
       line-height: 2.7rem;
     }
 
-    > svg {
+    >svg {
       width: 3.6rem;
       height: 1.2rem;
     }
