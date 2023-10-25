@@ -1,8 +1,11 @@
 .catalog {
     position: relative;
+    background-color: #F1F4F5;
 
     .container {
         padding-top: 8rem;
+        border-left: 1px solid rgba(157, 153, 175, 0.1);
+        border-right: 1px solid rgba(157, 153, 175, 0.1);
     }
 
     // .catalog__title-h1
@@ -39,7 +42,7 @@
 
     // .catalog__item
     &__item {
-        width: 42.6rem;
+        width: 42.5rem;
         height: 40.1rem;
         display: flex;
         flex-direction: column;

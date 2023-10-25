@@ -5291,7 +5291,7 @@ svg {
   }
 }
 .about-company .header {
-  border-bottom: 1px solid rgba(157, 153, 175, 0.25);
+  border-bottom: 1px solid rgba(157, 153, 175, 0.1);
   padding: 0 0;
 }
 .about-company .header > .container {
@@ -8024,9 +8024,12 @@ svg {
 }
 .catalog {
   position: relative;
+  background-color: #F1F4F5;
 }
 .catalog .container {
   padding-top: 8rem;
+  border-left: 1px solid rgba(157, 153, 175, 0.1);
+  border-right: 1px solid rgba(157, 153, 175, 0.1);
 }
 .catalog__title-h1 {
   width: 100%;
@@ -8057,7 +8060,7 @@ svg {
   gap: 6rem 6rem;
 }
 .catalog__item {
-  width: 42.6rem;
+  width: 42.5rem;
   height: 40.1rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -8286,99 +8289,160 @@ svg {
 
 @media (max-width: 48em) {
   .error-block {
-    min-height: calc(100vh - 11rem - 43.1rem);
-    background-color: #0B0C0B;
-    position: relative;
-  }
-  .error-block .container {
-    position: relative;
-    padding: 16.2rem 0;
+    min-height: calc(100vh - 16.2rem - 152.4rem);
   }
   .error-block__img-container {
-    position: relative;
-    margin: 0 auto;
-    width: 34rem;
-    height: 30rem;
-    z-index: 2;
-  }
-  .error-block__img-container > img {
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    width: 35rem;
+    height: 32rem;
   }
   .error-block__img-container::before {
-    top: -5rem;
-    left: -19rem;
-    content: "4";
-    position: absolute;
-    -webkit-transform: rotate(-6.28deg);
-            transform: rotate(-6.28deg);
-    color: #FFF;
-    font-family: Euclid Circular A;
-    font-size: 33rem;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
+    font-size: 32rem;
   }
   .error-block__img-container::after {
-    top: -5rem;
-    right: -18rem;
-    content: "4";
-    position: absolute;
-    -webkit-transform: rotate(7.888deg);
-            transform: rotate(7.888deg);
-    color: #FFF;
-    font-family: Euclid Circular A;
-    font-size: 33rem;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-  }
-  .error-block__name {
-    margin-top: 8rem;
-    color: #FFF;
-    text-align: center;
-    font-family: Euclid Circular A;
-    font-size: 4rem;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
-    letter-spacing: 0.72rem;
-    text-transform: uppercase;
+    font-size: 32rem;
   }
   .error-block__link {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    height: 7.5rem;
-    width: 35rem;
-    margin: 8rem auto 0;
-    background: #E01327;
+    height: 10.4rem;
+    width: 50rem;
+    margin: 14.4rem auto 0;
+    padding: 3rem;
+    font-size: 3.2rem;
+  }
+  .error-block__link > svg {
+    width: 4.6rem;
+    height: 1.5rem;
+  }
+}
+.seo {
+  position: relative;
+  background-color: #F1F4F5;
+}
+.seo .container {
+  padding-top: 20rem;
+  border-left: 1px solid rgba(157, 153, 175, 0.1);
+  border-right: 1px solid rgba(157, 153, 175, 0.1);
+  width: 140rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.seo__arcticle {
+  width: 68.4rem;
+}
+.seo .img-container {
+  width: 51.2rem;
+  height: 73.4rem;
+}
+.seo__title {
+  color: #2d3238;
+  font-family: Euclid Circular A;
+  font-size: 5.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.seo__subtitle {
+  border-left: 2px solid #dd1444;
+  width: 61.4rem;
+  padding-left: 3rem;
+  margin-top: 4rem;
+  color: #2d3238;
+  font-family: Euclid Circular A;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.seo__paragraph {
+  display: block;
+  margin-top: 2.4rem;
+  color: #595e68;
+  font-family: Euclid Circular A;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 2.7rem;
+}
+.seo__paragraph:first-of-type {
+  color: #2D3238;
+  margin-top: 10rem;
+}
+.seo__paragraph:first-of-type::first-letter {
+  color: #2D3238;
+  font-family: Euclid Circular A;
+  font-size: 6rem;
+  padding-right: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 2.7rem;
+}
+
+@media (max-width: 48em) {
+  .seo .container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    padding: 2.5rem 3.2rem;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    color: #FFF;
-    font-family: Euclid Circular A;
-    font-size: 2rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    white-space: nowrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    gap: 8rem;
   }
-  .error-block__link > svg {
-    width: 3.6rem;
-    height: 1.2rem;
+  .seo .img-container {
+    width: 74.8rem;
+    height: 107rem;
+  }
+  .seo__arcticle {
+    width: 100%;
+  }
+  .seo__title {
+    font-size: 5.4rem;
+    line-height: 130%;
+  }
+  .seo__subtitle {
+    border-left: 2px solid #dd1444;
+    width: 100%;
+    padding-left: 2.4rem;
+    margin-top: 3rem;
+    font-family: Euclid Circular A;
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 140%;
+  }
+  .seo__paragraph {
+    margin-top: 4.8rem;
+    padding-bottom: 0;
+    color: #2D3238;
+    font-family: Euclid Circular A;
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 140%;
+  }
+  .seo__paragraph:first-of-type::first-letter {
+    padding-right: 1rem;
+    color: #2D3238;
+    font-family: Euclid Circular A;
+    font-size: 6rem;
+    font-style: normal;
+    font-weight: 600;
   }
 }
 body {
