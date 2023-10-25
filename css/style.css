@@ -5083,6 +5083,7 @@ svg {
   font-weight: 700;
 }
 .vacancies-item--link {
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -7490,6 +7491,55 @@ svg {
 }
 .close-btn :hover {
   opacity: 0.6;
+}
+
+.form_type_vacancy-response .form__fields {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 3rem;
+}
+.form_type_vacancy-response .form__field {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  max-width: 68.5rem;
+}
+.form_type_vacancy-response .form__textarea {
+  max-width: 68.5rem;
+  margin-top: 0;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+.form_type_vacancy-response .form__file-upload-select {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.form_type_vacancy-response .form__file-select-text {
+  color: #92999D;
+  font-family: Euclid Circular A;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 2.7rem;
+}
+.form_type_vacancy-response .form__file-upload-btn {
+  cursor: pointer;
+}
+.form_type_vacancy-response .form__file-upload-btn svg {
+  width: 2.7rem;
+  height: 2.7rem;
+}
+.form_type_vacancy-response .form__file-upload-input {
+  display: none;
 }
 
 @media (max-width: 48em) {
