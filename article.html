@@ -63,7 +63,7 @@
           </div>
         </div>
       </div>
-      <div class="header__phone-number">+ 7 (495) 532-03-79</div>
+      <a class="header__phone-number">+ 7 (495) 532-03-79</a>
     </div>
   </header>
 
@@ -95,27 +95,27 @@
             <img src="./img/our-articles1.jpg" alt="" />
           </div>
           <div class="article-head--socials">
-            <div class="article-head--socials-teleg">
+            <a href="#" class="article-head--socials-teleg">
               <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23" fill="none">
                 <path
                   d="M9.37295 17.8729L9.64128 13.8191L17.0013 7.18745C17.3271 6.89037 16.9342 6.74662 16.503 7.00537L7.41795 12.7458L3.48878 11.4999C2.64545 11.2604 2.63587 10.6758 3.68045 10.2541L18.985 4.35078C19.6846 4.03453 20.3554 4.52328 20.0871 5.59662L17.4805 17.8729C17.2984 18.7449 16.7713 18.9558 16.043 18.5533L12.0755 15.6208L10.1684 17.4704C9.94795 17.6908 9.76587 17.8729 9.37295 17.8729Z"
                   fill="#0B0C0B" />
               </svg>
-            </div>
-            <div class="article-head--socials-face">
+            </a>
+            <a href="#" class="article-head--socials-face">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                 <path
                   d="M14.9987 1.6665H12.4987C11.3936 1.6665 10.3338 2.10549 9.55242 2.88689C8.77102 3.66829 8.33203 4.7281 8.33203 5.83317V8.33317H5.83203V11.6665H8.33203V18.3332H11.6654V11.6665H14.1654L14.9987 8.33317H11.6654V5.83317C11.6654 5.61216 11.7532 5.4002 11.9094 5.24392C12.0657 5.08764 12.2777 4.99984 12.4987 4.99984H14.9987V1.6665Z"
                   fill="#0B0C0B" />
               </svg>
-            </div>
-            <div class="article-head--socials-twitter">
+            </a>
+            <a href="#" class="article-head--socials-twitter">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
                 <path
                   d="M17.25 2.25022C16.5318 2.75683 15.7366 3.1443 14.895 3.39772C14.4433 2.87835 13.843 2.51024 13.1753 2.34316C12.5075 2.17609 11.8046 2.21811 11.1616 2.46356C10.5185 2.709 9.96633 3.14602 9.57973 3.7155C9.19314 4.28499 8.99077 4.95947 9 5.64772V6.39772C7.68197 6.43189 6.37595 6.13958 5.19826 5.5468C4.02056 4.95403 3.00774 4.07919 2.25 3.00022C2.25 3.00022 -0.75 9.75022 6 12.7502C4.45539 13.7987 2.61537 14.3244 0.75 14.2502C7.5 18.0002 15.75 14.2502 15.75 5.62522C15.7493 5.41631 15.7292 5.20791 15.69 5.00272C16.4554 4.24784 16.9956 3.29475 17.25 2.25022Z"
                   fill="#0B0C0B" />
               </svg>
-            </div>
+            </a>
           </div>
         </div>
         <div class="article--text">
@@ -196,7 +196,8 @@
               запорной арматуры в сравнении с другими видами тезники для
               работы в сфере: нефти, газа, химической промышленности и т.д.
             </div>
-            <div class="article-box--link">Скопировать ссылку</div>
+            <a class="article-box--link" id="copyButton">Скопировать ссылку</a>
+            <input type="text" value="https://yourlink.com" id="myLink" readonly style="display: none;">
             <div class="article-box--time">7 минут</div>
           </div>
         </div>
@@ -906,47 +907,47 @@
 
   <footer class="footer">
     <div class="container">
-      <div class="footer__top">
-        <div class="footer__top-items">
-          <div class="footer__top-logo">
-            <a href="#">
-              <img src="img/logo.png" alt="" />
-            </a>
-          </div>
-          <div class="footer__top-phone">+ 7 (495) 532-03-79</div>
+        <div class="footer__top">
+            <div class="footer__top-items">
+                <div class="footer__top-logo">
+                    <a href="#">
+                        <img src="img/logo.png" alt="" />
+                    </a>
+                </div>
+                <a href="#" class="footer__top-phone">+ 7 (495) 532-03-79</a>
+            </div>
+            <div class="footer__top-items">
+                <div class="footer__top-item"><a href="#">О компании</a></div>
+                <div class="footer__top-item"><a href="#">Проекты</a></div>
+                <div class="footer__top-item"><a href="#">Карьера</a></div>
+            </div>
+            <div class="footer__top-items">
+                <div class="footer__top-item"><a href="#">Статьи</a></div>
+                <div class="footer__top-item"><a href="#">Новости</a></div>
+                <div class="footer__top-item"><a href="#">Контакты</a></div>
+            </div>
+            <div class="footer__top-items">
+                <div class="footer__top-item"><a href="#">Продукция</a></div>
+                <div class="footer__top-item prod">
+                    <a href="#">Запорно-регулирующая аппаратура (ЗРА)</a>
+                </div>
+                <div class="footer__top-item prod">
+                    <a href="#">Электроприводы</a>
+                </div>
+                <div class="footer__top-item prod"><a href="#">УЗРТ</a></div>
+            </div>
         </div>
-        <div class="footer__top-items">
-          <div class="footer__top-item"><a href="#">О компании</a></div>
-          <div class="footer__top-item"><a href="#">Проекты</a></div>
-          <div class="footer__top-item"><a href="#">Карьера</a></div>
+        <div class="footer__line"></div>
+        <div class="footer__bottom">
+            <div class="footer__bottom-item">Copiright © 2022 М.О. «Алиал»</div>
+            <a href="#" class="footer__bottom-item">info@alialmash.ru</a>
+            <div class="footer__bottom-item">
+                <span>Смотрите также:</span>
+                <a class="footer__bottom-logo" href=""><img src="./img/logo-tech.png" alt="" /></a>
+            </div>
         </div>
-        <div class="footer__top-items">
-          <div class="footer__top-item"><a href="#">Статьи</a></div>
-          <div class="footer__top-item"><a href="#">Новости</a></div>
-          <div class="footer__top-item"><a href="#">Контакты</a></div>
-        </div>
-        <div class="footer__top-items">
-          <div class="footer__top-item"><a href="#">Продукция</a></div>
-          <div class="footer__top-item prod">
-            <a href="#">Запорно-регулирующая аппаратура (ЗРА)</a>
-          </div>
-          <div class="footer__top-item prod">
-            <a href="#">Электроприводы</a>
-          </div>
-          <div class="footer__top-item prod"><a href="#">УЗРТ</a></div>
-        </div>
-      </div>
-      <div class="footer__line"></div>
-      <div class="footer__bottom">
-        <div class="footer__bottom-item">Copiright © 2022 М.О. «Алиал»</div>
-        <div class="footer__bottom-item">info@alialmash.ru</div>
-        <div class="footer__bottom-item">
-          <span>Смотрите также:</span>
-          <a class="footer__bottom-logo" href=""><img src="./img/logo-tech.png" alt="" /></a>
-        </div>
-      </div>
     </div>
-  </footer>
+</footer>
 
   <script src="js/wow.min.js"></script>
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>

@@ -73,7 +73,8 @@
       flex-basis: 17rem;
       align-items: center;
 
-      &>div {
+      &>a {
+        cursor: pointer;
         width: 4.8rem;
         height: 4.8rem;
         border-radius: 50%;

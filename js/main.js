@@ -349,3 +349,15 @@ $(document).ready(function() {
     $(video)[0].play();
   });
 });
+
+$(document).ready(function(){
+  $('#copyButton').click(function(e) {
+      e.preventDefault();
+      var copyText = document.getElementById("myLink");
+      copyText.select();
+      copyText.setSelectionRange(0, 99999);
+      document.execCommand("copy");
+
+      alert("Ссылка скопирована: " + copyText.value);
+  });
+});
