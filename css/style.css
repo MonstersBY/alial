@@ -8188,6 +8188,199 @@ svg {
     height: 2.4rem;
   }
 }
+.error-block {
+  min-height: calc(100vh - 11rem - 43.1rem);
+  background-color: #0B0C0B;
+  position: relative;
+}
+.error-block .container {
+  position: relative;
+  padding: 16.2rem 0;
+}
+.error-block__img-container {
+  position: relative;
+  margin: 0 auto;
+  width: 34rem;
+  height: 30rem;
+  z-index: 2;
+}
+.error-block__img-container > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.error-block__img-container::before {
+  top: -5rem;
+  left: -19rem;
+  content: "4";
+  position: absolute;
+  -webkit-transform: rotate(-6.28deg);
+          transform: rotate(-6.28deg);
+  color: #FFF;
+  font-family: Euclid Circular A;
+  font-size: 33rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.error-block__img-container::after {
+  top: -5rem;
+  right: -18rem;
+  content: "4";
+  position: absolute;
+  -webkit-transform: rotate(7.888deg);
+          transform: rotate(7.888deg);
+  color: #FFF;
+  font-family: Euclid Circular A;
+  font-size: 33rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.error-block__name {
+  margin-top: 8rem;
+  color: #FFF;
+  text-align: center;
+  font-family: Euclid Circular A;
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: 0.72rem;
+  text-transform: uppercase;
+}
+.error-block__link {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 7.5rem;
+  width: 35rem;
+  margin: 8rem auto 0;
+  background: #E01327;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 2.5rem 3.2rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #FFF;
+  font-family: Euclid Circular A;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  white-space: nowrap;
+}
+.error-block__link > svg {
+  width: 3.6rem;
+  height: 1.2rem;
+}
+
+@media (max-width: 48em) {
+  .error-block {
+    min-height: calc(100vh - 11rem - 43.1rem);
+    background-color: #0B0C0B;
+    position: relative;
+  }
+  .error-block .container {
+    position: relative;
+    padding: 16.2rem 0;
+  }
+  .error-block__img-container {
+    position: relative;
+    margin: 0 auto;
+    width: 34rem;
+    height: 30rem;
+    z-index: 2;
+  }
+  .error-block__img-container > img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .error-block__img-container::before {
+    top: -5rem;
+    left: -19rem;
+    content: "4";
+    position: absolute;
+    -webkit-transform: rotate(-6.28deg);
+            transform: rotate(-6.28deg);
+    color: #FFF;
+    font-family: Euclid Circular A;
+    font-size: 33rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  .error-block__img-container::after {
+    top: -5rem;
+    right: -18rem;
+    content: "4";
+    position: absolute;
+    -webkit-transform: rotate(7.888deg);
+            transform: rotate(7.888deg);
+    color: #FFF;
+    font-family: Euclid Circular A;
+    font-size: 33rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  .error-block__name {
+    margin-top: 8rem;
+    color: #FFF;
+    text-align: center;
+    font-family: Euclid Circular A;
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 0.72rem;
+    text-transform: uppercase;
+  }
+  .error-block__link {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    height: 7.5rem;
+    width: 35rem;
+    margin: 8rem auto 0;
+    background: #E01327;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 2.5rem 3.2rem;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: #FFF;
+    font-family: Euclid Circular A;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  .error-block__link > svg {
+    width: 3.6rem;
+    height: 1.2rem;
+  }
+}
 body {
   position: relative;
   background-color: #f1f4f5;
