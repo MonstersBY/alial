@@ -153,6 +153,85 @@ body {
 }
 
 
+.button {
+  
+  &:hover{
+    button{
+      background-color: darken(#fff,10%)
+    }
+  }
+  padding-left: 0;
+  svg {
+    width: 3.6rem;
+    height: 1.2rem;
+  }
+  > button {
+    transition: background-color 0.2s ease-in-out;
+    width: 100%;
+    max-width: 35rem;
+    display: inline-flex;
+    box-sizing: border-box;
+    padding: 2.5rem 3.2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.3rem;
+    background: #fff;
+  }
+
+  &__title {
+    color: #0b0c0b;
+    font-family: Euclid Circular A;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  &__text {
+    width: 100%;
+    margin: 0 0;
+    color: #0b0c0b;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Euclid Circular A;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 2.7rem;
+  }
+
+  &_type_red{
+
+    > button {
+      background: #E01327;
+    }
+  
+    .button__title {
+      color: #FFF;
+    }
+  
+    .button__text {
+      color: #FFF;
+    }
+
+    svg{
+      path{
+        fill: #FFF; 
+      } 
+    }
+
+    &:hover{
+      button{
+        background-color: darken(#E01327,10%)
+      }
+    }
+  }
+}
+
+
 
 
 @media (max-width: 48em) {

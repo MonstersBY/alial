@@ -8603,6 +8603,87 @@ body {
   border-left: 0.1rem solid rgba(157, 153, 175, 0.1);
 }
 
+.button {
+  padding-left: 0;
+}
+.button:hover button {
+  background-color: #e6e6e6;
+}
+.button svg {
+  width: 3.6rem;
+  height: 1.2rem;
+}
+.button > button {
+  -webkit-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
+  width: 100%;
+  max-width: 35rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 2.5rem 3.2rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 1.3rem;
+  background: #fff;
+}
+.button__title {
+  color: #0b0c0b;
+  font-family: Euclid Circular A;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.button__text {
+  width: 100%;
+  margin: 0 0;
+  color: #0b0c0b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: Euclid Circular A;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 2.7rem;
+}
+.button_type_red > button {
+  background: #E01327;
+}
+.button_type_red .button__title {
+  color: #FFF;
+}
+.button_type_red .button__text {
+  color: #FFF;
+}
+.button_type_red svg path {
+  fill: #FFF;
+}
+.button_type_red:hover button {
+  background-color: #b10f1f;
+}
+
 @media (max-width: 48em) {
   .title-h1 {
     font-size: 5.4rem;
