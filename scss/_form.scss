@@ -1,6 +1,6 @@
 .form {
+  display: none;
 
-  // .form__title
   &__title {
     color: #0b0c0b;
     font-family: Euclid Circular A;
@@ -49,8 +49,9 @@
     font-weight: 300;
     line-height: 2.7rem;
 
-    ::placeholder {
+    &::placeholder {
       color: #92999d;
+      opacity: 1;
     }
   }
 
@@ -68,8 +69,9 @@
     line-height: 2.7rem;
     padding: 2.7rem 2.8rem;
 
-    ::placeholder {
+    &::placeholder {
       color: #92999d;
+      opacity: 1;
     }
   }
 
@@ -102,17 +104,19 @@
 }
 
 .form-modal {
-  z-index: 12;
-  width: 100%;
-  position: absolute;
-  display: none;
-  top: 15.6vh;
+  position: fixed;
+  top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 30;
 
   .container {
-    position: relative;
-    z-index: 13;
-    margin: 0 auto;
+    z-index: 200;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   &.active {
@@ -173,33 +177,35 @@
 
     // .form__fields 
     &__fields {
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-rows: repeat(4, 1fr);
+      gap: 3rem;
+      width: 100%;
+    }
+
+    // .form__fields-container
+    &__fields-container {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
       gap: 3rem;
     }
 
     // .form__field 
     &__field {
-      flex-basis: 50%;
       max-width: 68.5rem;
     }
 
-    // .form__textarea 
-    &__textarea {
-      max-width: 68.5rem;
-      margin-top: 0;
-      flex-basis: 50%;
-    }
-
-    // form__file-upload-select
-    &__file-upload-select {
-      flex-basis: 50%;
+    // form__file-upload-container
+    &__file-upload-container {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
     }
 
-    // form__file-select-text
-    &__file-select-text {
+
+    // form__file-upload-text
+    &__file-upload-text {
       color: #92999D;
       font-family: Euclid Circular A;
       font-size: 1.8rem;
@@ -211,11 +217,12 @@
     // form__file-upload-btn
     &__file-upload-btn {
       cursor: pointer;
-      svg{
+
+      svg {
         width: 2.7rem;
         height: 2.7rem;
       }
-      
+
     }
 
     // form__file-upload-input
@@ -224,18 +231,114 @@
     }
   }
 
-  // .field 
-  // .field_vacancy 
-  // .field_name 
-  // .field_telephone 
-  // .field_email 
 
-  // .button 
-  // .button_type_red 
-  // .button__title 
-  // .button__text 
+  .form__field {
+    display: flex;
+
+    // .form__field_vacancy 
+    &_vacancy {}
+
+    // .form__field_name 
+    &_name {}
+
+    // .form__field_telephone
+    &_telephone {}
+
+    // .form__field_email
+    &_email {}
+
+    // .form__field_textarea
+    &_textarea {
+      grid-row: span 2;
+    }
+
+    // .form__field_upload-file
+    &_upload-file {
+      grid-row: span 2;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+    }
+  }
+
+
+  .file-upload {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+    // .file-upload__wrapper-icon 
+    &__wrapper-icon {
+
+      // .file-upload__wrapper-icon_upload
+      &_upload {
+        width: 5rem;
+        height: 5.4rem;
+      }
+
+      // .file-upload__wrapper-icon_delete 
+      &_delete {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+
+    // .file-upload__text-container 
+    &__text-container {
+      width: 30rem;
+      margin-left: 1.2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+
+    // .file-upload__name 
+    &__name {
+      color: #FFF;
+      font-family: Euclid Circular A;
+      font-size: 1.8rem;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 2.7rem;
+    }
+
+    // .file-upload__size 
+    &__size {
+      color: #92999D;
+      font-family: Euclid Circular A;
+      font-size: 1.8rem;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 2.7rem;
+    }
+
+    // .file-upload__delete-btn
+    &__delete-btn {
+      cursor: pointer;
+      margin-left: auto;
+      display: flex;
+      flex-direction: row;
+      gap: 0.4rem;
+    }
+
+    // .file-upload__delete-text 
+    &__delete-text {
+      color: #92999D;
+      font-family: Euclid Circular A;
+      font-size: 1.6rem;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+    }
+  }
+
+  .button_type_red {
+    margin-top: 3rem;
+  }
+
 }
- 
+
 
 
 

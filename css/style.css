@@ -4978,6 +4978,9 @@ svg {
   display: flex;
   padding: 6rem 0;
   border-top: 1px solid rgba(157, 153, 175, 0.1607843137);
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 .vacancies-item:last-child {
   border-bottom: 1px solid rgba(157, 153, 175, 0.1607843137);
@@ -7332,6 +7335,9 @@ svg {
   line-height: 2.7rem;
 }
 
+.form {
+  display: none;
+}
 .form__title {
   color: #0b0c0b;
   font-family: Euclid Circular A;
@@ -7377,20 +7383,25 @@ svg {
   font-weight: 300;
   line-height: 2.7rem;
 }
-.form__field ::-webkit-input-placeholder {
+.form__field::-webkit-input-placeholder {
   color: #92999d;
+  opacity: 1;
 }
-.form__field ::-moz-placeholder {
+.form__field::-moz-placeholder {
   color: #92999d;
+  opacity: 1;
 }
-.form__field :-ms-input-placeholder {
+.form__field:-ms-input-placeholder {
   color: #92999d;
+  opacity: 1;
 }
-.form__field ::-ms-input-placeholder {
+.form__field::-ms-input-placeholder {
   color: #92999d;
+  opacity: 1;
 }
-.form__field ::placeholder {
+.form__field::placeholder {
   color: #92999d;
+  opacity: 1;
 }
 .form__textarea {
   width: 100%;
@@ -7405,20 +7416,25 @@ svg {
   line-height: 2.7rem;
   padding: 2.7rem 2.8rem;
 }
-.form__textarea ::-webkit-input-placeholder {
+.form__textarea::-webkit-input-placeholder {
   color: #92999d;
+  opacity: 1;
 }
-.form__textarea ::-moz-placeholder {
+.form__textarea::-moz-placeholder {
   color: #92999d;
+  opacity: 1;
 }
-.form__textarea :-ms-input-placeholder {
+.form__textarea:-ms-input-placeholder {
   color: #92999d;
+  opacity: 1;
 }
-.form__textarea ::-ms-input-placeholder {
+.form__textarea::-ms-input-placeholder {
   color: #92999d;
+  opacity: 1;
 }
-.form__textarea ::placeholder {
+.form__textarea::placeholder {
   color: #92999d;
+  opacity: 1;
 }
 .form__submit {
   margin-top: 6rem;
@@ -7436,17 +7452,20 @@ svg {
 }
 
 .form-modal {
-  z-index: 12;
-  width: 100%;
-  position: absolute;
-  display: none;
-  top: 15.6vh;
+  position: fixed;
+  top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 30;
 }
 .form-modal .container {
-  position: relative;
-  z-index: 13;
-  margin: 0 auto;
+  z-index: 200;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 .form-modal.active {
   display: block;
@@ -7495,24 +7514,28 @@ svg {
 }
 
 .form_type_vacancy-response .form__fields {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 3rem 1fr 3rem 1fr 3rem 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  gap: 3rem;
+  width: 100%;
+}
+.form_type_vacancy-response .form__fields-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   gap: 3rem;
 }
 .form_type_vacancy-response .form__field {
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
   max-width: 68.5rem;
 }
-.form_type_vacancy-response .form__textarea {
-  max-width: 68.5rem;
-  margin-top: 0;
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
-}
-.form_type_vacancy-response .form__file-upload-select {
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
+.form_type_vacancy-response .form__file-upload-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -7524,7 +7547,7 @@ svg {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.form_type_vacancy-response .form__file-select-text {
+.form_type_vacancy-response .form__file-upload-text {
   color: #92999D;
   font-family: Euclid Circular A;
   font-size: 1.8rem;
@@ -7541,6 +7564,98 @@ svg {
 }
 .form_type_vacancy-response .form__file-upload-input {
   display: none;
+}
+.form_type_vacancy-response .form__field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.form_type_vacancy-response .form__field_textarea {
+  -ms-grid-row-span: 2;
+  grid-row: span 2;
+}
+.form_type_vacancy-response .form__field_upload-file {
+  -ms-grid-row-span: 2;
+  grid-row: span 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.form_type_vacancy-response .file-upload {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.form_type_vacancy-response .file-upload__wrapper-icon_upload {
+  width: 5rem;
+  height: 5.4rem;
+}
+.form_type_vacancy-response .file-upload__wrapper-icon_delete {
+  width: 2rem;
+  height: 2rem;
+}
+.form_type_vacancy-response .file-upload__text-container {
+  width: 30rem;
+  margin-left: 1.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0;
+}
+.form_type_vacancy-response .file-upload__name {
+  color: #FFF;
+  font-family: Euclid Circular A;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 2.7rem;
+}
+.form_type_vacancy-response .file-upload__size {
+  color: #92999D;
+  font-family: Euclid Circular A;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 2.7rem;
+}
+.form_type_vacancy-response .file-upload__delete-btn {
+  cursor: pointer;
+  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 0.4rem;
+}
+.form_type_vacancy-response .file-upload__delete-text {
+  color: #92999D;
+  font-family: Euclid Circular A;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.form_type_vacancy-response .button_type_red {
+  margin-top: 3rem;
 }
 
 @media (max-width: 48em) {

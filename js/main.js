@@ -31,7 +31,7 @@ sliderBaner.on("slideChange", function (x) {
   document.querySelector(
     ".baner__swiper-slide-number"
   ).innerHTML = `<img src="./img/icon/slide-num/${x.activeIndex + 1
-    }.svg" alt="">`;
+  }.svg" alt="">`;
   setTimeout(() => {
     $(".baner__swiper-slide-number").children("img").addClass("active");
   }, 1);
@@ -308,9 +308,16 @@ $(document).ready(function () {
 
 // Открытие формы при нажатии нак кнопку
 $(document).ready(function () {
+  // на странице баннера
   $(".baner__slide-link").on("click", function () {
     $(".form").addClass("active");
   });
+
+  // на странице вакансий
+  $(".vacancies-item--link").on("click", function () {
+    $(".form").addClass("active");
+  });
+
 
   function closeModal() {
     $(".form").removeClass("active");
@@ -327,37 +334,27 @@ $(document).ready(function () {
   });
 });
 
-$(document).ready(function() {
+
+
+$(document).ready(function () {
   var video = $('.article-box--video video')[0];
   var playButton = $('.article-box--btn-play');
 
 
   // При событии паузы включаем изображение и кнопку плей
-  $(video).on('pause', function() {
+  $(video).on('pause', function () {
     $('.article-box--img-wrapper').show();
     playButton.show();
   });
 
   // При событии воспроизведения скрываем изображение и кнопку плей
-  $(video).on('play', function() {
+  $(video).on('play', function () {
     $('.article-box--img-wrapper').hide();
     playButton.hide();
   });
 
   // Обработчик клика на кнопку плей
-  playButton.on('click', function() {
+  playButton.on('click', function () {
     $(video)[0].play();
-  });
-});
-
-$(document).ready(function(){
-  $('#copyButton').click(function(e) {
-      e.preventDefault();
-      var copyText = document.getElementById("myLink");
-      copyText.select();
-      copyText.setSelectionRange(0, 99999);
-      document.execCommand("copy");
-
-      alert("Ссылка скопирована: " + copyText.value);
   });
 });
