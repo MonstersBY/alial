@@ -693,7 +693,9 @@ svg {
   margin-bottom: -1rem;
 }
 .baner__container {
+  border-top: 0.1rem solid rgba(157, 153, 175, 0.1);
   position: relative;
+  z-index: -1;
   width: 100%;
   height: auto;
   margin: 0;
@@ -996,6 +998,7 @@ svg {
             flex-direction: column;
   }
   .baner__slide-container {
+    border-top: none;
     padding: 15.2rem 4rem 0;
     margin: 0;
   }
@@ -1540,7 +1543,6 @@ svg {
     -webkit-box-align: baseline;
         -ms-flex-align: baseline;
             align-items: baseline;
-    height: 100%;
   }
   .gallery .lines {
     display: none;
@@ -1556,6 +1558,7 @@ svg {
     margin-right: 12rem;
   }
   .gallery__swiper {
+    overflow: hidden;
     -webkit-box-shadow: unset;
             box-shadow: unset;
   }
@@ -1572,7 +1575,6 @@ svg {
         -ms-flex-align: center;
             align-items: center;
     background-image: inherit;
-    height: 102.5rem;
   }
   .gallery__swiper-pagination {
     display: block;
@@ -1646,7 +1648,6 @@ svg {
   .gallery__img {
     margin-top: 6.6rem;
     position: relative;
-    height: 100rem;
     width: 100%;
   }
   .gallery__img img {

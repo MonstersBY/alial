@@ -53,13 +53,17 @@ const sliderGallery = new Swiper(".gallery__swiper", {
     formatFractionCurrent: addZero,
     formatFractionTotal: addZero,
   },
-  allowTouchMove: false,
+  allowTouchMove: true,
   slidesPerView: 1,
   spaceBetween: rem(5),
   speed: 1500,
+  slidesPerView: "auto",
+  freeMode: true,
+  mousewheel: true,
   breakpoints: {
     769: {
       slidesPerView: 1,
+      
       spaceBetween: rem(0),
       speed: 1500,
       autoplay: {
@@ -67,9 +71,7 @@ const sliderGallery = new Swiper(".gallery__swiper", {
       },
     },
   },
-  slidesPerView: "auto",
-  freeMode: true,
-  mousewheel: true,
+  
 });
 function addZero(num) {
   return num > 9 ? num : "0" + num;
