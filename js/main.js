@@ -310,17 +310,22 @@ $(document).ready(function () {
 $(document).ready(function () {
   // на странице баннера
   $(".baner__slide-link").on("click", function () {
-    $(".form").addClass("active");
+    openModal();
   });
 
   // на странице вакансий
   $(".vacancies-item--link").on("click", function () {
-    $(".form").addClass("active");
+    openModal();
   });
 
+  function openModal() {
+    $(".form").addClass("active");
+    $("body").css("overflow", "hidden");
+  }
 
   function closeModal() {
     $(".form").removeClass("active");
+    $("body").css("overflow", "auto");
   }
 
   // Закрытие формы при нажатии на крестик

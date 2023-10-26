@@ -187,14 +187,11 @@
   .vacancies {
     overflow-x: hidden;
 
-    padding-bottom: 0;
-
     .container {
-      padding-top: 10rem;
       padding-bottom: 24rem;
       display: flex;
       flex-direction: column;
-      padding: 0 4rem 6.4rem;
+      padding: 10rem 4rem 0;
 
       &::after {
         width: 0;

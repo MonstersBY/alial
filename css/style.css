@@ -5115,10 +5115,8 @@ svg {
 @media (max-width: 48em) {
   .vacancies {
     overflow-x: hidden;
-    padding-bottom: 0;
   }
   .vacancies .container {
-    padding-top: 10rem;
     padding-bottom: 24rem;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -5127,7 +5125,7 @@ svg {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding: 0 4rem 6.4rem;
+    padding: 10rem 4rem 0;
   }
   .vacancies .container::after {
     width: 0;
@@ -7453,6 +7451,9 @@ svg {
 
 .form-modal {
   position: fixed;
+  padding-top: 16rem;
+  padding-bottom: 2rem;
+  overflow: auto;
   top: 0;
   left: 0;
   width: 100%;
@@ -7461,11 +7462,8 @@ svg {
 }
 .form-modal .container {
   z-index: 200;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  position: relative;
+  margin: auto;
 }
 .form-modal.active {
   display: block;
@@ -7514,6 +7512,7 @@ svg {
 }
 
 .form_type_vacancy-response .form__fields {
+  margin-top: 0;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 1fr 3rem 1fr 3rem 1fr 3rem 1fr;
@@ -7522,6 +7521,7 @@ svg {
   width: 100%;
 }
 .form_type_vacancy-response .form__fields-container {
+  margin-top: 5.4rem;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7533,6 +7533,7 @@ svg {
   gap: 3rem;
 }
 .form_type_vacancy-response .form__field {
+  margin-top: 0;
   max-width: 68.5rem;
 }
 .form_type_vacancy-response .form__file-upload-container {
@@ -7598,11 +7599,14 @@ svg {
       -ms-flex-direction: row;
           flex-direction: row;
 }
-.form_type_vacancy-response .file-upload__wrapper-icon_upload {
+.form_type_vacancy-response .file-upload__wrapper-icon_upload svg {
   width: 5rem;
   height: 5.4rem;
 }
 .form_type_vacancy-response .file-upload__wrapper-icon_delete {
+  margin-top: 0.5rem;
+}
+.form_type_vacancy-response .file-upload__wrapper-icon_delete svg {
   width: 2rem;
   height: 2rem;
 }
@@ -7625,6 +7629,9 @@ svg {
   font-style: normal;
   font-weight: 300;
   line-height: 2.7rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .form_type_vacancy-response .file-upload__size {
   color: #92999D;
@@ -7635,6 +7642,9 @@ svg {
   line-height: 2.7rem;
 }
 .form_type_vacancy-response .file-upload__delete-btn {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   cursor: pointer;
   margin-left: auto;
   display: -webkit-box;
@@ -7659,6 +7669,10 @@ svg {
 }
 
 @media (max-width: 48em) {
+  .form-modal {
+    padding-top: 25rem;
+    padding-bottom: 25rem;
+  }
   .form-modal .form-grid {
     display: none;
   }
@@ -7714,6 +7728,101 @@ svg {
     padding: 5.4rem 5.6rem;
   }
   .form__submit {
+    margin-top: 5.4rem;
+  }
+  .form_type_vacancy-response .form__fields {
+    margin-top: 0;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 1fr 5.4rem 1fr 5.4rem 1fr 5.4rem 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 5.4rem;
+  }
+  .form_type_vacancy-response .form__fields-container {
+    gap: 5.4rem;
+    margin-top: 5.4rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .form_type_vacancy-response .form__field {
+    max-width: 100%;
+  }
+  .form_type_vacancy-response .form__file-upload-text {
+    font-size: 3.6rem;
+    line-height: 5.4rem;
+  }
+  .form_type_vacancy-response .form__file-upload-btn {
+    cursor: pointer;
+  }
+  .form_type_vacancy-response .form__file-upload-btn svg {
+    width: 5.4rem;
+    height: 5.4rem;
+  }
+  .form_type_vacancy-response .form__file-upload-input {
+    display: none;
+  }
+  .form_type_vacancy-response .form__field {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .form_type_vacancy-response .form__field_textarea {
+    -ms-grid-row-span: 2;
+    grid-row: span 2;
+  }
+  .form_type_vacancy-response .form__field_upload-file {
+    -ms-grid-row-span: 2;
+    grid-row: span 2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .form_type_vacancy-response .file-upload {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .form_type_vacancy-response .file-upload__wrapper-icon_upload svg {
+    width: 8.1482rem;
+    height: 8.8rem;
+  }
+  .form_type_vacancy-response .file-upload__wrapper-icon_delete svg {
+    width: 4rem;
+    height: 4rem;
+  }
+  .form_type_vacancy-response .file-upload__text-container {
+    width: 31rem;
+    margin-left: 2.4rem;
+  }
+  .form_type_vacancy-response .file-upload__name {
+    font-size: 3.2rem;
+    line-height: 140%;
+  }
+  .form_type_vacancy-response .file-upload__size {
+    font-size: 3.2rem;
+    line-height: 140%;
+  }
+  .form_type_vacancy-response .file-upload__delete-btn {
+    gap: 0.8rem;
+  }
+  .form_type_vacancy-response .file-upload__delete-text {
+    font-size: 3.2rem;
+  }
+  .form_type_vacancy-response .button_type_red {
     margin-top: 5.4rem;
   }
 }
