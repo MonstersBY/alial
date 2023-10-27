@@ -4,7 +4,6 @@
     padding-bottom: 3.2rem;
     background: #0B0C0B;
     color: #FFFFFF;
-    text-transform: uppercase;
     position: relative;
     z-index: 10;
     
@@ -95,8 +94,6 @@
         font-weight: 600;
         line-height: 150%;
         width: max-content;
-
-        text-transform: uppercase;
     }
     &__phone-number {
         font-size: 2rem;
@@ -114,7 +111,6 @@
         padding-bottom: 4.8rem;
         background: #0B0C0B;
         color: #FFFFFF;
-        text-transform: uppercase;
         
     
         &__logo {

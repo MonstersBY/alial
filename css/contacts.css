@@ -1,0 +1,51 @@
+.contacts {
+  padding-left: 1.7rem;
+}
+.contacts__subtitle {
+  color: #fff;
+  font-family: Euclid Circular A;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.contacts__title {
+  color: #fff;
+  font-family: Euclid Circular A;
+  font-size: 5.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.contacts .contactslist {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.contacts .contacts-item {
+  position: relative;
+}
+.contacts .contacts-item__title {
+  color: #fff;
+  font-family: Euclid Circular A;
+  font-size: 5.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.contacts .contacts-item__text {
+  margin-top: 2.1rem;
+  color: #fff;
+  font-family: Euclid Circular A;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 2.7rem; /* 150% */
+}

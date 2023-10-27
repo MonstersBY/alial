@@ -1,0 +1,142 @@
+.seo {
+  position: relative;
+  background-color: #F1F4F5;
+  
+  .container {
+    padding-top: 20rem;
+    border-left: 1px solid rgba(157, 153, 175, 0.1);
+    border-right: 1px solid rgba(157, 153, 175, 0.1);
+    width: 140rem;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  // .seo__arcticle
+  &__arcticle {
+    width: 68.4rem;
+  }
+
+  .img-container {
+    width: 51.2rem;
+    height: 73.4rem;
+  }
+
+  // .seo__title
+  &__title {
+    color: #2d3238;
+    font-family: Euclid Circular A;
+    font-size: 5.5rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  // .seo__subtitle
+  &__subtitle {
+    border-left: 2px solid #dd1444;
+    width: 61.4rem;
+    padding-left: 3rem;
+    margin-top: 4rem;
+    color: #2d3238;
+    font-family: Euclid Circular A;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+  }
+
+  // .seo__paragraph
+  &__paragraph {
+    display: block;
+    margin-top: 2.4rem;
+    color: #595e68;
+    font-family: Euclid Circular A;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 2.7rem;
+    
+    &:first-of-type {
+      color: #2D3238;
+      margin-top: 10rem;
+      &::first-letter{
+        color: #2D3238;
+        font-family: Euclid Circular A;
+        font-size: 6rem;
+        padding-right: 1rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 2.7rem;
+      }
+    }
+
+    
+    
+  }
+
+}
+
+@media (max-width: 48em) {
+  .seo {
+    .container {
+      justify-content: center;
+      width: 100%;
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 8rem;
+    }
+
+    .img-container {
+      width: 74.8rem;
+      height: 107rem;
+    }
+
+    // .seo__arcticle
+    &__arcticle {
+      width: 100%;
+    }
+
+    // .seo__title
+    &__title {
+      font-size: 5.4rem;
+      line-height: 130%;
+    }
+
+    // .seo__subtitle
+    &__subtitle {
+      border-left: 2px solid #dd1444;
+      width: 100%;
+      padding-left: 2.4rem;
+      margin-top: 3rem;
+      font-family: Euclid Circular A;
+      font-size: 3.2rem;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 140%;
+    }
+
+    // .seo__paragraph
+    &__paragraph {
+      margin-top: 4.8rem;
+      padding-bottom: 0;
+      color: #2D3238;
+      font-family: Euclid Circular A;
+      font-size: 3.2rem;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 140%;
+      &:first-of-type {
+      &::first-letter {
+        padding-right: 1rem;
+        color: #2D3238;
+        font-family: Euclid Circular A;
+        font-size: 6rem;
+        font-style: normal;
+        font-weight: 600;
+      }
+    }
+    }
+  }
+}

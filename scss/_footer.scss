@@ -1,7 +1,7 @@
 .footer {
+    position: relative;
     background-color: #0B0C0B;
     color: #FFFFFF;
-    margin-top: -11.2rem;
     padding-top: 5.9rem;
     padding-bottom: 5.9rem;
 
@@ -44,7 +44,7 @@
     &__line {
         height: 1px;
         width: auto;
-        background: #92999D;
+        background: rgba(157, 153, 175, 0.25);
         margin-bottom: 2.8rem;
     }
     &__bottom {
@@ -77,7 +77,6 @@
 
 @media (max-width: 48em) {
     .footer {
-        margin-top: 0;
         padding-top: 12.5rem;
         padding-bottom: 12rem;
     

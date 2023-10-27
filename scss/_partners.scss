@@ -43,7 +43,8 @@
         overflow: hidden;
         padding: 0 3rem 3.6rem;
         border-bottom: 1px solid #EDEDF1;
-
+        border-top: 1px solid #EDEDF1;
+        
         &-right, &-left {
             position: absolute;
             top: 58%;
