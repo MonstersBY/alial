@@ -1,5 +1,35 @@
 .form {
   display: none;
+  &__field-wrapper{
+    position: relative;
+    height: fit-content;
+  }
+
+  .error {
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+    bottom: -2.4rem;
+    left: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color:  #E01327;
+    font-family: Euclid Circular A;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+  }
+  @media (max-width: 48em){
+    .error {
+      font-size: 3.2rem;
+      bottom: -4.8rem;
+    }
+  }
+
+  .invalid{
+    border: 1px solid #E01327;
+  }
 
   &__title {
     color: #0b0c0b;
@@ -25,6 +55,7 @@
 
   // .form__fields
   &__fields {
+    height: fit-content;
     margin-top: 8rem;
     margin-top: 8rem;
     width: 100%;
@@ -180,13 +211,15 @@
     &__fields {
       margin-top: 0;
       display: grid;
-      grid-template-rows: repeat(4, 1fr);
+      grid-template-rows: repeat(4, 8.2rem);
       gap: 3rem;
       width: 100%;
+    
     }
 
     // .form__fields-container
     &__fields-container {
+      height: fit-content;
       margin-top: 5.4rem;
       width: 100%;
       display: flex;
@@ -234,10 +267,17 @@
       display: none;
     }
   }
-
+  .form__field-wrapper{
+    // .form__field-wrapper_textarea
+    &_textarea {
+      height: 100%;
+      grid-row: span 2;
+    }
+  }
 
   .form__field {
     display: flex;
+    height: 100%;
 
     // .form__field_vacancy 
     &_vacancy {}
@@ -251,14 +291,11 @@
     // .form__field_email
     &_email {}
 
-    // .form__field_textarea
-    &_textarea {
-      grid-row: span 2;
-    }
+    
 
     // .form__field_upload-file
     &_upload-file {
-      grid-row: span 2;
+      grid-row: span 1;
       display: flex;
       justify-content: space-between;
       flex-direction: column;
@@ -267,9 +304,12 @@
 
 
   .file-upload {
+    display: none;
     width: 100%;
-    display: flex;
     flex-direction: row;
+    &.active{
+      display: flex;
+    }
 
     // .file-upload__wrapper-icon 
     &__wrapper-icon {
@@ -461,108 +501,100 @@
       &__field {
         max-width: 100%;
       }
+      // form__file-upload-text
+      &__file-upload-text {
+        font-size: 3.6rem;
+        line-height: 5.4rem;
+      }
 
+      // form__file-upload-btn
+      &__file-upload-btn {
+        cursor: pointer;
 
-
-        // form__file-upload-text
-        &__file-upload-text {
-          font-size: 3.6rem;
-          line-height: 5.4rem;
-        }
-
-        // form__file-upload-btn
-        &__file-upload-btn {
-          cursor: pointer;
-
-          svg {
-            width: 5.4rem;
-            height: 5.4rem;
-          }
-        }
-
-        // form__file-upload-input
-        &__file-upload-input {
-          display: none;
+        svg {
+          width: 5.4rem;
+          height: 5.4rem;
         }
       }
 
-
-      .form__field {
-        display: flex;
-
-        // .form__field_textarea
-        &_textarea {
-          grid-row: span 2;
-        }
-
-        // .form__field_upload-file
-        &_upload-file {
-          grid-row: span 2;
-          display: flex;
-          justify-content: space-between;
-          flex-direction: column;
-        }
+      // form__file-upload-input
+      &__file-upload-input {
+        display: none;
       }
-
-
-      .file-upload {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-
-        // .file-upload__wrapper-icon 
-        &__wrapper-icon {
-
-          // .file-upload__wrapper-icon_upload
-          &_upload {
-            svg {
-              width: 8.1482rem;
-              height: 8.8rem;
-            }
-          }
-
-          // .file-upload__wrapper-icon_delete 
-          &_delete {
-            svg {
-              width: 4rem;
-              height: 4rem;
-            }
-          }
-        }
-
-        // .file-upload__text-container 
-        &__text-container {
-          width: 31rem;
-          margin-left: 2.4rem;
-        }
-
-
-        // .file-upload__name 
-        &__name {
-          font-size: 3.2rem;
-          line-height: 140%;
-        }
-
-        // .file-upload__size 
-        &__size {
-          font-size: 3.2rem;
-          line-height: 140%;
-        }
-
-        // .file-upload__delete-btn
-        &__delete-btn {
-          gap: 0.8rem;
-        }
-
-        // .file-upload__delete-text 
-        &__delete-text {
-          font-size: 3.2rem;
-        }
-      }
-
-      .button_type_red {
-        margin-top: 5.4rem;
-      }
-
     }
+
+
+    .form__field {
+      display: flex;
+
+      // .form__field_upload-file
+      &_upload-file {
+        grid-row: span 2;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+      }
+    }
+
+
+    .file-upload {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+
+      // .file-upload__wrapper-icon 
+      &__wrapper-icon {
+
+        // .file-upload__wrapper-icon_upload
+        &_upload {
+          svg {
+            width: 8.1482rem;
+            height: 8.8rem;
+          }
+        }
+
+        // .file-upload__wrapper-icon_delete 
+        &_delete {
+          svg {
+            width: 4rem;
+            height: 4rem;
+          }
+        }
+      }
+
+      // .file-upload__text-container 
+      &__text-container {
+        width: 31rem;
+        margin-left: 2.4rem;
+      }
+
+
+      // .file-upload__name 
+      &__name {
+        font-size: 3.2rem;
+        line-height: 140%;
+      }
+
+      // .file-upload__size 
+      &__size {
+        font-size: 3.2rem;
+        line-height: 140%;
+      }
+
+      // .file-upload__delete-btn
+      &__delete-btn {
+        gap: 0.8rem;
+      }
+
+      // .file-upload__delete-text 
+      &__delete-text {
+        font-size: 3.2rem;
+      }
+    }
+
+    .button_type_red {
+      margin-top: 5.4rem;
+    }
+
   }
+}

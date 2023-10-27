@@ -7337,6 +7337,36 @@ svg {
 .form {
   display: none;
 }
+.form__field-wrapper {
+  position: relative;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.form .error {
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+  bottom: -2.4rem;
+  left: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #E01327;
+  font-family: Euclid Circular A;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+@media (max-width: 48em) {
+  .form .error {
+    font-size: 3.2rem;
+    bottom: -4.8rem;
+  }
+}
+.form .invalid {
+  border: 1px solid #E01327;
+}
 .form__title {
   color: #0b0c0b;
   font-family: Euclid Circular A;
@@ -7355,6 +7385,9 @@ svg {
   line-height: 2.7rem;
 }
 .form__fields {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   margin-top: 8rem;
   margin-top: 8rem;
   width: 100%;
@@ -7516,12 +7549,15 @@ svg {
   margin-top: 0;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 1fr 3rem 1fr 3rem 1fr 3rem 1fr;
-  grid-template-rows: repeat(4, 1fr);
+  -ms-grid-rows: 8.2rem 3rem 8.2rem 3rem 8.2rem 3rem 8.2rem;
+  grid-template-rows: repeat(4, 8.2rem);
   gap: 3rem;
   width: 100%;
 }
 .form_type_vacancy-response .form__fields-container {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   margin-top: 5.4rem;
   width: 100%;
   display: -webkit-box;
@@ -7567,18 +7603,20 @@ svg {
 .form_type_vacancy-response .form__file-upload-input {
   display: none;
 }
+.form_type_vacancy-response .form__field-wrapper_textarea {
+  height: 100%;
+  -ms-grid-row-span: 2;
+  grid-row: span 2;
+}
 .form_type_vacancy-response .form__field {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-.form_type_vacancy-response .form__field_textarea {
-  -ms-grid-row-span: 2;
-  grid-row: span 2;
+  height: 100%;
 }
 .form_type_vacancy-response .form__field_upload-file {
-  -ms-grid-row-span: 2;
-  grid-row: span 2;
+  -ms-grid-row-span: 1;
+  grid-row: span 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -7591,14 +7629,17 @@ svg {
           flex-direction: column;
 }
 .form_type_vacancy-response .file-upload {
+  display: none;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+}
+.form_type_vacancy-response .file-upload.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 .form_type_vacancy-response .file-upload__wrapper-icon_upload svg {
   width: 5rem;
@@ -7768,10 +7809,6 @@ svg {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-  }
-  .form_type_vacancy-response .form__field_textarea {
-    -ms-grid-row-span: 2;
-    grid-row: span 2;
   }
   .form_type_vacancy-response .form__field_upload-file {
     -ms-grid-row-span: 2;

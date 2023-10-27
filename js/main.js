@@ -365,3 +365,25 @@ $(document).ready(function () {
     $(video)[0].play();
   });
 });
+
+
+$(document).ready(function () {
+$("#file-upload-input").on("change", function() {
+  let file = this.files[0];
+  if (file) {
+      $('.file-upload').parent().css('grid-row', 'span 2'); // родительский элемент на две строки расширяем
+      let fileSize = (file.size / 1024 / 1024).toFixed(2); // размер файла в мегабайтах
+      $(".file-upload").addClass("active");;
+      $(".file-upload__name").text(file.name);
+      $(".file-upload__size").text(fileSize + ' мб');
+  }
+});
+
+$(".file-upload__delete-text").on("click", function() {
+  $('.file-upload').parent().css('grid-row', 'span 1'); // родительский элемент на две строки уменьшаем
+  $(".file-upload").removeClass("active");
+  $("#file-upload-input").val(''); // очистка инпута файлов
+  $(".file-upload__name").text('');
+  $(".file-upload__size").text('');
+});
+});

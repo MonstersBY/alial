@@ -886,16 +886,30 @@
             <path d="M34 3L3 34" stroke="#424245" stroke-width="3" stroke-linecap="square" stroke-linejoin="round" />
             <path d="M3 3L34 34" stroke="#424245" stroke-width="3" stroke-linecap="square" stroke-linejoin="round" />
           </svg></span>
-        <form action="">
+        <form class="vacancy-form" action="" type="submit">
           <div class="form__fields-container">
             <div class="form__fields form__fields_left">
-              <input class="form__field form__field_vacancy" type="text" placeholder="Вакансия" required />
-              <input class="form__field form__field_name" type="text" placeholder="ФИО" required />
-              <input class="form__field form__field_telephone" type="text" placeholder="Телефон" required />
-              <input class="form__field form__field_email" type="text" placeholder="Email" required />
+              <div class="form__field-wrapper"><input class="form__field form__field_vacancy" name="vacancy" type="text"
+                  placeholder="Вакансия" />
+                <span class="error"></span>
+              </div>
+              <div class="form__field-wrapper"><input class="form__field form__field_name" name="name" type="text"
+                  placeholder="ФИО" />
+                <span class="error"></span>
+              </div>
+              <div class="form__field-wrapper"><input class="form__field form__field_telephone" name="telephone"
+                  type="text" placeholder="Телефон" />
+                <span class="error"></span>
+              </div>
+              <div class="form__field-wrapper"><input class="form__field form__field_email" name="email" type="text"
+                  placeholder="Email" />
+                <span class="error"></span>
+              </div>
             </div>
             <div class="form__fields form__fields_right">
-              <textarea class="form__field form__field_textarea" placeholder="Сопроводительное письмо"></textarea>
+              <div class="form__field-wrapper form__field-wrapper_textarea"><textarea name="letter" class="form__field form__field_textarea"
+                  placeholder="Сопроводительное письмо"></textarea><span class="error"></span></div>
+
               <div class="form__field form__field_upload-file">
                 <div class="form__file-upload-container">
                   <div class="form__file-upload-text">Прикрепить резюме</div>
@@ -924,8 +938,8 @@
                     </svg>
                   </div>
                   <div class="file-upload__text-container">
-                    <span class="file-upload__name">Название документа.pdf</span>
-                    <span class="file-upload__size">3.4 мб</span>
+                    <span class="file-upload__name"></span>
+                    <span class="file-upload__size"></span>
                   </div>
                   <div class="file-upload__delete-btn">
                     <span class="file-upload__delete-text">Удалить</span>
@@ -1009,9 +1023,11 @@
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="./js/jquery.maskedinput.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.20.0/jquery.validate.min.js"></script>
   <script src="./js/inputmask.js"></script>
   <script src="./js/swiper.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/validation.js"></script>
 </body>
 
 </html>
