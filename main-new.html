@@ -68,13 +68,7 @@
   </header>
 
   <main>
-    <section class="grid">
-      <div class="cell"></div>
-      <div class="cell"></div>
-      <div class="cell"></div>
-      <div class="cell"></div>
-    </section>
-    
+
     <section class="form form_theme_dark form-modal">
       <div class="overlay">
         <div class="form-grid">
@@ -95,15 +89,20 @@
             <path d="M34 3L3 34" stroke="#424245" stroke-width="3" stroke-linecap="square" stroke-linejoin="round" />
             <path d="M3 3L34 34" stroke="#424245" stroke-width="3" stroke-linecap="square" stroke-linejoin="round" />
           </svg></span>
-        <form action="">
+        <form action="" class="feedback-form" type="submit">
           <div class="form__fields">
-            <input class="form__field field field__name" type="text" placeholder="ФИО" required />
-            <input class="form__field field field__telephone" type="text" placeholder="Телефон" required />
-            <input class="form__field field field__email" type="text" placeholder="Email" required />
-            <input class="form__field field field__company-name" type="text" placeholder="Название компании" required />
+            <div class="form__field-wrapper"><input class="form__field field field__name" name="name" type="text" placeholder="ФИО"
+               /></div>
+            <div class="form__field-wrapper"><input class="form__field field field__telephone" name="telephone" type="text"
+                placeholder="Телефон" /></div>
+            <div class="form__field-wrapper"><input class="form__field field field__email" name="email" type="email"
+                placeholder="Email" /></div>
+            <div class="form__field-wrapper"><input class="form__field field field__company-name" name="company" type="text"
+                placeholder="Название компании" /></div>
           </div>
-
-          <textarea class="form__textarea" placeholder="Сообщение" required></textarea>
+          <div class="form__field-wrapper">
+            <textarea class="form__textarea" name="message" placeholder="Сообщение"></textarea>
+          </div>
           <div class="button button_type_red">
             <button type="submit">
               <div class="button__title">Оставить заявку</div>
@@ -1365,10 +1364,12 @@
   <script src="./js/jquery.fancybox.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.20.0/jquery.validate.min.js"></script>
   <script src="./js/jquery.maskedinput.js"></script>
   <script src="./js/inputmask.js"></script>
   <script src="./js/swiper.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/validation.js"></script>
 </body>
 
 </html>
