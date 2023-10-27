@@ -1,5 +1,5 @@
 .form {
-  display: none;
+  
 
   &__field-wrapper {
     width: 100%;
@@ -116,6 +116,7 @@
 
   //   Темная тема
   &_theme_dark {
+    
 
     // .form__title
     .form__title {
@@ -138,6 +139,7 @@
 }
 
 .form-modal {
+  display: none;
   position: fixed;
   padding-top: 16rem;
   padding-bottom: 2rem;

@@ -54,7 +54,7 @@ $(document).ready(function () {
     });
 });
 
-// На главной
+// На главной и карточке продукта
 $(document).ready(function () {
     $('.feedback-form').on('submit', function (event) {
         event.preventDefault();

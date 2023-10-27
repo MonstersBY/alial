@@ -16,54 +16,54 @@
 <body>
     <header class="header">
         <div class="container header__container">
-          <div class="header__left">
-            <div class="header__logo">
-              <a href="#">
-                <img src="img/logo.png" alt="" />
-              </a>
-            </div>
-            <div class="header__language">
-              <div class="header__language-box">
-                <span>RU</span>
-                <div class="header__language-img">
-                  <img src="img/icon/ru.svg" alt="" />
+            <div class="header__left">
+                <div class="header__logo">
+                    <a href="#">
+                        <img src="img/logo.png" alt="" />
+                    </a>
                 </div>
-              </div>
-              <div class="header__language-list">
-                <div class="header__language-list-box">
-                  <span>EN</span>
-                  <div class="header__language-img">
-                    <img src="img/icon/en.svg" alt="" />
-                  </div>
+                <div class="header__language">
+                    <div class="header__language-box">
+                        <span>RU</span>
+                        <div class="header__language-img">
+                            <img src="img/icon/ru.svg" alt="" />
+                        </div>
+                    </div>
+                    <div class="header__language-list">
+                        <div class="header__language-list-box">
+                            <span>EN</span>
+                            <div class="header__language-img">
+                                <img src="img/icon/en.svg" alt="" />
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
-          <div class="header__burger">
-            <div class="header__burger-icon"></div>
-          </div>
-          <div class="header__right">
-            <ul class="header__lists">
-              <li class="header__item"><a href="#">О компании</a></li>
-              <li class="header__item"><a href="#">Продукция</a></li>
-              <li class="header__item"><a href="#">Проекты</a></li>
-              <li class="header__item"><a href="#">Новости</a></li>
-              <li class="header__item"><a href="#">Статьи</a></li>
-              <li class="header__item"><a href="#">Карьера</a></li>
-              <li class="header__item"><a href="#">Контакты</a></li>
-            </ul>
-            <div class="header__mob mobile">
-              <div class="header__mob-contact">
-                <strong>+ 7 (495) 532-03-79</strong>
-                <span>info@alialmash.ru</span>
-              </div>
-              <div class="header__mob-another">
-                <span>Смотрите также:</span>
-                <a class="header__mob-img" href=""><img src="./img/logo-tech.png" alt="" /></a>
-              </div>
+            <div class="header__burger">
+                <div class="header__burger-icon"></div>
             </div>
-          </div>
-          <a class="header__phone-number">+ 7 (495) 532-03-79</a>
+            <div class="header__right">
+                <ul class="header__lists">
+                    <li class="header__item"><a href="#">О компании</a></li>
+                    <li class="header__item"><a href="#">Продукция</a></li>
+                    <li class="header__item"><a href="#">Проекты</a></li>
+                    <li class="header__item"><a href="#">Новости</a></li>
+                    <li class="header__item"><a href="#">Статьи</a></li>
+                    <li class="header__item"><a href="#">Карьера</a></li>
+                    <li class="header__item"><a href="#">Контакты</a></li>
+                </ul>
+                <div class="header__mob mobile">
+                    <div class="header__mob-contact">
+                        <strong>+ 7 (495) 532-03-79</strong>
+                        <span>info@alialmash.ru</span>
+                    </div>
+                    <div class="header__mob-another">
+                        <span>Смотрите также:</span>
+                        <a class="header__mob-img" href=""><img src="./img/logo-tech.png" alt="" /></a>
+                    </div>
+                </div>
+            </div>
+            <a class="header__phone-number">+ 7 (495) 532-03-79</a>
         </div>
     </header>
 
@@ -841,28 +841,38 @@
             </div>
         </section>
 
-        <section class="form">
+        <section class="form" type="submit">
             <div class="container">
                 <div class="form__title">Обратная связь с нами</div>
                 <div class="form__subtitle">Оставьте заявку, и мы свяжемся с вами в течение 1 рабочего дня</div>
-                <div class="form__fields">
-                    <input class="form__field field field__name" type="text" placeholder="ФИО" required>
-                    <input class="form__field field field__telephone" type="text" placeholder="Телефон" required>
-                    <input class="form__field field field__email" type="text" placeholder="Email" required>
-                    <input class="form__field field field__company-name" type="text" placeholder="Название компании" required>
-                </div>
+                <form class="feedback-form">
+                    <div class="form__fields">
+                        <div class="form__field-wrapper">
+                            <input class="form__field field field__name" type="text" placeholder="ФИО" name="name">
+                        </div>
 
-                <textarea class="form__textarea" placeholder="Сообщение" required></textarea>
-                <button type="submit" class="form__submit request-link">
-                    <div class="request-link-title">Оставить заявку</div>
-                    <div class="request-link-text"><span>Скоро с вами свяжемся</span><svg width="36" height="13"
-                            viewBox="0 0 36 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M27.7716 12.5L36.0001 6.5L27.7716 0.5V5.11621H0V7.88544H27.7716V12.5Z"
-                                fill="white" />
-                        </svg>
+                        <div class="form__field-wrapper"><input class="form__field field field__telephone"
+                                name="telephone" type="text" placeholder="Телефон"></div>
+                        <div class="form__field-wrapper"><input class="form__field field field__email" name="email"
+                                type="text" placeholder="Email"></div>
+                        <div class="form__field-wrapper"><input class="form__field field field__company-name"
+                                name="company" type="text" placeholder="Название компании"></div>
                     </div>
-                </button>
+                    <div class="form__field-wrapper">
+                        <textarea class="form__textarea" placeholder="Сообщение" name="message"></textarea>
+                    </div>
+                    <button type="submit" class="form__submit request-link">
+                        <div class="request-link-title">Оставить заявку</div>
+                        <div class="request-link-text"><span>Скоро с вами свяжемся</span><svg width="36" height="13"
+                                viewBox="0 0 36 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M27.7716 12.5L36.0001 6.5L27.7716 0.5V5.11621H0V7.88544H27.7716V12.5Z"
+                                    fill="white" />
+                            </svg>
+                        </div>
+                    </button>
+                </form>
+
             </div>
         </section>
 
@@ -1866,10 +1876,12 @@
     <script src="./js/jquery.fancybox.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.20.0/jquery.validate.min.js"></script>
     <script src="./js/jquery.maskedinput.js"></script>
     <script src="./js/inputmask.js"></script>
     <script src="./js/swiper.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/validation.js"></script>
 </body>
 
 </html>
