@@ -7774,8 +7774,9 @@ svg {
   }
   .form_type_vacancy-response .form__fields {
     margin-top: 0;
-    display: -ms-grid;
-    display: grid;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -ms-grid-rows: 1fr 5.4rem 1fr 5.4rem 1fr 5.4rem 1fr;
     grid-template-rows: repeat(4, 1fr);
     gap: 5.4rem;
@@ -7790,6 +7791,9 @@ svg {
   }
   .form_type_vacancy-response .form__field {
     max-width: 100%;
+  }
+  .form_type_vacancy-response .form__field-wrapper_textarea {
+    height: 44rem;
   }
   .form_type_vacancy-response .form__file-upload-text {
     font-size: 3.6rem;
@@ -7825,10 +7829,8 @@ svg {
             flex-direction: column;
   }
   .form_type_vacancy-response .file-upload {
+    margin-top: 8rem;
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;

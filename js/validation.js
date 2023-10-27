@@ -1,6 +1,6 @@
 // Для телефона
 $('[name="telephone"]').mask("+7(999)999-9999", {autoclear: false});
-// Валидация на jquery c плагином валидации
+// Валидация на jquery c плагином валидации на странице вакансий
 $(document).ready(function () {
     $('.vacancy-form').on('submit', function (event) {
         event.preventDefault();
